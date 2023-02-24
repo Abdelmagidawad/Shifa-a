@@ -271,11 +271,11 @@ html::-webkit-scrollbar-thumb:hover {
     }
 
     .header .nav-bar .links li:first-child a {
-        padding-right: 0;
+        padding-left: 0;
     }
 
     .header .nav-bar .links li:last-child a {
-        padding-left: 0;
+        padding-right: 0;
     }
 
 }
@@ -300,7 +300,7 @@ html::-webkit-scrollbar-thumb:hover {
 @media(max-width:767px) {
     .header .nav-bar .bottom a {
         padding: 0 8px;
-        font-size: 10px;
+        font-size: 13px;
         border-radius: 6px;
     }
 
