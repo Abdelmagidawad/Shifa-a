@@ -291,7 +291,7 @@ html::-webkit-scrollbar-thumb:hover {
 @media(max-width:767px) {
     .header .nav-bar .bottom a {
         padding: 0 8px;
-        font-size: 13px;
+        font-size: 10px;
         border-radius: 6px;
     }
 

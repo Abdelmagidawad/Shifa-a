@@ -306,7 +306,7 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 .join .container .box:first-child {
-    animation: box-doctor 1.5s linear 1;
+    animation: box-doctor 0.75s linear 1;
 }
 
 @keyframes box-doctor {
@@ -320,7 +320,7 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 .join .container .box:last-child {
-    animation: box-patient 1.5s linear 1;
+    animation: box-patient 0.75s linear 1;
 }
 
 @keyframes box-patient {
