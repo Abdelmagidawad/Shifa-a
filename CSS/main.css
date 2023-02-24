@@ -269,6 +269,15 @@ html::-webkit-scrollbar-thumb:hover {
         font-size: 14px;
         height: 40px;
     }
+
+    .header .nav-bar .links li:first-child a {
+        padding-right: 0;
+    }
+
+    .header .nav-bar .links li:last-child a {
+        padding-left: 0;
+    }
+
 }
 
 .header .nav-bar .bottom {
