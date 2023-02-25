@@ -180,6 +180,8 @@ html::-webkit-scrollbar-thumb:hover {
 @media(max-width:767px) {
     .header .container {
         flex-direction: column;
+        padding-left: 4px;
+        padding-right: 4px;
     }
 }
 
@@ -270,14 +272,6 @@ html::-webkit-scrollbar-thumb:hover {
         height: 40px;
     }
 
-    .header .nav-bar .links li:first-child a {
-        padding-left: 0;
-    }
-
-    .header .nav-bar .links li:last-child a {
-        padding-right: 0;
-    }
-
 }
 
 .header .nav-bar .bottom {
@@ -299,11 +293,10 @@ html::-webkit-scrollbar-thumb:hover {
 
 @media(max-width:767px) {
     .header .nav-bar .bottom a {
-        padding: 0 4px;
-        font-size: 13px;
+        padding: 0 7px;
+        font-size: 12px;
         border-radius: 6px;
     }
-
 }
 
 .header .nav-bar .bottom li:last-of-type a {
