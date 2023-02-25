@@ -267,7 +267,7 @@ html::-webkit-scrollbar-thumb:hover {
     }
 
     .header .nav-bar .links a {
-        padding: 0 10px;
+        padding: 0 8px;
         font-size: 14px;
         height: 40px;
     }
