@@ -407,7 +407,7 @@ html::-webkit-scrollbar-thumb:hover {
     padding-top: 30px;
     padding-bottom: 30px;
     background-color: #64b8f3;
-    animation: footer-anim 2s infinite alternate;
+    animation: footer-anim 7s infinite linear;
 }
 
 @keyframes footer-anim {
