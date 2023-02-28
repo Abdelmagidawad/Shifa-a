@@ -49,11 +49,12 @@
                 </div>
                 <form action="" method="get">
                     <p class="hint">
-                        Please enter the Mobile Number associated with your account
+                        Please enter the mobile number associated with your account
                     </p>
                     <div class="phone">
                         <label for="">Mobile Number</label><br>
-                        <input type="number" placeholder="+20" name="phone" required autofocus>
+                        <input type="number" placeholder="+20" name="phone" required autofocus min="10000000000"
+                            max="99999999999">
                     </div>
                     <div class="submit">
                         <input type="submit" value="Send" formaction="../OTP/otp.html">
