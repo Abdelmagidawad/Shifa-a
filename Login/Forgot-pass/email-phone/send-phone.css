@@ -1,0 +1,30 @@
+/* ****** */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* ****** */
+@media(min-width:992px) {
+    .form .container .image img {
+        margin-top: 30px;
+        /* aspect-ratio: 1/1; */
+    }
+}
+
+@media (max-width:991px) {
+    .form {
+        padding-top: 60px;
+    }
+
+    .form .container {
+        flex-direction: column-reverse;
+    }
+
+    .form .container .image img {
+        margin: auto;
+        margin-top: 0px;
+    }
+
+}

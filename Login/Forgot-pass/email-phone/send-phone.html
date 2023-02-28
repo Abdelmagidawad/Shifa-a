@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shifa’a-Login</title>
+    <title>Shifa’a-Reset-password</title>
     <!-- Render All Element Normally  -->
-    <link rel="stylesheet" href="../CSS/normalize.css">
-    <!-- login file css  -->
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="../../../CSS/normalize.css">
+    <!-- send-phone files css  -->
+    <link rel="stylesheet" href="send-email.css">
+    <!-- ***** -->
+    <link rel="stylesheet" href="send-phone.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,19 +22,19 @@
     <!-- Start Header  -->
     <div class="header" id="header">
         <div class="container">
-            <a href="../index.html" class="logo">
-                <img src="../images/logo.jpeg" alt="photo-logo">
+            <a href="../../../index.html" class="logo">
+                <img src="../../../images/logo.jpeg" alt="photo-logo">
                 Shifa’a
             </a>
             <div class="nav-bar">
                 <ul class="links">
-                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../../../index.html">Home</a></li>
                     <li><a href="#">Doctor</a></li>
-                    <li><a href="../index.html">Services</a></li>
+                    <li><a href="../../../index.html">Services</a></li>
                     <li><a href="#">Review</a></li>
                 </ul>
                 <ul class="bottom">
-                    <li><a href="../Register/register.html">Sign Up</a></li>
+                    <li><a href="../../../Register/register.html">Sign Up</a></li>
                 </ul>
             </div>
         </div>
@@ -41,27 +43,27 @@
     <!-- Start form  -->
     <div class="form">
         <div class="container">
-            <div class="head-loading">
-                <h2>Hello! Welcome Shifa’a</h2>
-            </div>
-            <form action="" method="post">
-                <div class="email">
-                    <label for="">Email</label><br>
-                    <input type="email" placeholder="Email Address" name="email" required autofocus>
+            <div class="section-form">
+                <div class="head-loading">
+                    <h2>Forgot Your Password</h2>
                 </div>
-                <div class="pass">
-                    <label for="">Password</label><br>
-                    <input type="password" placeholder="Password" name="password" required minlength="8">
-                    <a href="../Login/Forgot-pass/email-phone/send-email.html">Forgot Password ?</a>
-                </div>
-                <div class="submit">
-                    <input type="submit" value="Sign in">
-                    <p>
-                        Don't have an account?
-                        <a href="../Register/register.html"> Register</a>
+                <form action="" method="post">
+                    <p class="hint">
+                        Please enter the Mobile Number associated with your account
                     </p>
-                </div>
-            </form>
+                    <div class="phone">
+                        <label for="">Mobile Number</label><br>
+                        <input type="number" placeholder="+20" name="phone" required autofocus>
+                    </div>
+                    <div class="submit">
+                        <input type="submit" value="Send" formaction="../OTP/otp.html">
+                        <a href="send-email.html">Try another way?</a>
+                    </div>
+                </form>
+            </div>
+            <div class="image">
+                <img src="../forgot-image/mobil.png" alt="email-photo">
+            </div>
         </div>
     </div>
     <!-- End form  -->
@@ -69,8 +71,8 @@
     <div class="footer">
         <div class="container">
             <div class="about">
-                <a href="../index.html">
-                    <img src="../images/logo-footer.png" alt="logo">
+                <a href="../../../index.html">
+                    <img src="../../../images/logo-footer.png" alt="logo">
                     Shifa’a
                 </a>
                 <p>

@@ -83,7 +83,6 @@ html::-webkit-scrollbar-thumb:hover {
 
 /* End Global Rules  */
 /* ******************************* */
-
 /* Start Header  */
 .header {
     background-color: #ffffff;
@@ -203,7 +202,6 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 .header .nav-bar .bottom a {
-    color: black;
     padding: 3px 13px;
     border-radius: 10px;
     transition: var(--main-transition);
@@ -215,17 +213,12 @@ html::-webkit-scrollbar-thumb:hover {
         font-size: 13px;
         border-radius: 6px;
     }
-
 }
 
-.header .nav-bar .bottom li:last-of-type a {
+.header .nav-bar .bottom li a {
     background-color: var(--main-color);
     color: white;
     box-shadow: 0 0 8px 0px rgb(0 0 0 / 15%);
-}
-
-.header .nav-bar .bottom li:first-of-type a:hover {
-    color: var(--main-color);
 }
 
 .header .nav-bar .bottom li:last-of-type a:hover {
@@ -239,10 +232,16 @@ html::-webkit-scrollbar-thumb:hover {
 
 /* End Header  */
 
-/* Start Section Form  */
+/* Start Form  */
 .form {
     padding-top: 60px;
     padding-bottom: 100px;
+}
+
+.form>img {
+    max-width: 100%;
+    position: absolute;
+    z-index: -1;
 }
 
 .form .container {
@@ -256,142 +255,127 @@ html::-webkit-scrollbar-thumb:hover {
     position: relative;
 }
 
-.form .head-loading::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 50px;
-    z-index: -1;
-    background-color: var(--main-color);
-    border-radius: 3px;
-    animation: loading 7s linear infinite alternate;
-}
 
-@keyframes loading {
-
-    0%,
-    100% {
-        left: 0;
-    }
-
-    50% {
-        left: calc(100% - 50px);
-    }
-}
-
-
-.form .head-loading h2 {
+.form h2 {
     font-size: 35px;
     font-weight: bold;
     margin: 0 auto 43px;
     color: var(--main-color);
     line-height: 1;
-    mix-blend-mode: color-dodge;
+    /* mix-blend-mode: color-dodge; */
 }
 
 @media(max-width:767px) {
-    .form .head-loading h2 {
+    .form h2 {
         font-size: 30px;
     }
-
 }
 
-
 .form form {
-    width: 65%;
+    width: 56%;
     margin: 15px auto;
-    border-radius: 5px;
+    border-radius: 20px;
     border: 1px solid var(--main-color);
     box-shadow: 0 0 10px 2px rgb(0 0 0 / 10%);
-    padding: 75px;
+    padding: 70px;
+    padding-top: 40px;
+}
+
+@media(min-width:992px) {
+    .form form {
+        padding: 40px 50px 70px;
+    }
 }
 
 @media(max-width:767px) {
     .form form {
-        width: 100%;
+        width: fit-content;
         padding: 40px 20px;
     }
 
 }
 
-.form form div {
-    text-align: left;
-    margin-top: 30px;
+.form form img {
+    max-width: 120px;
+    animation: otp-img 1.5s linear infinite;
 }
 
-.form form div:first-child {
-    margin-top: 25px;
+@keyframes otp-img {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
-.form form div:not(.gender) label {
+.form form h3 {
     font-size: 25px;
-    color: black;
-}
-
-.form form div:not(:last-of-type, .gender) input {
-    outline: none;
-    border: 2px solid #e9edf9;
-    padding: 15px 20px;
-    width: 100%;
-    border-radius: 7px;
-    margin-top: 15px;
-    caret-color: var(--main-color);
-}
-
-.form form div:not(:last-of-type, .gender) input:focus {
-    box-shadow: 0 0 5px 0 #246bfd;
-    outline: none;
-}
-
-.form form .gender h2 {
-    font-size: 25px;
-    font-weight: normal;
-    /* margin-bottom: 14px; */
-    color: black;
+    color: var(--second-color);
+    margin-bottom: 40px;
 }
 
 @media(max-width:767px) {
-    .form form div:not(.gender) label {
-        font-size: 22px;
-    }
-
-    .form form .gender h2 {
+    .form form h3 {
         font-size: 22px;
     }
 }
 
-.form form .gender input {
-    margin-right: 7px;
+.form form div {
+    text-align: left;
+    margin-top: 20px;
 }
 
-.form form .gender label:first-of-type {
-    margin-right: 50%;
+
+.form form .code {
+    display: flex;
+    justify-content: center;
+}
+
+.form form .code input {
+    outline: none;
+    border: 2px solid #e9edf9;
+    padding: 20px 20px;
+    border-radius: 10px;
+    caret-color: var(--main-color);
+    text-align: center;
+    font-size: 23px;
+    font-weight: bold;
+    box-shadow: 0 0 2px 0px var(--main-color);
+}
+
+@media(min-width:992px) {
+    .form form .code input {
+        width: 70px;
+        height: 70px;
+    }
 }
 
 @media(max-width:991px) {
-    .form form .gender label:first-of-type {
-        margin-right: 30%;
+    .form form .code input {
+        width: 50px;
+        height: 50px;
+        padding: 20px 10px;
     }
 }
 
-.form form .gender label {
-    font-size: 20px;
-    color: var(--second-color);
+
+.form form .code input:not(:last-of-type) {
+    margin-right: 40px;
 }
 
-.form form .gender input:first-of-type {
-    margin-left: 5px;
+@media(max-width:767px) {
+    .form form .code input:not(:last-of-type) {
+        margin-right: 28px;
+    }
 }
 
-
-.form form div input::placeholder {
-    transition: opacity var(--main-transition);
-}
-
-.form form div input:focus::placeholder {
-    opacity: 0;
+.form form div:not(:last-of-type) input:focus {
+    box-shadow: 0 0 5px 0 var(--main-color);
+    outline: none;
 }
 
 /* ****** */
@@ -402,22 +386,31 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 /* ****** */
+
+.form form div input::placeholder {
+    transition: opacity var(--main-transition);
+}
+
+.form form div input:focus::placeholder {
+    opacity: 0;
+}
+
 .form form .submit {
     text-align: center;
-    margin-top: 60px;
 }
 
 .form form .submit input {
     display: block;
-    width: 100%;
+    width: 75%;
     padding: 15px;
     background-color: var(--main-color);
     color: white;
     font-size: 20px;
+    font-weight: bold;
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    margin-bottom: 35px;
+    margin: 40px auto 0px;
     transition: var(--main-transition);
 }
 
@@ -426,21 +419,7 @@ input[type="number"]::-webkit-inner-spin-button {
     transform: scale(0.9);
 }
 
-.form form .submit p {
-    font-size: 17px;
-}
-
-.form form .submit p a {
-    color: var(--main-color);
-    transition: var(--main-transition);
-}
-
-.form form .submit p a:hover {
-    transform: scale(0.9);
-}
-
-/* End Section Form  */
-
+/* End Form  */
 /* Start Footer  */
 .footer {
     padding-top: 30px;

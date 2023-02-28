@@ -83,7 +83,6 @@ html::-webkit-scrollbar-thumb:hover {
 
 /* End Global Rules  */
 /* ******************************* */
-
 /* Start Header  */
 .header {
     background-color: #ffffff;
@@ -203,7 +202,6 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 .header .nav-bar .bottom a {
-    color: black;
     padding: 3px 13px;
     border-radius: 10px;
     transition: var(--main-transition);
@@ -215,17 +213,12 @@ html::-webkit-scrollbar-thumb:hover {
         font-size: 13px;
         border-radius: 6px;
     }
-
 }
 
-.header .nav-bar .bottom li:last-of-type a {
+.header .nav-bar .bottom li a {
     background-color: var(--main-color);
     color: white;
     box-shadow: 0 0 8px 0px rgb(0 0 0 / 15%);
-}
-
-.header .nav-bar .bottom li:first-of-type a:hover {
-    color: var(--main-color);
 }
 
 .header .nav-bar .bottom li:last-of-type a:hover {
@@ -238,15 +231,53 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 /* End Header  */
-
-/* Start Section Form  */
+/* Start Form  */
 .form {
-    padding-top: 60px;
+    padding-top: 100px;
     padding-bottom: 100px;
 }
 
 .form .container {
-    text-align: center;
+    display: flex;
+    gap: 20px;
+}
+
+.form .container .image {
+    display: flex;
+    align-items: center;
+}
+
+.form .container .image img {
+    width: 520px;
+    max-width: 100%;
+    margin-top: 90px;
+    animation: img-animation 1s linear infinite alternate;
+}
+
+@keyframes img-animation {
+    to {
+        transform: translateY(0);
+    }
+
+    from {
+        transform: translateY(-15px);
+    }
+}
+
+@media (max-width:991px) {
+    .form {
+        padding-top: 60px;
+    }
+
+    .form .container {
+        flex-direction: column;
+    }
+
+    .form .container .image img {
+        margin: auto;
+        margin-top: 0px;
+    }
+
 }
 
 .form .head-loading {
@@ -256,81 +287,61 @@ html::-webkit-scrollbar-thumb:hover {
     position: relative;
 }
 
-.form .head-loading::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 50px;
-    z-index: -1;
-    background-color: var(--main-color);
-    border-radius: 3px;
-    animation: loading 7s linear infinite alternate;
-}
 
-@keyframes loading {
-
-    0%,
-    100% {
-        left: 0;
-    }
-
-    50% {
-        left: calc(100% - 50px);
-    }
-}
-
-
-.form .head-loading h2 {
+.form h2 {
     font-size: 35px;
     font-weight: bold;
     margin: 0 auto 43px;
     color: var(--main-color);
     line-height: 1;
-    mix-blend-mode: color-dodge;
+    /* mix-blend-mode: color-dodge; */
 }
 
 @media(max-width:767px) {
-    .form .head-loading h2 {
+    .form h2 {
         font-size: 30px;
     }
-
 }
 
+.form .section-form {
+    flex: 1;
+}
 
 .form form {
-    width: 65%;
-    margin: 15px auto;
-    border-radius: 5px;
+    width: 100%;
+    margin: auto;
+    border-radius: 15px;
     border: 1px solid var(--main-color);
     box-shadow: 0 0 10px 2px rgb(0 0 0 / 10%);
-    padding: 75px;
+    padding: 45px;
 }
 
 @media(max-width:767px) {
     .form form {
-        width: 100%;
-        padding: 40px 20px;
+        /* width: fit-content; */
+        padding: 30px;
     }
 
 }
 
 .form form div {
     text-align: left;
-    margin-top: 30px;
-}
-
-.form form div:first-child {
     margin-top: 25px;
 }
 
-.form form div:not(.gender) label {
+
+.form form div label {
     font-size: 25px;
     color: black;
 }
 
-.form form div:not(:last-of-type, .gender) input {
+@media(max-width:767px) {
+    .form form div label {
+        font-size: 22px;
+    }
+}
+
+.form form div:not(:last-of-type) input {
     outline: none;
     border: 2px solid #e9edf9;
     padding: 15px 20px;
@@ -340,51 +351,10 @@ html::-webkit-scrollbar-thumb:hover {
     caret-color: var(--main-color);
 }
 
-.form form div:not(:last-of-type, .gender) input:focus {
-    box-shadow: 0 0 5px 0 #246bfd;
+.form form div:not(:last-of-type) input:focus {
+    box-shadow: 0 0 5px 0 var(--main-color);
     outline: none;
 }
-
-.form form .gender h2 {
-    font-size: 25px;
-    font-weight: normal;
-    /* margin-bottom: 14px; */
-    color: black;
-}
-
-@media(max-width:767px) {
-    .form form div:not(.gender) label {
-        font-size: 22px;
-    }
-
-    .form form .gender h2 {
-        font-size: 22px;
-    }
-}
-
-.form form .gender input {
-    margin-right: 7px;
-}
-
-.form form .gender label:first-of-type {
-    margin-right: 50%;
-}
-
-@media(max-width:991px) {
-    .form form .gender label:first-of-type {
-        margin-right: 30%;
-    }
-}
-
-.form form .gender label {
-    font-size: 20px;
-    color: var(--second-color);
-}
-
-.form form .gender input:first-of-type {
-    margin-left: 5px;
-}
-
 
 .form form div input::placeholder {
     transition: opacity var(--main-transition);
@@ -394,17 +364,12 @@ html::-webkit-scrollbar-thumb:hover {
     opacity: 0;
 }
 
-/* ****** */
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+.form form div.submit {
+    margin-top: 50px;
 }
 
-/* ****** */
 .form form .submit {
     text-align: center;
-    margin-top: 60px;
 }
 
 .form form .submit input {
@@ -413,11 +378,12 @@ input[type="number"]::-webkit-inner-spin-button {
     padding: 15px;
     background-color: var(--main-color);
     color: white;
+    font-weight: bold;
     font-size: 20px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
     transition: var(--main-transition);
 }
 
@@ -426,21 +392,7 @@ input[type="number"]::-webkit-inner-spin-button {
     transform: scale(0.9);
 }
 
-.form form .submit p {
-    font-size: 17px;
-}
-
-.form form .submit p a {
-    color: var(--main-color);
-    transition: var(--main-transition);
-}
-
-.form form .submit p a:hover {
-    transform: scale(0.9);
-}
-
-/* End Section Form  */
-
+/* End Form  */
 /* Start Footer  */
 .footer {
     padding-top: 30px;
