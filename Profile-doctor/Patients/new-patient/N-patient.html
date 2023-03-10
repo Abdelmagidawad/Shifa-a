@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shifa’a-New-Patient</title>
+    <!-- Render All Element Normally  -->
+    <link rel="stylesheet" href="../../../CSS/normalize.css">
+    <!-- Font Awesome Library  -->
+    <link rel="stylesheet" href="../../../CSS/all.min.css">
+    <!-- Header file css  -->
+    <link rel="stylesheet" href="../../header.css">
+    <!-- New Patient File CSS  -->
+    <link rel="stylesheet" href="N-patient.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Start Header  -->
+    <div class="header" id="header">
+        <div class="container">
+            <a href="" class="logo">
+                <img src="../../../images/logo.jpeg" alt="photo-logo">
+                Shifa’a
+            </a>
+            <div class="nav-bar">
+                <ul class="links">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Schedule</a></li>
+                    <li>
+                        <a href="">Patients</a>
+                        <ul class="patient-links">
+                            <li class="p-link">
+                                <a href="N-patient.html"><i class="fa-solid fa-user-group"></i>New Patients</a>
+                            </li>
+                            <li class="p-link">
+                                <a href="../past-patient/P-patient.html"><i class="fa-solid fa-user-group"></i>Past
+                                    Patients</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="">Dashboard</a></li>
+                </ul>
+                <ul class="Profile-toltab">
+                    <li>
+                        <img src="../../Home/home-image/avatar-doctor.png" alt="pro-img">
+                        <div class="tol-tab">
+                            <div>
+                                <img src="../../Home/home-image/avatar-doctor.png" alt="photo">
+                                <h2>Abdelmagid Migo</h2>
+                            </div>
+                            <ul class="tol-links">
+                                <li> <a href=""><i class="fa-regular fa-user"></i>Edit Profile</a></li>
+                                <li><a href=""><i class="fa-regular fa-bell"></i>Notification</a></li>
+                                <li><a href=""><i class="far fa-check-circle fa-fw"></i>Security</a>
+                                </li>
+                                <li><a href=""><i class="fa-sharp fa-regular fa-globe"></i>Language</a></li>
+                                <li><a href=""><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Header  -->
+
+    <!-- Start List Patient  -->
+    <div class="list-patient">
+        <div class="main-heading">
+            <h2>List of patients</h2>
+            <p>14 Pending requests</p>
+        </div>
+        <!-- When open mobile app  -->
+        <div class="for-mobile">
+            <div class="container">
+                <img src="new-img/logo2.jpeg" alt="logo">
+                <div>
+                    <h2>Download our mobile app</h2>
+                    <a href="">Download</a>
+                </div>
+            </div>
+        </div>
+        <!-- End mobile-->
+        <div class="ccontainer">
+            <div class="filter">
+                <label for="filter"><i class="fa-solid fa-filter"></i></label>
+                <select name="" id="filter">
+                    <option value="" selected>All</option>
+                    <option value="">Pending</option>
+                    <option value="">Accepted</option>
+                    <option value="">Declined</option>
+                </select>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>ID</td>
+                        <td>Email</td>
+                        <td>Phone number</td>
+                        <td>Date added</td>
+                        <td>Status</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="new-img/patient1.png" alt="photo">
+                            Ahmed Ibrahim
+                        </td>
+                        <td>147801</td>
+                        <td>Ahmed@gamil.com</td>
+                        <td>01017281918</td>
+                        <td>
+                            21/2/2022
+                            <span>10:00 AM</span>
+                        </td>
+                        <td><span class="pen">Pending</span></td>
+                        <td>
+                            <a href="" title="See More"><i class="fas fa-long-arrow-alt-right"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="new-img/patient2.png" alt="photo">
+                            Ali Ibrahim
+                        </td>
+                        <td>147802</td>
+                        <td>Ali@gamil.com</td>
+                        <td>01019271618</td>
+                        <td>
+                            22/2/2022
+                            <span>10:30 AM</span>
+                        </td>
+                        <td><span class="des">Declined</span></td>
+                        <td>
+                            <a href="" title="See More"><i class="fas fa-long-arrow-alt-right"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="new-img/patient3.png" alt="photo">
+                            Ahmed Ali
+                        </td>
+                        <td>147803</td>
+                        <td>Ahmed@gamil.com</td>
+                        <td>01012281615</td>
+                        <td>
+                            25/2/2022
+                            <span>11:00 AM</span>
+                        </td>
+                        <td><span>Accepted</span></td>
+                        <td>
+                            <a href="" title="See More"><i class="fas fa-long-arrow-alt-right"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="new-img/patient4.png" alt="photo">
+                            Hossam Khedr
+                        </td>
+                        <td>147804</td>
+                        <td>Hossam@gamil.com</td>
+                        <td>01117261218</td>
+                        <td>
+                            16/2/2022
+                            <span>12:00 AM</span>
+                        </td>
+                        <td><span>Accepted</span></td>
+                        <td>
+                            <a href="" title="See More"><i class="fas fa-long-arrow-alt-right"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="new-img/patient5.png" alt="photo">
+                            Samey Ahmed
+                        </td>
+                        <td>147805</td>
+                        <td>Samey@gamil.com</td>
+                        <td>01217281918</td>
+                        <td>
+                            6/2/2022
+                            <span>12:30 AM</span>
+                        </td>
+                        <td><span>Accepted</span></td>
+                        <td>
+                            <a href="" title="See More"><i class="fas fa-long-arrow-alt-right"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="new-img/patient7.jpg" alt="photo">
+                            Kholoud Ahmed
+                        </td>
+                        <td>147806</td>
+                        <td>Kholoud@gamil.com</td>
+                        <td>01017251712</td>
+                        <td>
+                            11/2/2023
+                            <span>10:00 AM</span>
+                        </td>
+                        <td><span class="des">Declined</span></td>
+                        <td>
+                            <a href="" title="See More"><i class="fas fa-long-arrow-alt-right"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="new-img/patient9.png" alt="photo">
+                            Aya Ibrahim
+                        </td>
+                        <td>147807</td>
+                        <td>Aya@gamil.com</td>
+                        <td>01011281718</td>
+                        <td>
+                            28/2/2023
+                            <span>10:30 AM</span>
+                        </td>
+                        <td><span class="pen">Pending</span></td>
+                        <td>
+                            <a href="" title="See More"><i class="fas fa-long-arrow-alt-right"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="new-img/patient9.png" alt="photo">
+                            Walaa Ali
+                        </td>
+                        <td>147808</td>
+                        <td>Walaa@gamil.com</td>
+                        <td>01117281519</td>
+                        <td>
+                            21/8/2023
+                            <span>1:00 PM</span>
+                        </td>
+                        <td><span class="pen">Pending</span></td>
+                        <td>
+                            <a href="" title="See More"><i class="fas fa-long-arrow-alt-right"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="new-img/patient5.png" alt="photo">
+                            Ahmed Rajab
+                        </td>
+                        <td>147809</td>
+                        <td>Ahmed@gamil.com</td>
+                        <td>01217281920</td>
+                        <td>
+                            5/6/2023
+                            <span>8:00 pM</span>
+                        </td>
+                        <td><span class="des">Declined</span></td>
+                        <td>
+                            <a href="" title="See More"><i class="fas fa-long-arrow-alt-right"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="new-img/patient6.png" alt="photo">
+                            Ibrahim Omar
+                        </td>
+                        <td>1478010</td>
+                        <td>Ibrahim@gamil.com</td>
+                        <td>01117282316</td>
+                        <td>
+                            17/8/2021
+                            <span>10:00 AM</span>
+                        </td>
+                        <td><span>Accepted</span></td>
+                        <td>
+                            <a href="" title="See More"><i class="fas fa-long-arrow-alt-right"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="new-img/patient1.png" alt="photo">
+                            Mahmoud Reda
+                        </td>
+                        <td>1478011</td>
+                        <td>Mahmoud@gamil.com</td>
+                        <td>01217241912</td>
+                        <td>
+                            17/2/2022
+                            <span>6:00 PM</span>
+                        </td>
+                        <td><span class="pen">Pending</span></td>
+                        <td>
+                            <a href="" title="See More"><i class="fas fa-long-arrow-alt-right"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="new-img/patient2.png" alt="photo">
+                            Ahmed Ibrahim
+                        </td>
+                        <td>1478012</td>
+                        <td>Ahmed@gamil.com</td>
+                        <td>01017281918</td>
+                        <td>
+                            21/2/2020
+                            <span>10:10 AM</span>
+                        </td>
+                        <td><span>Accepted</span></td>
+                        <td>
+                            <a href="" title="See More"><i class="fas fa-long-arrow-alt-right"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="new-img/patient7.jpg" alt="photo">
+                            Merna Ahmed
+                        </td>
+                        <td>1478013</td>
+                        <td>Merna@gamil.com</td>
+                        <td>01017291518</td>
+                        <td>
+                            8/3/2023
+                            <span>12:30 PM</span>
+                        </td>
+                        <td><span class="pen">Pending</span></td>
+                        <td>
+                            <a href="" title="See More"><i class="fas fa-long-arrow-alt-right"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="new-img/patient5.png" alt="photo">
+                            Reda Ahmed
+                        </td>
+                        <td>1478014</td>
+                        <td>Ahmed@gamil.com</td>
+                        <td>01217281615</td>
+                        <td>
+                            8/3/2023
+                            <span>2:20 PM</span>
+                        </td>
+                        <td><span>Accepted</span></td>
+                        <td>
+                            <a href="" title="See More"><i class="fas fa-long-arrow-alt-right"></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- End List Patient  -->
+
+</body>
