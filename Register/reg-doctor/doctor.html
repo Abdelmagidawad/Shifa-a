@@ -1,183 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shifa’a-Register-Doctor</title>
+    <link
+      rel="shortcut icon"
+      href="../../images/favicon.png"
+      style="width: 30px; height: 30px"
+    />
     <!-- Render All Element Normally  -->
-    <link rel="stylesheet" href="../../CSS/normalize.css">
+    <link rel="stylesheet" href="../../CSS/normalize.css" />
     <!-- Register Doctor file CSS  -->
-    <link rel="stylesheet" href="doctor.css">
+    <link rel="stylesheet" href="doctor.css" />
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <!-- Start Header  -->
     <div class="header" id="header">
-        <div class="container">
-            <a href="../../index.html" class="logo">
-                <img src="../../images/logo.jpeg" alt="photo-logo">
-                Shifa’a
-            </a>
-            <div class="nav-bar">
-                <ul class="links">
-                    <li><a href="../../index.html">Home</a></li>
-                    <li><a href="#">Doctor</a></li>
-                    <li><a href="../../index.html">Services</a></li>
-                    <li><a href="#">Review</a></li>
-                </ul>
-                <ul class="bottom">
-                    <li><a href="../../Login/login.html">Sign In</a></li>
-                </ul>
-            </div>
+      <div class="container">
+        <a href="../../index.html" class="logo">
+          <img src="../../images/logo.jpeg" alt="photo-logo" />
+          Shifa’a
+        </a>
+        <div class="nav-bar">
+          <ul class="links">
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="#">Doctor</a></li>
+            <li><a href="../../index.html">Services</a></li>
+            <li><a href="#">Review</a></li>
+          </ul>
+          <ul class="bottom">
+            <li><a href="../../Login/login.html">Sign In</a></li>
+          </ul>
         </div>
+      </div>
     </div>
     <!-- End Header  -->
 
     <!-- Start Section Form  -->
     <div class="form">
-        <div class="container">
-            <div class="head-loading">
-                <h2>Create A New Account</h2>
-            </div>
-            <form action="" method="get">
-                <div class="f-name">
-                    <label for="">First Name</label><br>
-                    <input type="text" placeholder="First Name" name="first-name" autofocus>
-                </div>
-                <div class="l-name">
-                    <label for="">Last Name</label><br>
-                    <input type="text" placeholder="Last Name" name="last-name">
-                </div>
-                <div class="gender">
-                    <h2>Gender</h2>
-                    <input id="mal" type="radio" name="gender" value="male">
-                    <label for="mal">Male</label>
-                    <input id="fem" type="radio" name="gender" value="female">
-                    <label for="fem">Female</label>
-                </div>
-                <div class="specialty">
-                    <label for="">Specialty</label><br>
-                    <input list="specialty" name="specialty" placeholder="Choose Your Specialty">
-                    <datalist id="specialty">
-                        <option value="Dermatology">
-                        <option value="Dentistry">
-                        <option value="Psychiatry">
-                        <option value="Pediatrics and New Born">
-                        <option value="Neurology">
-                        <option value="Orthopedics">
-                        <option value="Gynaecology and Infertility">
-                        <option value="Ear, Nose and Throat">
-                        <option value="Cardiology and Vascular Disease">
-                        <option value="Allergy and Immunology">
-                        <option value="Andrology and Male Infertility">
-                        <option value="Audiology">
-                        <option value="Cardiology and Thoracic Surgery">
-                        <option value="Chest and Respiratory">
-                        <option value="Diabetes and Endocrinology">
-                        <option value="Diagnostic Radiology">
-                        <option value="Dietitian and Nutrition">
-                        <option value="Family Medicine">
-                        <option value="Gastroenterology and Endoscopy">
-                        <option value="General Practice">
-                        <option value="General Surgery">
-                        <option value="Geriatrics">
-                        <option value="Hematology">
-                        <option value="Hepatology">
-                        <option value="Internal Medicine">
-                        <option value="IVF and Infertility">
-                        <option value="Laboratories">
-                        <option value="Nephrology">
-                        <option value="Obesity and Laparoscopic Surgery">
-                        <option value="Oncology">
-                        <option value="Oncology Surgery">
-                        <option value="Ophthalmology">
-                        <option value="Osteopathy">
-                        <option value="Pain Management">
-                        <option value="Pediatric Surgery">
-                        <option value="Phoniatrics">
-                        <option value="Plastic Surgery">
-                        <option value="Rheumatology">
-                        <option value="Spinal Surgery">
-                        <option value="Urology">
-                        <option value="Vascular Surgery">
-                    </datalist>
-                </div>
-                <div class="phone">
-                    <label for="">Mobile Number</label><br>
-                    <input type="number" placeholder="+20" name="phone" min="1000000000" max="9999999999">
-                </div>
-                <div class="email">
-                    <label for="">Email</label><br>
-                    <input type="email" placeholder="Doctor@Example.com" name="email" required>
-                </div>
-                <div class="pass">
-                    <label for="">Password</label><br>
-                    <input type="password" placeholder="Password" name="password" required minlength="8">
-                </div>
-                <div class="con-pass">
-                    <label for="">Confirm Password</label><br>
-                    <input type="password" placeholder="Confirm Password" name="confirm password" required
-                        minlength="8">
-                </div>
-                <div class="submit">
-                    <input type="submit" value="Sign up" formaction="../../Login/login.html">
-                    <p>
-                        Already have an account?
-                        <a href="../../Login/login.html"> Sign in</a>
-                    </p>
-                </div>
-            </form>
+      <div class="container">
+        <div class="head-loading">
+          <h2>Create A New Account</h2>
         </div>
+        <form action="" method="get">
+          <div class="f-name">
+            <label for="">First Name</label><br />
+            <input
+              type="text"
+              placeholder="First Name"
+              name="first-name"
+              autofocus
+            />
+          </div>
+          <div class="l-name">
+            <label for="">Last Name</label><br />
+            <input type="text" placeholder="Last Name" name="last-name" />
+          </div>
+          <div class="gender">
+            <h2>Gender</h2>
+            <input id="mal" type="radio" name="gender" value="male" />
+            <label for="mal">Male</label>
+            <input id="fem" type="radio" name="gender" value="female" />
+            <label for="fem">Female</label>
+          </div>
+          <div class="specialty">
+            <label for="">Specialty</label><br />
+            <input
+              list="specialty"
+              name="specialty"
+              placeholder="Choose Your Specialty"
+            />
+            <datalist id="specialty">
+              <option value="Dermatology"></option>
+              <option value="Dentistry"></option>
+              <option value="Psychiatry"></option>
+              <option value="Pediatrics and New Born"></option>
+              <option value="Neurology"></option>
+              <option value="Orthopedics"></option>
+              <option value="Gynaecology and Infertility"></option>
+              <option value="Ear, Nose and Throat"></option>
+              <option value="Cardiology and Vascular Disease"></option>
+              <option value="Allergy and Immunology"></option>
+              <option value="Andrology and Male Infertility"></option>
+              <option value="Audiology"></option>
+              <option value="Cardiology and Thoracic Surgery"></option>
+              <option value="Chest and Respiratory"></option>
+              <option value="Diabetes and Endocrinology"></option>
+              <option value="Diagnostic Radiology"></option>
+              <option value="Dietitian and Nutrition"></option>
+              <option value="Family Medicine"></option>
+              <option value="Gastroenterology and Endoscopy"></option>
+              <option value="General Practice"></option>
+              <option value="General Surgery"></option>
+              <option value="Geriatrics"></option>
+              <option value="Hematology"></option>
+              <option value="Hepatology"></option>
+              <option value="Internal Medicine"></option>
+              <option value="IVF and Infertility"></option>
+              <option value="Laboratories"></option>
+              <option value="Nephrology"></option>
+              <option value="Obesity and Laparoscopic Surgery"></option>
+              <option value="Oncology"></option>
+              <option value="Oncology Surgery"></option>
+              <option value="Ophthalmology"></option>
+              <option value="Osteopathy"></option>
+              <option value="Pain Management"></option>
+              <option value="Pediatric Surgery"></option>
+              <option value="Phoniatrics"></option>
+              <option value="Plastic Surgery"></option>
+              <option value="Rheumatology"></option>
+              <option value="Spinal Surgery"></option>
+              <option value="Urology"></option>
+              <option value="Vascular Surgery"></option>
+            </datalist>
+          </div>
+          <div class="phone">
+            <label for="">Mobile Number</label><br />
+            <input
+              type="number"
+              placeholder="+20"
+              name="phone"
+              min="1000000000"
+              max="9999999999"
+            />
+          </div>
+          <div class="email">
+            <label for="">Email</label><br />
+            <input
+              type="email"
+              placeholder="Doctor@Example.com"
+              name="email"
+              required
+            />
+          </div>
+          <div class="pass">
+            <label for="">Password</label><br />
+            <input
+              type="password"
+              placeholder="Password"
+              name="password"
+              required
+              minlength="8"
+            />
+          </div>
+          <div class="con-pass">
+            <label for="">Confirm Password</label><br />
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              name="confirm password"
+              required
+              minlength="8"
+            />
+          </div>
+          <div class="submit">
+            <input
+              type="submit"
+              value="Sign up"
+              formaction="../../Login/login.html"
+            />
+            <p>
+              Already have an account?
+              <a href="../../Login/login.html"> Sign in</a>
+            </p>
+          </div>
+        </form>
+      </div>
     </div>
     <!-- End Section Form  -->
     <!-- Start Footer  -->
     <div class="footer">
-        <div class="container">
-            <div class="about">
-                <a href="../../index.html">
-                    <img src="../../images/logo-footer.png" alt="logo">
-                    Shifa’a
-                </a>
-                <p>
-                    Shifa’a provides progressive, and affordable healthcare, accessible on mobile and online
-                    for everyone
-                </p>
-            </div>
-            <div class="info">
-                <div class="box">
-                    <h3>Team Shifa’a</h3>
-                    <ul>
-                        <li><a href="#">About</a></li>
-                        <li><a href="">Find a doctor</a></li>
-                        <li><a href="">App</a></li>
-                    </ul>
-                </div>
-                <div class="box">
-                    <h3>Help</h3>
-                    <ul>
-                        <li><a href="">Help center</a></li>
-                        <li><a href="">Contact support</a></li>
-                    </ul>
-                </div>
-                <div class="box">
-                    <h3>Region</h3>
-                    <ul>
-                        <li>Egypt</li>
-                    </ul>
-                </div>
-            </div>
-            <p>Copyright &copy; 2023 <span>Shifa’a</span> . All Rights Reseved.</p>
+      <div class="container">
+        <div class="about">
+          <a href="../../index.html">
+            <img src="../../images/logo-footer.png" alt="logo" />
+            Shifa’a
+          </a>
+          <p>
+            Shifa’a provides progressive, and affordable healthcare, accessible
+            on mobile and online for everyone
+          </p>
         </div>
+        <div class="info">
+          <div class="box">
+            <h3>Team Shifa’a</h3>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="">Find a doctor</a></li>
+              <li><a href="">App</a></li>
+            </ul>
+          </div>
+          <div class="box">
+            <h3>Help</h3>
+            <ul>
+              <li><a href="">Help center</a></li>
+              <li><a href="">Contact support</a></li>
+            </ul>
+          </div>
+          <div class="box">
+            <h3>Region</h3>
+            <ul>
+              <li>Egypt</li>
+            </ul>
+          </div>
+        </div>
+        <p>Copyright &copy; 2023 <span>Shifa’a</span> . All Rights Reseved.</p>
+      </div>
     </div>
     <!-- End Footer  -->
-
-
-</body>
-
+  </body>
 </html>
