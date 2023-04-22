@@ -443,6 +443,7 @@ html::-webkit-scrollbar-thumb:hover {
   width: fit-content;
   padding: 15px 50px;
   margin: 35px 0 0 5px;
+  font-weight: bold;
   border-radius: 25px;
   background: var(--main-color);
   color: white;
