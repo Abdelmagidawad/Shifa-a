@@ -1,0 +1,318 @@
+/* Start Global Rules  */
+:root {
+  --main-color: #246bfd;
+  --second-color: #7d7987;
+  --main-padding: 100px;
+  --main-transition: 0.4s;
+  --section-background: #e5e5e533;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Add Scrollbar  */
+html::-webkit-scrollbar {
+  width: 15px;
+}
+
+html::-webkit-scrollbar-track {
+  box-shadow: 0 0 7px #777 inset;
+  background-color: #ddd;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-color: #3055cb;
+}
+
+/* End Scrollbar  */
+
+/* End Global Rules  */
+/* ******************************* */
+
+/* Start canceled of Doctor  */
+
+.list-canceled {
+  padding-top: 60px;
+  padding-bottom: var(--main-padding);
+  background-color: var(--section-background);
+}
+
+.list-canceled .links-appointments {
+  padding-right: 30px;
+  display: flex;
+  gap: 40px;
+}
+
+.list-canceled .links-appointments input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.list-canceled .links-appointments div {
+  width: 30%;
+}
+.list-canceled .links-appointments .up-appoint {
+  margin-left: -9px;
+}
+.list-canceled .links-appointments label {
+  display: block;
+  cursor: pointer;
+  text-align: center;
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px 0px;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
+}
+@media (max-width: 767px) {
+  .list-canceled .links-appointments label {
+    border-radius: 11px;
+    padding: 14px 4px;
+    font-size: 14px;
+  }
+
+  .list-canceled .links-appointments {
+    padding-right: 0px;
+    display: flex;
+    gap: 5px;
+    padding: 0 10px;
+  }
+  .list-canceled .links-appointments .up-appoint {
+    margin-left: 0px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .list-canceled .links-appointments {
+    gap: 20px;
+  }
+  .list-canceled .links-appointments .up-appoint {
+    margin-left: 9px;
+  }
+  .list-canceled .links-appointments label {
+    padding: 16px 0px;
+    font-size: 17px;
+  }
+}
+
+.list-canceled .links-appointments input[type="radio"]:checked + div label {
+  background-color: var(--main-color);
+}
+.list-canceled .links-appointments input[type="radio"]:checked + div label a {
+  color: white;
+}
+
+.list-canceled .links-appointments label a {
+  display: block;
+  width: fit-content;
+  margin: auto;
+  color: var(--main-color);
+}
+
+.list-canceled .list-doctor-Can {
+  width: calc(100% - 60px);
+  margin: auto;
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  margin-top: 50px;
+  box-shadow: 0 0 7px 1px rgb(0 0 0 /10%);
+}
+
+.list-canceled .list-doctor-Can .list-doctor .header-doc {
+  display: flex;
+  gap: 15px;
+}
+
+.list-canceled .list-doctor-Can .list-doctor .header-doc h3 {
+  font-size: 21px;
+  color: var(--second-color);
+  margin-bottom: 0;
+  width: 25%;
+}
+
+.list-canceled .list-doctor-Can .list-doctor .box {
+  display: flex;
+  gap: 15px;
+  margin: 15px 0;
+  background-color: #e5e5e573;
+  padding: 20px 10px;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  transition: var(--main-transition);
+}
+
+.list-canceled .list-doctor-Can .list-doctor .box:hover {
+  transform: scale(1.03);
+  background-color: #246bfd3d;
+}
+
+.list-canceled .list-doctor-Can .list-doctor .box .image {
+  display: flex;
+  align-items: center;
+  width: 25%;
+}
+
+.list-canceled .list-doctor-Can .list-doctor .box .image img {
+  max-width: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.list-canceled .list-doctor-Can .list-doctor .box p {
+  width: 25%;
+}
+
+.list-canceled .list-doctor-Can .list-doctor .box p:last-of-type {
+  width: 20%;
+}
+
+.list-canceled .list-doctor-Can .list-doctor .box .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+}
+.list-canceled .list-doctor-Can .list-doctor .box .button span {
+  /* background-color: #00f260; */
+  background-color: #f00000;
+  padding: 8px 15px;
+  border-radius: 8px;
+  color: white;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .list-canceled .list-doctor-Can .title {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+  .list-canceled .list-doctor-Can .list-doctor .header-doc {
+    gap: 10px;
+  }
+  .list-canceled .list-doctor-Can .list-doctor .header-doc h3 {
+    font-size: 18px;
+  }
+  .list-canceled .list-doctor-Can .list-doctor .box {
+    gap: 10px;
+    padding: 15px 10px;
+    font-size: 15px;
+  }
+  .list-canceled .list-doctor-Can .list-doctor .box .image img {
+    max-width: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+}
+
+/* When open mobile app */
+
+@media (max-width: 767px) {
+  .list-canceled .list-doctor-Can {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .list-canceled .for-mobile {
+    display: none;
+  }
+}
+
+.list-canceled .for-mobile {
+  margin-top: 70px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.list-canceled .for-mobile .img-back {
+  max-width: 90%;
+  position: absolute;
+  z-index: -1;
+}
+
+.list-canceled .for-mobile .container {
+  width: fit-content;
+  margin: auto;
+  box-shadow: 0 0 7px 1px rgb(0 0 0 / 10%);
+  border: 1px solid var(--main-color);
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+}
+
+.list-canceled .for-mobile .imge {
+  max-width: 75px;
+  border-radius: 50%;
+  margin: 15px 0 0px;
+  animation: for-mobile-img 1.5s ease-in-out infinite;
+}
+
+@keyframes for-mobile-img {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+.list-canceled .for-mobile div {
+  margin: 10px 0 20px;
+}
+
+.list-canceled .for-mobile div h2 {
+  font-size: 30px;
+  margin-bottom: 50px;
+  color: var(--second-color);
+  padding-top: 30px;
+  border-top: 2px solid #e5e5e5;
+}
+
+.list-canceled .for-mobile a {
+  display: block;
+  width: fit-content;
+  margin: auto;
+  padding: 10px 15px;
+  background-color: var(--main-color);
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: var(--main-transition);
+}
+
+.list-canceled .for-mobile a:hover {
+  transform: scale(0.9);
+}
+
+/* End mobile */
+
+/* End canceled of Doctor  */

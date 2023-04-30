@@ -317,10 +317,16 @@ html::-webkit-scrollbar-thumb:hover {
   padding-right: 15px;
 }
 
+.list-patient .for-mobile .img-back {
+  max-width: 90%;
+  position: absolute;
+  z-index: -1;
+}
+
 .list-patient .for-mobile .container {
   width: fit-content;
   margin: auto;
-  background-color: white;
+  /* background-color: white; */
   box-shadow: 0 0 7px 1px rgb(0 0 0 / 10%);
   border: 1px solid var(--main-color);
   border-radius: 15px;
@@ -328,7 +334,7 @@ html::-webkit-scrollbar-thumb:hover {
   text-align: center;
 }
 
-.list-patient .for-mobile img {
+.list-patient .for-mobile .imge {
   max-width: 75px;
   border-radius: 50%;
   margin: 15px 0 0px;
