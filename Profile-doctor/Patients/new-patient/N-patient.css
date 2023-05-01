@@ -313,6 +313,8 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 .list-patient .for-mobile {
+  margin-top: 100px;
+  margin-bottom: 155px;
   padding-left: 15px;
   padding-right: 15px;
 }

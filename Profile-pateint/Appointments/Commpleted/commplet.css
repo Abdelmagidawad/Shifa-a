@@ -255,7 +255,8 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 .list-completed .for-mobile {
-  margin-top: 70px;
+  margin-top: 110px;
+  margin-bottom: 155px;
   padding-left: 15px;
   padding-right: 15px;
 }
