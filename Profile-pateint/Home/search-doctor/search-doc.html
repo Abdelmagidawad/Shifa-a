@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shifa’a | Patient | Search | Doctor</title>
+    <link
+      rel="shortcut icon"
+      href="../../../images/favicon.png"
+      style="width: 30px; height: 30px"
+    />
+    <!-- Render All Element Normally  -->
+    <link rel="stylesheet" href="../../../CSS/normalize.css" />
+    <!-- Font Awesome Library  -->
+    <link rel="stylesheet" href="../../../CSS/all.min.css" />
+    <!-- Header-patient file css  -->
+    <link rel="stylesheet" href="../../header.css" />
+    <!-- Search Doctor File CSS  -->
+    <link rel="stylesheet" href="search-doc.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Start Header  -->
+    <div class="header" id="header">
+      <div class="container">
+        <a href="#" class="logo">
+          <img src="../../../images/logo.png" alt="photo-logo" />
+          Shifa’a
+        </a>
+        <div class="nav-bar">
+          <ul class="links">
+            <li><a href="../home.html">Home</a></li>
+            <li><a href="#">Reports</a></li>
+            <li>
+              <a href="../../Appointments/Upcomming/upcom.html">Appointments</a>
+            </li>
+            <li><a href="#">Medicine</a></li>
+          </ul>
+          <ul class="Profile-toltab">
+            <li>
+              <img src="../Home-img/profile-img.png" alt="pro-img" />
+              <div class="tol-tab">
+                <div>
+                  <img src="../Home-img/profile-img.png" alt="photo" />
+                  <h2>Ahmed Ibrahim</h2>
+                </div>
+                <ul class="tol-links">
+                  <li>
+                    <a href=""
+                      ><i class="fa-regular fa-user"></i>Edit Profile</a
+                    >
+                  </li>
+                  <li>
+                    <a href=""
+                      ><i class="fa-regular fa-bell"></i>Notification</a
+                    >
+                  </li>
+                  <li>
+                    <a href=""
+                      ><i class="far fa-check-circle fa-fw"></i>Security</a
+                    >
+                  </li>
+                  <li>
+                    <a href=""
+                      ><i class="fa-sharp fa-regular fa-globe"></i>Language</a
+                    >
+                  </li>
+                  <li>
+                    <a href=""
+                      ><i class="fa-solid fa-circle-question"></i>Help Center</a
+                    >
+                  </li>
+                  <li>
+                    <a href=""
+                      ><i class="fa-solid fa-arrow-right-from-bracket"></i
+                      >Logout</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- End Header  -->
+
+    <!-- Start List Doctors  -->
+    <div class="search-doctor">
+      <h2 class="main-title">Search A Doctor</h2>
+      <div class="container">
+        <div class="inputs">
+          <div class="input-search">
+            <i class="fa fa-search"></i>
+            <input
+              type="search"
+              name="namedoctor"
+              placeholder="Search doctor"
+            />
+          </div>
+          <div class="input-filter">
+            <label for="filter"><i class="fa-solid fa-filter"></i></label>
+            <select name="gender" id="filter">
+              <option value="" disabled selected hidden>Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+            <select name="specialty" id="filter">
+              <option value="" disabled selected hidden>Specialty</option>
+              <option value="Dermatology">Dermatology</option>
+              <option value="Dentistry">Dentistry</option>
+              <option value="Psychiatry">Psychiatry</option>
+              <option value="Pediatrics and New Born">
+                Pediatrics and New Born
+              </option>
+              <option value="Neurology">Neurology</option>
+              <option value="Orthopedics">Orthopedics</option>
+              <option value="Gynaecology and Infertility">
+                Gynaecology and Infertility
+              </option>
+              <option value="Ear, Nose and Throat">Ear, Nose and Throat</option>
+              <option value="Cardiology and Vascular Disease">
+                Cardiology and Vascular Disease
+              </option>
+              <option value="Allergy and Immunology">
+                Allergy and Immunology
+              </option>
+              <option value="Andrology and Male Infertility">
+                Andrology and Male Infertility
+              </option>
+              <option value="Audiology">Audiology</option>
+              <option value="Cardiology and Thoracic Surgery">
+                Cardiology and Thoracic Surgery
+              </option>
+              <option value="Chest and Respiratory">
+                Chest and Respiratory
+              </option>
+              <option value="Diabetes and Endocrinology">
+                Diabetes and Endocrinology
+              </option>
+              <option value="Diagnostic Radiology">Diagnostic Radiology</option>
+              <option value="Dietitian and Nutrition">
+                Dietitian and Nutrition
+              </option>
+              <option value="Family Medicine">Family Medicine</option>
+              <option value="Gastroenterology and Endoscopy">
+                Gastroenterology and Endoscopy
+              </option>
+              <option value="General Practice">General Practice</option>
+              <option value="General Surgery">General Surgery</option>
+              <option value="Geriatrics">Geriatrics</option>
+              <option value="Hematology">Hematology</option>
+              <option value="Hepatology">Hepatology</option>
+              <option value="Internal Medicine">Internal Medicine</option>
+              <option value="IVF and Infertility">IVF and Infertility</option>
+              <option value="Laboratories">Laboratories</option>
+              <option value="Nephrology">Nephrology</option>
+              <option value="Obesity and Laparoscopic Surgery">
+                Obesity and Laparoscopic Surgery
+              </option>
+              <option value="Oncology">Oncology</option>
+              <option value="Oncology Surgery">Oncology Surgery</option>
+              <option value="Ophthalmology">Ophthalmology</option>
+              <option value="Osteopathy">Osteopathy</option>
+              <option value="Pain Management">Pain Management</option>
+              <option value="Pediatric Surgery">Pediatric Surgery</option>
+              <option value="Phoniatrics">Phoniatrics</option>
+              <option value="Plastic Surgery">Plastic Surgery</option>
+              <option value="Rheumatology">Rheumatology</option>
+              <option value="Spinal Surgery">Spinal Surgery</option>
+              <option value="Urology">Urology</option>
+              <option value="Vascular Surgery">Vascular Surgery</option>
+            </select>
+          </div>
+        </div>
+        <div class="list-doc">
+          <div class="box">
+            <img src="search-images/doc1.png" alt="doctor-picture" />
+            <div class="content">
+              <h3>Mahmoud Reda</h3>
+              <span>Osteopathy</span>
+              <div class="rate">
+                <i class="filled fas fa-star"></i>
+                <i class="filled fas fa-star"></i>
+                <i class="filled fas fa-star"></i>
+                <i class="filled fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 4.0 )</span>
+              </div>
+              <p>
+                <i class="fas fa-map-marker-alt fa-fw"></i>
+                Egypt, Alsharkia
+              </p>
+              <div class="book"><a href="#">Book Now</a></div>
+            </div>
+          </div>
+          <div class="box">
+            <img src="search-images/doc2.jpg.crdownload" alt="doctor-picture" />
+            <div class="content">
+              <h3>Mohamed Hassan</h3>
+              <span>Rheumatology</span>
+              <div class="rate">
+                <i class="filled fas fa-star"></i>
+                <i class="filled fas fa-star"></i>
+                <i class="filled fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 3.0 )</span>
+              </div>
+              <p>
+                <i class="fas fa-map-marker-alt fa-fw"></i>
+                Egypt, Giza
+              </p>
+              <div class="book"><a href="#">Book Now</a></div>
+            </div>
+          </div>
+          <div class="box">
+            <img src="search-images/doc5.jpg" alt="doctor-picture" />
+            <div class="content">
+              <h3>Kholoud Ahmed</h3>
+              <span>Vascular Surgery</span>
+              <div class="rate">
+                <i class="filled fas fa-star"></i>
+                <i class="filled fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 2.0 )</span>
+              </div>
+              <p>
+                <i class="fas fa-map-marker-alt fa-fw"></i>
+                Egypt, Cairo
+              </p>
+              <div class="book"><a href="#">Book Now</a></div>
+            </div>
+          </div>
+          <div class="box">
+            <img src="search-images/doc4.jpg" alt="doctor-picture" />
+            <div class="content">
+              <h3>Aya Ibrahim</h3>
+              <span>Geriatrics</span>
+              <div class="rate">
+                <i class="filled fas fa-star"></i>
+                <i class="filled fas fa-star"></i>
+                <i class="filled fas fa-star"></i>
+                <i class="filled fas fa-star"></i>
+                <i class="filled fas fa-star"></i>
+                <span>( 5.0 )</span>
+              </div>
+              <p>
+                <i class="fas fa-map-marker-alt fa-fw"></i>
+                Egypt, Alsharkia
+              </p>
+              <div class="book"><a href="#">Book Now</a></div>
+            </div>
+          </div>
+          <div class="box">
+            <img src="search-images/doc1.png" alt="doctor-picture" />
+            <div class="content">
+              <h3>Ali Ahmed</h3>
+              <span>Osteopathy</span>
+              <div class="rate">
+                <i class="filled fas fa-star"></i>
+                <i class="filled fas fa-star"></i>
+                <i class="filled fas fa-star"></i>
+                <i class="filled fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 4.0 )</span>
+              </div>
+              <p>
+                <i class="fas fa-map-marker-alt fa-fw"></i>
+                Egypt, Giza
+              </p>
+              <div class="book"><a href="#">Book Now</a></div>
+            </div>
+          </div>
+          <div class="box">
+            <img src="search-images/doc2.jpg.crdownload" alt="doctor-picture" />
+            <div class="content">
+              <h3>Abdelmagid Awad</h3>
+              <span>Hematology</span>
+              <div class="rate">
+                <i class="filled fas fa-star"></i>
+                <i class="filled fas fa-star"></i>
+                <i class="filled fas fa-star"></i>
+                <i class="filled fas fa-star"></i>
+                <i class="filled fas fa-star"></i>
+                <span>( 5.0 )</span>
+              </div>
+              <p>
+                <i class="fas fa-map-marker-alt fa-fw"></i>
+                Egypt, Cairo
+              </p>
+              <div class="book"><a href="#">Book Now</a></div>
+            </div>
+          </div>
+          <div class="box">
+            <img src="search-images/doc4.jpg" alt="doctor-picture" />
+            <div class="content">
+              <h3>Merna Ahmed</h3>
+              <span>Vascular Surgery</span>
+              <div class="rate">
+                <i class="filled fas fa-star"></i>
+                <i class="filled fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 2.0 )</span>
+              </div>
+              <p>
+                <i class="fas fa-map-marker-alt fa-fw"></i>
+                Egypt, Giza
+              </p>
+              <div class="book"><a href="#">Book Now</a></div>
+            </div>
+          </div>
+          <div class="box">
+            <img src="search-images/doc2.jpg.crdownload" alt="doctor-picture" />
+            <div class="content">
+              <h3>Omar Ahmed</h3>
+              <span>General Practice</span>
+              <div class="rate">
+                <i class="filled fas fa-star"></i>
+                <i class="filled fas fa-star"></i>
+                <i class="filled fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 3.0 )</span>
+              </div>
+              <p>
+                <i class="fas fa-map-marker-alt fa-fw"></i>
+                Egypt, Cairo
+              </p>
+              <div class="book"><a href="#">Book Now</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End List Doctors  -->
+  </body>
+</html>

@@ -452,8 +452,7 @@ html::-webkit-scrollbar-thumb:hover {
 
 .landing .container .text a:hover {
   background-color: #4368e1;
-  color: #e6e6e6;
-  transform: scale(0.9);
+  box-shadow: 0 0 10px 0px var(--main-color);
 }
 
 @media (max-width: 991px) {
