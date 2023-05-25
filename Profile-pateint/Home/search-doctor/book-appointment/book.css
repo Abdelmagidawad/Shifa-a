@@ -1,0 +1,169 @@
+/* Start Global Rules  */
+:root {
+  --main-color: #246bfd;
+  --second-color: #7d7987;
+  --main-padding: 100px;
+  --main-transition: 0.4s;
+  --section-background: #e5e5e533;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* start container  */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* End container  */
+
+/* Add Scrollbar  */
+html::-webkit-scrollbar {
+  width: 15px;
+}
+
+html::-webkit-scrollbar-track {
+  box-shadow: 0 0 7px #777 inset;
+  background-color: #ddd;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-color: #3055cb;
+}
+
+/* End Scrollbar  */
+
+/* End Global Rules  */
+/* ******************************* */
+
+/* Start Book Appointment  */
+
+.book-appoint {
+  padding-top: 60px;
+  padding-bottom: var(--main-padding);
+  background-color: var(--section-background);
+}
+
+.book-appoint .main-title {
+  text-align: center;
+  font-size: 30px;
+  color: var(--main-color);
+  margin: 0 0 40px;
+}
+
+.book-appoint .container .book-details {
+  width: 80%;
+  margin: 30px auto 0;
+}
+.book-appoint .book-details .info {
+  background-color: white;
+  box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
+  border-radius: 10px;
+  padding: 40px;
+}
+.book-appoint .book-details .info .head {
+  display: flex;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.book-appoint .book-details .info .head img {
+  max-width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  width: 115px;
+  margin-right: 50px;
+}
+
+.book-appoint .book-details .info .head .name-spe h2 {
+  font-size: 27px;
+  margin-bottom: 15px;
+  color: var(--second-color);
+}
+.book-appoint .book-details .info .head .name-spe span {
+  display: flex;
+  font-size: 20px;
+  color: var(--second-color);
+}
+.book-appoint .book-details .info .details {
+  display: flex;
+  justify-content: space-around;
+  margin: 35px 50px;
+  /* gap: 25px; */
+}
+.book-appoint .book-details .info .details .box {
+  width: 10em;
+  background-color: var(--section-background);
+  box-shadow: 0 0 5px 2px rgb(0 0 0 /10%);
+  color: var(--main-color);
+  text-align: center;
+  border-radius: 20px;
+}
+.book-appoint .book-details .info .details .box h4 {
+  font-size: 18px;
+  margin: 15px 0 10px;
+}
+.book-appoint .book-details .info .details .box span {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.book-appoint .book-details .info .about h3 {
+  font-size: 23px;
+  color: var(--second-color);
+  margin-bottom: 10px;
+}
+.book-appoint .book-details .info .about p {
+  font-size: 19px;
+  line-height: 1.7;
+  color: var(--second-color);
+  margin: 0;
+}
