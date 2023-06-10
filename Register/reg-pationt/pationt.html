@@ -72,9 +72,9 @@
           </div>
           <div class="gender">
             <h2>Gender</h2>
-            <input id="mal" type="radio" name="gender" value="male" />
+            <input id="mal" type="radio" name="gender" value="Male" />
             <label for="mal">Male</label>
-            <input id="fem" type="radio" name="gender" value="female" />
+            <input id="fem" type="radio" name="gender" value="Female" />
             <label for="fem">Female</label>
           </div>
           <div class="email">
@@ -117,11 +117,7 @@
             />
           </div>
           <div class="submit">
-            <input
-              type="submit"
-              value="Sign up"
-              formaction="../../Login/login.html"
-            />
+            <button type="submit" class="input">Sign up</button>
             <p>
               Already have an account?
               <a href="../../Login/login.html"> Sign in</a>
@@ -172,5 +168,12 @@
       </div>
     </div>
     <!-- End Footer  -->
+
+    <!-- file register patient js -->
+    <script type="module" src="reg-patient.js"></script>
+    <!-- file remotekHelper JS  -->
+    <script src="../../Network/remoteHelper.js"></script>
+    <!-- file modules object js  -->
+    <script src="../../Models/patient.js"></script>
   </body>
 </html>

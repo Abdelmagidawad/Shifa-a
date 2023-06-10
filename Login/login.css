@@ -367,7 +367,7 @@ html::-webkit-scrollbar-thumb:hover {
   text-align: center;
 }
 
-.form form .submit input {
+.form form .submit .input {
   display: block;
   width: 100%;
   padding: 15px;
@@ -381,7 +381,7 @@ html::-webkit-scrollbar-thumb:hover {
   transition: var(--main-transition);
 }
 
-.form form .submit input:hover {
+.form form .submit .input:hover {
   background-color: #1296f3;
   transform: scale(0.9);
 }
