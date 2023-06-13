@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shifa’a | Reports | Patient</title>
+    <link
+      rel="shortcut icon"
+      href="../../images/favicon.png"
+      style="width: 30px; height: 30px"
+    />
+    <!-- Render All Element Normally  -->
+    <link rel="stylesheet" href="../../CSS/normalize.css" />
+    <!-- Font Awesome Library  -->
+    <link rel="stylesheet" href="../../CSS/all.min.css" />
+    <!-- Header-patient file css  -->
+    <link rel="stylesheet" href="../header.css" />
+    <!-- Report File CSS  -->
+    <link rel="stylesheet" href="report.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Start Header  -->
+    <div class="header" id="header">
+      <div class="container">
+        <a href="#" class="logo">
+          <img src="../../../images/logo.png" alt="photo-logo" />
+          Shifa’a
+        </a>
+        <div class="nav-bar">
+          <ul class="links">
+            <li><a href="../Home/home.html">Home</a></li>
+            <li><a href="#">Reports</a></li>
+            <li>
+              <a href="../Appointments/Upcomming/upcom.html">Appointments</a>
+            </li>
+            <li><a href="#">Medicine</a></li>
+          </ul>
+          <ul class="Profile-toltab">
+            <li>
+              <img src="../Home/Home-img/profile-img.png" alt="pro-img" />
+              <div class="tol-tab">
+                <div>
+                  <img src="../Home/Home-img/profile-img.png" alt="photo" />
+                  <h2>Ahmed Ibrahim</h2>
+                </div>
+                <ul class="tol-links">
+                  <li>
+                    <a href=""
+                      ><i class="fa-regular fa-user"></i>Edit Profile</a
+                    >
+                  </li>
+                  <li>
+                    <a href=""
+                      ><i class="fa-regular fa-bell"></i>Notification</a
+                    >
+                  </li>
+                  <li>
+                    <a href=""
+                      ><i class="far fa-check-circle fa-fw"></i>Security</a
+                    >
+                  </li>
+                  <li>
+                    <a href=""
+                      ><i class="fa-sharp fa-regular fa-globe"></i>Language</a
+                    >
+                  </li>
+                  <li>
+                    <a href=""
+                      ><i class="fa-solid fa-circle-question"></i>Help Center</a
+                    >
+                  </li>
+                  <li>
+                    <button type="button" onclick="openPopup()">
+                      <i class="fa-solid fa-arrow-right-from-bracket"></i>Logout
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- End Header  -->
+    <!-- ******************
+    ************ -->
+    <!-- popuplogout -->
+    <div class="popup" id="POP">
+      <div class="overlay"></div>
+      <div class="popup-content">
+        <h2>Are you sure,</h2>
+        <h2>you want to logout</h2>
+        <div class="pop-btn">
+          <button type="button" id="cancel">Cancel</button>
+          <button type="button" id="logout">Logout</button>
+        </div>
+      </div>
+    </div>
+    <!-- end popuplogout -->
+
+    <!-- start Report Patient  -->
+    <div class="reports">
+      <h2 class="main-title">Reports</h2>
+      <div class="container">
+        <div class="box">
+          <div class="text">
+            <div>
+              Doctor Name:
+              <h2>Dr.Mahmude Reda</h2>
+            </div>
+            <div>
+              Specialty:
+              <h2>Chest and Respiratory</h2>
+            </div>
+            <div>
+              Date:
+              <h2>16-04-2023</h2>
+            </div>
+            <div>
+              Time:
+              <h2>9:30 am</h2>
+            </div>
+          </div>
+          <img src="../Home/Home-img/scan.png" alt="Scan-code" />
+        </div>
+        <div class="box">
+          <div class="text">
+            <div>
+              Doctor Name:
+              <h2>Dr.Mohamed Hassan</h2>
+            </div>
+            <div>
+              Specialty:
+              <h2>Chest and Respiratory</h2>
+            </div>
+            <div>
+              Date:
+              <h2>10-05-2023</h2>
+            </div>
+            <div>
+              Time:
+              <h2>9:30 am</h2>
+            </div>
+          </div>
+          <img src="../Home/Home-img/scan.png" alt="Scan-code" />
+        </div>
+        <div class="box">
+          <div class="text">
+            <div>
+              Doctor Name:
+              <h2>Dr.Abdelmagid Awad</h2>
+            </div>
+            <div>
+              Specialty:
+              <h2>Rheumatology</h2>
+            </div>
+            <div>
+              Date:
+              <h2>16-06-2023</h2>
+            </div>
+            <div>
+              Time:
+              <h2>9:30 am</h2>
+            </div>
+          </div>
+          <img src="../Home/Home-img/scan.png" alt="Scan-code" />
+        </div>
+      </div>
+    </div>
+
+    <!-- End Report Patient  -->
+
+    <!-- main file js  -->
+    <script type="module" src="report.js"></script>
+    <!-- Cookies file js  -->
+    <script src="../../Local/localHelper.js"></script>
+    <!-- network helper file js  -->
+    <script src="../../Network/remoteHelper.js"></script>
+    <!-- Logout js file  -->
+    <script src="../logOut.js"></script>
+  </body>
+</html>
