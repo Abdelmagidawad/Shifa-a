@@ -79,10 +79,9 @@
                     >
                   </li>
                   <li>
-                    <a href=""
-                      ><i class="fa-solid fa-arrow-right-from-bracket"></i
-                      >Logout</a
-                    >
+                    <button type="button" onclick="openPopup()">
+                      <i class="fa-solid fa-arrow-right-from-bracket"></i>Logout
+                    </button>
                   </li>
                 </ul>
               </div>
@@ -94,6 +93,143 @@
     <!-- End Header  -->
     <!-- ******************
     ************ -->
-    <div class="test"></div>
+    <!-- popuplogout -->
+    <div class="popup" id="POP">
+      <div class="overlay"></div>
+      <div class="popup-content">
+        <h2>Are you sure,</h2>
+        <h2>you want to logout</h2>
+        <div class="pop-btn">
+          <button type="button" id="cancel">Cancel</button>
+          <button type="button" id="logout">Logout</button>
+        </div>
+      </div>
+    </div>
+    <!-- end popuplogout -->
+
+    <!-- Start home patient  -->
+    <div class="Home-content">
+      <div class="container">
+        <div class="find-doc">
+          <div class="appoint">
+            <h2>Need to Find a Doctor?</h2>
+            <h2>Go online with us!</h2>
+            <a href="search-doctor/search-doc.html">Book Appointment</a>
+          </div>
+          <img src="Home-img/home-imge.png" alt="imageHello" />
+        </div>
+        <div class="medical-car">
+          <div class="text">
+            <h2>Medical Card</h2>
+            <p>Emergency Profile</p>
+            <a href="#">Open Profile</a>
+          </div>
+          <img src="Home-img/medical.png" alt="photo-card" />
+        </div>
+        <div class="appointment">
+          <h2>Upcoming Appointments</h2>
+          <div class="up-list-doc">
+            <div class="box">
+              <h3>Dr.Mohamed Ibrahim</h3>
+              <p>Osteopathy</p>
+              <div class="time-D">
+                <p><i class="fa-solid fa-calendar-days"></i> 15-5-2023</p>
+                <p><i class="fa-solid fa-clock"></i> 11:30 Am</p>
+              </div>
+            </div>
+            <div class="box">
+              <h3>Dr.Mohamed Ali</h3>
+              <p>Rheumatology</p>
+              <div class="time-D">
+                <p><i class="fa-solid fa-calendar-days"></i> 15-5-2023</p>
+                <p><i class="fa-solid fa-clock"></i> 12:30 Pm</p>
+              </div>
+            </div>
+            <div class="box">
+              <h3>Dr.Kholoud Ahmed</h3>
+              <p>Osteopathy</p>
+              <div class="time-D">
+                <p><i class="fa-solid fa-calendar-days"></i> 1-6-2023</p>
+                <p><i class="fa-solid fa-clock"></i> 11:30 Am</p>
+              </div>
+            </div>
+            <div class="box">
+              <h3>Dr.Mahmoud Reda</h3>
+              <p>Vascular Surgery</p>
+              <div class="time-D">
+                <p><i class="fa-solid fa-calendar-days"></i> 5-6-2023</p>
+                <p><i class="fa-solid fa-clock"></i> 10:00 Am</p>
+              </div>
+            </div>
+            <div class="box">
+              <h3>Dr.Mohamed Hassan</h3>
+              <p>Osteopathy</p>
+              <div class="time-D">
+                <p><i class="fa-solid fa-calendar-days"></i> 13-6-2023</p>
+                <p><i class="fa-solid fa-clock"></i> 2:30 Pm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sec-medicine">
+          <h2>Your Daily Reminders</h2>
+          <div class="medicine">
+            <div class="box">
+              <div class="sec1">
+                <img src="Home-img/image_medicine.png" alt="photo-medicine" />
+                <div class="text">
+                  <h3>Panadol Cold Flu</h3>
+                  <p>1 PILL</p>
+                </div>
+              </div>
+              <div class="sec2">
+                <p class="appoint">After Breakfast</p>
+                <p class="appoint">After Dinner</p>
+              </div>
+              <span>10:00 am</span>
+            </div>
+            <div class="box">
+              <div class="sec1">
+                <img src="Home-img/image_medicine.png" alt="photo-medicine" />
+                <div class="text">
+                  <h3>Panadol Cold Flu</h3>
+                  <p>1 PILL</p>
+                </div>
+              </div>
+              <div class="sec2">
+                <p class="appoint">After Breakfast</p>
+                <p class="appoint">After Dinner</p>
+              </div>
+              <span>10:00 am</span>
+            </div>
+            <div class="box">
+              <div class="sec1">
+                <img src="Home-img/image_medicine.png" alt="photo-medicine" />
+                <div class="text">
+                  <h3>Panadol Cold Flu</h3>
+                  <p>1 PILL</p>
+                </div>
+              </div>
+              <div class="sec2">
+                <p class="appoint">After Breakfast</p>
+                <p class="appoint">After Dinner</p>
+              </div>
+              <span>10:00 am</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- End home patient  -->
+
+    <!-- main file js  -->
+    <script type="module" src="patient-home.js"></script>
+    <!-- Cookies file js  -->
+    <script src="../../Local/localHelper.js"></script>
+    <!-- network helper file js  -->
+    <script src="../../Network/remoteHelper.js"></script>
+    <!-- Logout js file  -->
+    <script src="../logOut.js"></script>
   </body>
 </html>

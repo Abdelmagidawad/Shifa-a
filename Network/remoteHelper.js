@@ -41,7 +41,6 @@ export class NetworkHelper {
     const analytics = getAnalytics(app);
     this.database = getDatabase(app);
   }
-
   // Create doctor
   // createUserWithEmailAndPasswordAndWriteData(doctor, password) {
   //   const auth = getAuth();
@@ -174,6 +173,9 @@ export class NetworkHelper {
       .then((userCredential) => {
         const user = userCredential.user;
 
+        //Cookies
+        document.cookie = `userId=${user.uid}; domain=127.0.0.1; max-age={30*24*60*60}; path=/`;
+
         // const dt = new Date();
         // update(ref(database, "users/" + user.uid), {
         //   // last_login: dt,
@@ -210,6 +212,32 @@ export class NetworkHelper {
       }
     );
   }
+
+  //////////////////////////
+  fetchAllDoctorsDataFromDatabase() {
+    return new Promise((resolve, reject) => {
+      const dbRef = ref(this.database, "Doctors");
+      const dataList = []; // Array to store the retrieved data
+
+      onValue(
+        dbRef,
+        (snapshot) => {
+          snapshot.forEach((childSnapshot) => {
+            const childKey = childSnapshot.key;
+            const childData = childSnapshot.val();
+            dataList.push(childData); // Add the child data to the list
+          });
+
+          console.log(dataList); // Output the list of data
+          resolve(dataList); // Resolve the promise with the data list
+        },
+        {
+          onlyOnce: true,
+        }
+      );
+    });
+  }
+  /////////////////////////////
 
   fetchDataAndSearchFromDatabase(email) {
     const dbRef1 = ref(this.database, "Patients");
@@ -275,5 +303,49 @@ export class NetworkHelper {
         }
       );
     });
+  }
+
+  //////////////////////////
+  fetch3DataFromDatabase() {
+    const dbRef1 = ref(this.database, "Doctors");
+    const dataList = []; // Array to store the retrieved data
+
+    firebase.initializeApp(firebaseConfig);
+
+    firebase
+      .database()
+      .ref("Doctors")
+      .on("value", function (snapshot) {
+        console.log(snapshot.val());
+      });
+
+    // firebase
+    //   .database()
+    //   .ref("Doctors")
+    //   .once("value", function (snapshot) {
+    //     snapshot.forEach(function (childSnapshot) {
+    //       var childKey = childSnapshot.key;
+    //       var childData = childSnapshot.val();
+    //       console.log(childData);
+    //       // ...
+    //     });
+    //   });
+    onValue(
+      dbRef1,
+      (snapshot) => {
+        snapshot.forEach((childSnapshot) => {
+          const childKey = childSnapshot.key;
+          const childData = childSnapshot.val();
+          console.log(childData.email);
+        });
+      },
+      {
+        onlyOnce: true,
+      }
+    );
+  }
+  /////////////////////
+  test() {
+    console.log("plplplplplpl");
   }
 }

@@ -84,7 +84,244 @@ html::-webkit-scrollbar-thumb:hover {
 /* End Global Rules  */
 /* ******************************* */
 
-.test {
-  background-color: white;
-  height: calc(100vh - 20px);
+/* Start home patient   */
+
+.Home-content {
+  padding-top: 60px;
+  padding-bottom: var(--main-padding);
+  background-color: var(--section-background);
 }
+
+.Home-content .find-doc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  padding: 0 50px;
+  background-color: var(--main-color);
+  box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
+}
+.Home-content .find-doc .appoint {
+  margin-top: -25px;
+}
+.Home-content .find-doc .appoint h2 {
+  font-size: 25px;
+  color: white;
+}
+.Home-content .find-doc .appoint h2:last-of-type {
+  margin-bottom: 30px;
+}
+
+.Home-content .find-doc .appoint a {
+  display: block;
+  background-color: white;
+  width: fit-content;
+  padding: 15px 10px;
+  border-radius: 10px;
+  color: var(--main-color);
+  font-weight: bold;
+  transition: var(--main-transition);
+}
+.Home-content .find-doc .appoint a:hover {
+  box-shadow: 0 0 15px 2px white;
+}
+
+.Home-content .find-doc img {
+  width: 300px;
+  max-width: 100%;
+  animation: head-img 3s infinite ease-in-out;
+}
+@keyframes head-img {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@media (max-width: 767px) {
+  .Home-content .find-doc {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 20px 50px;
+  }
+  .Home-content .find-doc .appoint a {
+    margin: auto;
+    margin-bottom: 10px;
+  }
+}
+
+.Home-content .medical-car {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0;
+  background-color: #fefefe;
+  border-radius: 20px;
+  padding: 20px 50px;
+  box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
+}
+
+@media (max-width: 767px) {
+  .Home-content .medical-car {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+.Home-content .medical-car .text h2 {
+  font-size: 25px;
+  margin: 0;
+  color: var(--main-color);
+}
+.Home-content .medical-car .text p {
+  font-size: 17px;
+  color: var(--second-color);
+  font-weight: bold;
+}
+.Home-content .medical-car .text a {
+  display: block;
+  background-color: var(--main-color);
+  width: fit-content;
+  padding: 10px 10px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  transition: var(--main-transition);
+}
+.Home-content .medical-car .text a:hover {
+  box-shadow: 0 0 8px 1px var(--main-color);
+}
+
+.Home-content .medical-car img {
+  width: 100px;
+  height: 100px;
+}
+
+.Home-content .appointment {
+  margin-top: 40px;
+}
+
+.Home-content .appointment > h2 {
+  font-size: 23px;
+  margin-bottom: 23px;
+  color: var(--second-color);
+}
+.Home-content .appointment .up-list-doc {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.Home-content .appointment .up-list-doc .box {
+  background-color: #fefefe;
+  padding: 30px;
+  box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
+  border-radius: 10px;
+  transition: var(--main-transition);
+}
+
+.Home-content .appointment .up-list-doc .box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 12px rgb(0 0 0 / 15%);
+}
+
+.Home-content .appointment .up-list-doc .box h3 {
+  /* color: var(--main-color); */
+  font-size: 20px;
+  margin: 0;
+}
+
+.Home-content .appointment .up-list-doc .box > p {
+  font-size: 18px;
+  color: var(--second-color);
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.Home-content .appointment .up-list-doc .box .time-D {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Home-content .appointment .up-list-doc .box .time-D p {
+  color: var(--second-color);
+  font-weight: bold;
+}
+
+.Home-content .appointment .up-list-doc .box .time-D p i {
+  color: var(--main-color);
+}
+
+.Home-content .sec-medicine {
+  margin-top: 40px;
+}
+.Home-content .sec-medicine > h2 {
+  font-size: 23px;
+  margin-bottom: 23px;
+  color: var(--second-color);
+}
+.Home-content .sec-medicine .medicine {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 30px;
+}
+@media (max-width: 767px) {
+  .Home-content .sec-medicine .medicine {
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  }
+}
+.Home-content .sec-medicine .medicine .box {
+  background-color: #fefefe;
+  padding: 20px;
+  box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
+  border-radius: 10px;
+  transition: var(--main-transition);
+}
+.Home-content .sec-medicine .medicine .box:hover {
+  box-shadow: 0 2px 12px 2px rgb(0 0 0 / 15%);
+}
+
+.Home-content .sec-medicine .medicine .box span {
+  display: block;
+  text-align: end;
+  font-weight: bold;
+  color: var(--second-color);
+}
+.Home-content .sec-medicine .medicine .box .sec1 {
+  display: flex;
+  gap: 20px;
+}
+.Home-content .sec-medicine .medicine .box .sec1 img {
+  width: 100px;
+  max-width: 100%;
+}
+.Home-content .sec-medicine .medicine .box .sec1 .text h3 {
+  font-size: 20px;
+}
+.Home-content .sec-medicine .medicine .box .sec1 .text p {
+  color: var(--second-color);
+  font-weight: bold;
+}
+.Home-content .sec-medicine .medicine .box .sec2 {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+.Home-content .sec-medicine .medicine .box .sec2 > .appoint {
+  width: fit-content;
+  background-color: var(--section-background);
+  padding: 12px 10px;
+  margin: 0;
+  border-radius: 10px;
+  color: var(--main-color);
+  box-shadow: 0 0 3px 0px rgb(0 0 0 /10%);
+}
+
+/* End home patient   */

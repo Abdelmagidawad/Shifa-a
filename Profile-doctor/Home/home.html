@@ -37,8 +37,8 @@
         </a>
         <div class="nav-bar">
           <ul class="links">
-            <li><a href="">Home</a></li>
-            <li><a href="">Schedule</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="../Schedule/schedule.html">Schedule</a></li>
             <li>
               <a href="">Patients</a>
               <ul class="patient-links">
@@ -86,10 +86,9 @@
                     >
                   </li>
                   <li>
-                    <a href=""
-                      ><i class="fa-solid fa-arrow-right-from-bracket"></i
-                      >Logout</a
-                    >
+                    <button type="button" onclick="openPopup()">
+                      <i class="fa-solid fa-arrow-right-from-bracket"></i>Logout
+                    </button>
                   </li>
                 </ul>
               </div>
@@ -101,6 +100,129 @@
     <!-- End Header  -->
     <!-- ******************
     ************ -->
-    <div class="test"></div>
+    <!-- popuplogout -->
+    <div class="popup" id="POP">
+      <div class="overlay"></div>
+      <div class="popup-content">
+        <h2>Are you sure,</h2>
+        <h2>you want to logout</h2>
+        <div class="pop-btn">
+          <button type="button" id="cancel">Cancel</button>
+          <button type="button" id="logout">Logout</button>
+        </div>
+      </div>
+    </div>
+    <!-- end popuplogout -->
+
+    <!-- Start Home Content Doctor  -->
+    <div class="home-content">
+      <div class="container">
+        <div class="wel-home">
+          <div class="welcome">
+            <h2>
+              Welcome Back,
+              <p>Dr.Abdelmagid awad</p>
+            </h2>
+            <p>Have a nice day at Work</p>
+          </div>
+          <img src="home-image/Home-Hello.png" alt="" />
+        </div>
+        <div class="appoint">
+          <h2>Today's Appointments</h2>
+          <div class="list-appoint">
+            <div class="box">
+              <img
+                src="../patients/new-patient/new-img/patient1.png"
+                alt="photo-patient"
+              />
+              <div>
+                <h3>Mohamed Madge</h3>
+                <p><i class="fa-solid fa-clock"></i> 11:00 Am</p>
+              </div>
+            </div>
+            <div class="box">
+              <img
+                src="../patients/new-patient/new-img/patient2.png"
+                alt="photo-patient"
+              />
+              <div>
+                <h3>Mohamed Ibrahim</h3>
+                <p><i class="fa-solid fa-clock"></i> 11:30 Am</p>
+              </div>
+            </div>
+            <div class="box">
+              <img
+                src="../patients/new-patient/new-img/patient3.png"
+                alt="photo-patient"
+              />
+              <div>
+                <h3>Abdelmagid Awad</h3>
+                <p><i class="fa-solid fa-clock"></i> 10:00 Am</p>
+              </div>
+            </div>
+            <div class="box">
+              <img
+                src="../patients/new-patient/new-img/patient4.png"
+                alt="photo-patient"
+              />
+              <div>
+                <h3>Mohamed Hassan</h3>
+                <p><i class="fa-solid fa-clock"></i> 11:30 Am</p>
+              </div>
+            </div>
+            <div class="box">
+              <img
+                src="../Patients/new-patient/new-img/patient5.png"
+                alt="photo-patient"
+              />
+              <div>
+                <h3>Omar Hamed</h3>
+                <p><i class="fa-solid fa-clock"></i> 12:30 Pm</p>
+              </div>
+            </div>
+            <div class="box">
+              <img
+                src="../Patients/new-patient/new-img/patient7.jpg"
+                alt="photo-patient"
+              />
+              <div>
+                <h3>Mai Samy</h3>
+                <p><i class="fa-solid fa-clock"></i> 12:30 Pm</p>
+              </div>
+            </div>
+            <div class="box">
+              <img
+                src="../Patients/new-patient/new-img/patient1.png"
+                alt="photo-patient"
+              />
+              <div>
+                <h3>Eslam Ahmed</h3>
+                <p><i class="fa-solid fa-clock"></i> 1:30 Pm</p>
+              </div>
+            </div>
+            <div class="box">
+              <img
+                src="../Patients/new-patient/new-img/patient2.png"
+                alt="photo-patient"
+              />
+              <div>
+                <h3>Ibrahim Ahmed</h3>
+                <p><i class="fa-solid fa-clock"></i> 11:30 Am</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Start Home Content Doctor  -->
+
+    <!-- main file js  -->
+    <script type="module" src="doc-home.js"></script>
+    <!-- Cookies file js  -->
+    <script src="../../Local/localHelper.js"></script>
+    <!-- network helper file js  -->
+    <script src="../../Network/remoteHelper.js"></script>
+    <!-- log out file js  -->
+    <script src="../logOut.js"></script>
   </body>
 </html>

@@ -12,6 +12,9 @@ buttonSubmit.addEventListener("click", function (event) {
   let isValid = validateForm();
   if (isValid) {
     networkHelper.loginUser(inputEmail.value, inputPassword.value);
+
+    //Cookies
+    // alert(getCookieValue("userId"));
   }
 });
 

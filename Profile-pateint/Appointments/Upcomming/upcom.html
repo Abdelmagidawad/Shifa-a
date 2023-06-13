@@ -77,10 +77,9 @@
                     >
                   </li>
                   <li>
-                    <a href=""
-                      ><i class="fa-solid fa-arrow-right-from-bracket"></i
-                      >Logout</a
-                    >
+                    <button type="button" onclick="openPopup()">
+                      <i class="fa-solid fa-arrow-right-from-bracket"></i>Logout
+                    </button>
                   </li>
                 </ul>
               </div>
@@ -90,6 +89,20 @@
       </div>
     </div>
     <!-- End Header  -->
+
+    <!-- popuplogout -->
+    <div class="popup" id="POP">
+      <div class="overlay"></div>
+      <div class="popup-content">
+        <h2>Are you sure,</h2>
+        <h2>you want to logout</h2>
+        <div class="pop-btn">
+          <button type="button" id="cancel">Cancel</button>
+          <button type="button" id="logout">Logout</button>
+        </div>
+      </div>
+    </div>
+    <!-- end popuplogout -->
 
     <!-- Start Upcoming of Doctor -->
 
@@ -252,5 +265,14 @@
       </div>
     </div>
     <!-- End Upcoming of Doctor -->
+
+    <!-- main file js  -->
+    <script type="module" src=""></script>
+    <!-- Cookies file js  -->
+    <script src="../../../Local/localHelper.js"></script>
+    <!-- network helper file js  -->
+    <script src="../../../Network/remoteHelper.js"></script>
+    <!-- Logout js file  -->
+    <script src="../../logOut.js"></script>
   </body>
 </html>
