@@ -245,14 +245,14 @@ html::-webkit-scrollbar-thumb:hover {
   cursor: pointer;
 }
 
-.header .nav-bar .Profile-toltab li:hover .tol-tab {
+.header .nav-bar .Profile-toltab li .visible {
   opacity: 1;
   z-index: 100;
   top: calc(100% + -7px);
 }
 
 @media (max-width: 767px) {
-  .header .nav-bar .Profile-toltab li:hover .tol-tab {
+  .header .nav-bar .Profile-toltab li .visible {
     top: calc(100% + 1px);
   }
 }

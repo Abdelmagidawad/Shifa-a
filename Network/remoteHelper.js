@@ -5,6 +5,7 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signOut,
 } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js";
 
 import {
@@ -40,7 +41,22 @@ export class NetworkHelper {
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
     this.database = getDatabase(app);
+    this.auth = app.auth;
   }
+
+  signOutUser() {
+    const auth = getAuth();
+    signOut(auth)
+      .then(() => {
+        // Sign-out successful.
+        window.location.assign("/Login/login.html");
+      })
+      .catch((error) => {
+        // An error happened.
+        console.log(error);
+      });
+  }
+
   // Create doctor
   // createUserWithEmailAndPasswordAndWriteData(doctor, password) {
   //   const auth = getAuth();
