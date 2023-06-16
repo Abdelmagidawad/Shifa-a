@@ -531,6 +531,7 @@ html::-webkit-scrollbar-thumb:hover {
 .services {
   padding-top: var(--main-padding);
   padding-bottom: var(--main-padding);
+  background-color: #fefefe;
 }
 
 .services .image {
@@ -708,6 +709,7 @@ html::-webkit-scrollbar-thumb:hover {
 .download {
   padding-top: var(--main-padding);
   padding-bottom: var(--main-padding);
+  /* background-color: #fefefe; */
   position: relative;
 }
 
@@ -864,12 +866,14 @@ html::-webkit-scrollbar-thumb:hover {
 
 .feedback .container {
   display: flex;
-  gap: 100px;
+  gap: 20px;
   padding: 45px;
   position: relative;
   z-index: 1;
   border-radius: 20px;
   box-shadow: 0 0 10px 2px rgb(0 0 0 / 10%);
+  height: 70vh;
+  overflow: hidden;
 }
 
 .feedback .container::before {
@@ -886,8 +890,6 @@ html::-webkit-scrollbar-thumb:hover {
 
 @media (max-width: 767px) {
   .feedback .container {
-    flex-direction: column;
-    gap: 40px;
     box-shadow: none;
   }
 
@@ -897,14 +899,45 @@ html::-webkit-scrollbar-thumb:hover {
   }
 }
 
+.feedback .container .test {
+  position: absolute;
+  display: flex;
+  width: 262%;
+  left: 0;
+  transition: var(--main-transition);
+}
+
+.feedback .container .slide-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.feedback .container .slide-row:not(:first-child) {
+  margin-left: 20px;
+}
+
+@media (max-width: 767px) {
+  .feedback .container .test {
+    width: 277%;
+  }
+
+  .feedback .container .slide-row:not(:first-child) {
+    margin-left: 10px;
+  }
+}
+
 .feedback .info {
-  width: 40%;
   text-align: center;
 }
 
 .feedback .info img {
   width: 170px;
-  border-radius: 5px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
   border: 2px solid transparent;
   animation: info-img-anim 1.5s infinite;
 }
@@ -926,29 +959,33 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 .feedback .opinion {
-  width: 45%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-@media (max-width: 767px) {
-  .feedback .info,
-  .feedback .opinion {
-    width: 100%;
-  }
+  text-align: center;
 }
 
 .feedback .opinion p {
   font-size: 20px;
   line-height: 1.7;
   color: var(--second-color);
+  text-align: center;
+  padding: 0 100px;
+}
+
+@media (max-width: 767px) {
+  .feedback .opinion p {
+    padding: 0 15px;
+  }
 }
 
 .feedback .scroll-icone {
   margin: 27px auto 0;
   text-align: center;
+}
+
+.feedback .scroll-icone button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .feedback .scroll-icone i {
@@ -964,11 +1001,11 @@ html::-webkit-scrollbar-thumb:hover {
   color: white;
 }
 
-.feedback .scroll-icone a:first-child i {
+.feedback .scroll-icone button:first-child {
   margin-right: 10px;
 }
 
-.feedback .scroll-icone a:last-child i {
+.feedback .scroll-icone button:last-child {
   margin-left: 10px;
 }
 
