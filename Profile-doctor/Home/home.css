@@ -185,6 +185,7 @@ html::-webkit-scrollbar-thumb:hover {
 .home-content .appoint .box:hover {
   transform: scale(1.05);
   box-shadow: 0 2px 12px rgb(0 0 0 / 15%);
+  cursor: pointer;
 }
 
 .home-content .appoint .box:hover::before {

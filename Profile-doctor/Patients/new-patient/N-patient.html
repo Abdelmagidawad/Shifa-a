@@ -144,11 +144,11 @@
       <div class="ccontainer">
         <div class="filter">
           <label for="filter"><i class="fa-solid fa-filter"></i></label>
-          <select name="" id="filter">
-            <option value="" selected>All</option>
-            <option value="">Pending</option>
-            <option value="">Accepted</option>
-            <option value="">Declined</option>
+          <select name="filter" id="filter">
+            <option value="All" selected>All</option>
+            <option value="Pending">Pending</option>
+            <option value="Accepted">Accepted</option>
+            <option value="Declined">Declined</option>
           </select>
         </div>
         <table>
@@ -164,7 +164,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr class="pending">
               <td>
                 <img src="new-img/patient4.png" alt="photo" />
                 Ahmed Ibrahim
@@ -183,7 +183,7 @@
                 ></a>
               </td>
             </tr>
-            <tr>
+            <tr class="decline">
               <td>
                 <img src="new-img/patient2.png" alt="photo" />
                 Ali Ibrahim
@@ -202,7 +202,7 @@
                 ></a>
               </td>
             </tr>
-            <tr>
+            <tr class="accept">
               <td>
                 <img src="new-img/patient3.png" alt="photo" />
                 Ahmed Ali
@@ -221,7 +221,7 @@
                 ></a>
               </td>
             </tr>
-            <tr>
+            <tr class="accept">
               <td>
                 <img src="new-img/patient4.png" alt="photo" />
                 Hossam Khedr
@@ -240,7 +240,7 @@
                 ></a>
               </td>
             </tr>
-            <tr>
+            <tr class="accept">
               <td>
                 <img src="new-img/patient5.png" alt="photo" />
                 Samey Ahmed
@@ -259,7 +259,7 @@
                 ></a>
               </td>
             </tr>
-            <tr>
+            <tr class="decline">
               <td>
                 <img src="new-img/patient7.jpg" alt="photo" />
                 Kholoud Ahmed
@@ -278,7 +278,7 @@
                 ></a>
               </td>
             </tr>
-            <tr>
+            <tr class="pending">
               <td>
                 <img src="new-img/patient9.png" alt="photo" />
                 Aya Ibrahim
@@ -297,7 +297,7 @@
                 ></a>
               </td>
             </tr>
-            <tr>
+            <tr class="pending">
               <td>
                 <img src="new-img/patient9.png" alt="photo" />
                 Walaa Ali
@@ -316,7 +316,7 @@
                 ></a>
               </td>
             </tr>
-            <tr>
+            <tr class="decline">
               <td>
                 <img src="new-img/patient5.png" alt="photo" />
                 Ahmed Rajab
@@ -335,7 +335,7 @@
                 ></a>
               </td>
             </tr>
-            <tr>
+            <tr class="accept">
               <td>
                 <img src="new-img/patient6.png" alt="photo" />
                 Ibrahim Omar
@@ -354,7 +354,7 @@
                 ></a>
               </td>
             </tr>
-            <tr>
+            <tr class="pending">
               <td>
                 <img src="new-img/patient1.png" alt="photo" />
                 Mahmoud Reda
@@ -373,7 +373,7 @@
                 ></a>
               </td>
             </tr>
-            <tr>
+            <tr class="accept">
               <td>
                 <img src="new-img/patient2.png" alt="photo" />
                 Ahmed Ibrahim
@@ -392,7 +392,7 @@
                 ></a>
               </td>
             </tr>
-            <tr>
+            <tr class="pending">
               <td>
                 <img src="new-img/patient7.jpg" alt="photo" />
                 Merna Ahmed
@@ -411,7 +411,7 @@
                 ></a>
               </td>
             </tr>
-            <tr>
+            <tr class="accept">
               <td>
                 <img src="new-img/patient5.png" alt="photo" />
                 Reda Ahmed
@@ -437,7 +437,7 @@
     <!-- End List Patient  -->
 
     <!-- main file js  -->
-    <script type="module" src=""></script>
+    <script type="module" src="N-patient.js"></script>
     <!-- Cookies file js  -->
     <script src="../../../Local/localHelper.js"></script>
     <!-- network helper file js  -->

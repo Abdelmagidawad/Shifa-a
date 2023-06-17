@@ -200,6 +200,7 @@ html::-webkit-scrollbar-thumb:hover {
   align-items: center;
   width: 25%;
 }
+.list-completed .list-doctor-Com .list-doctor .box .button .a,
 .list-completed .list-doctor-Com .list-doctor .box .button a {
   display: block;
   padding: 8px 15px;
@@ -207,6 +208,12 @@ html::-webkit-scrollbar-thumb:hover {
   border: 2px solid var(--main-color);
   color: var(--main-color);
   transition: 0.5s;
+}
+
+.list-completed .list-doctor-Com .list-doctor .box .button .a {
+  cursor: pointer;
+  font-weight: bold;
+  outline: none;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -230,11 +237,12 @@ html::-webkit-scrollbar-thumb:hover {
     border-radius: 50%;
     margin-right: 10px;
   }
+  .list-completed .list-doctor-Com .list-doctor .box .button .a,
   .list-completed .list-doctor-Com .list-doctor .box .button a {
     padding: 5px 5px;
   }
 }
-
+.list-completed .list-doctor-Com .list-doctor .box .button .a:hover,
 .list-completed .list-doctor-Com .list-doctor .box .button a:hover {
   background-color: var(--main-color);
   color: white;
@@ -324,5 +332,123 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 /* End mobile */
+
+/* Start Review Pop UP */
+
+.review-up .r-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0, 0, 0, 0.7);
+  z-index: 103;
+  display: none;
+}
+
+.review-up .popup-review {
+  /* width: 310px; */
+  width: 430px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background-color: white;
+  z-index: 104;
+  border-radius: 15px;
+  /* padding: 40px 50px; */
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
+  transition: var(--main-transition);
+}
+/* event */
+.active .r-overlay {
+  display: block;
+}
+.active .popup-review {
+  transition: all var(--main-transition) ease-in-out;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/*  */
+.review-up .popup-review .pop-head {
+  display: flex;
+  gap: 40px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--second-color);
+}
+.review-up .popup-review .pop-head img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.review-up .popup-review .pop-head .text {
+  text-align: left;
+}
+.review-up .popup-review .pop-head .text h2 {
+  color: var(--second-color);
+  margin-bottom: 10px;
+}
+.review-up .popup-review .pop-head .text span {
+  color: var(--main-color);
+  font-size: 17px;
+}
+.review-up .popup-review .def {
+  font-size: 17px;
+  font-weight: bold;
+  color: var(--second-color);
+  margin-top: 20px;
+}
+.review-up .popup-review .stars {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 30px auto;
+  font-size: 30px;
+}
+.review-up .popup-review .stars i {
+  font-weight: 200;
+  color: #ffc107;
+  cursor: pointer;
+}
+.review-up .popup-review .current-rate {
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.review-up .popup-review .buttons {
+  margin: auto;
+}
+.review-up .popup-review .buttons button:first-child {
+  position: absolute;
+  top: -17px;
+  right: -19px;
+  border: none;
+  background-color: transparent;
+}
+.review-up .popup-review .buttons button:first-child i {
+  color: aliceblue;
+  font-size: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.review-up .popup-review .buttons button:last-child {
+  background-color: var(--main-color);
+  color: white;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 10px 80px;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  transition: var(--main-transition);
+}
+
+.review-up .popup-review .buttons button:last-child:hover {
+  box-shadow: 0 0 7px 1px var(--main-color);
+}
+/* End Review Review-uP   */
 
 /* End completed of Doctor  */

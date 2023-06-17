@@ -102,6 +102,7 @@ html::-webkit-scrollbar-thumb:hover {
   padding: 40px 45px;
   margin: 50px auto 0;
   border-radius: 16px;
+  background-color: #fefefe;
 }
 
 @media (max-width: 767px) {
