@@ -17,8 +17,82 @@ const doctorId = getCookieValue("userId");
 //     console.error(error);
 //   });
 
-networkHelper.fetch3DataFromDatabase();
+//***************************************************************** */
+// sort specialty
+// const selectElement = document.querySelector("select[name='specialty']");
+// const options = Array.from(selectElement.options);
 
-networkHelper.test();
+// options.sort((a, b) => a.text.localeCompare(b.text));
 
-console.log("llllllll");
+// options.forEach((option) => {
+//   selectElement.add(option);
+// });
+
+//******************************************************************* */
+// Get the search input and select elements
+const searchInput = document.querySelector('input[name="namedoctor"]');
+const specialtySelect = document.querySelector('select[name="specialty"]');
+const doctorBoxes = Array.from(document.querySelectorAll(".list-doc .box"));
+
+//Function to filter doctors
+function filterDoctors() {
+  const searchValue = searchInput.value.toLowerCase();
+  doctorBoxes.forEach((box) => {
+    const name = box.querySelector("h3").textContent.toLowerCase();
+    const matchesSearch = name.includes(searchValue);
+    if (matchesSearch) {
+      box.style.display = "block";
+    } else {
+      box.style.display = "none";
+    }
+  });
+}
+
+searchInput.addEventListener("input", filterDoctors);
+
+// filter Specialty
+specialtySelect.onchange = function () {
+  const specialtyValue = specialtySelect.value.toLowerCase();
+
+  doctorBoxes.forEach((box) => {
+    const specialty = box.querySelector("span").textContent.toLowerCase();
+    const matchesSpecialty = specialty === specialtyValue;
+
+    if (specialtyValue === "" || matchesSpecialty) {
+      box.style.display = "block";
+    } else {
+      box.style.display = "none";
+    }
+  });
+};
+
+// filter Gender
+const genderSelect = document.querySelector('select[name="gender"]');
+const genderValue = genderSelect.value.toLowerCase();
+
+genderSelect.oninput = function () {
+  if (genderSelect.value === "Male") {
+    doctorBoxes.forEach(function (box, i) {
+      doctorBoxes[2].style.display = "none";
+      doctorBoxes[3].style.display = "none";
+      doctorBoxes[6].style.display = "none";
+      doctorBoxes[0].style.display = "block";
+      doctorBoxes[1].style.display = "block";
+      doctorBoxes[4].style.display = "block";
+      doctorBoxes[5].style.display = "block";
+      doctorBoxes[7].style.display = "block";
+    });
+  }
+  if (genderSelect.value === "Female") {
+    doctorBoxes.forEach(function (box, i) {
+      doctorBoxes[0].style.display = "none";
+      doctorBoxes[1].style.display = "none";
+      doctorBoxes[4].style.display = "none";
+      doctorBoxes[5].style.display = "none";
+      doctorBoxes[7].style.display = "none";
+      doctorBoxes[2].style.display = "block";
+      doctorBoxes[3].style.display = "block";
+      doctorBoxes[6].style.display = "block";
+    });
+  }
+};

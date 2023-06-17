@@ -62,6 +62,7 @@ html::-webkit-scrollbar-thumb:hover {
   padding-top: 60px;
   padding-bottom: var(--main-padding);
   background-color: var(--section-background);
+  min-height: 100vh;
 }
 
 .list-schedule .select-day {
