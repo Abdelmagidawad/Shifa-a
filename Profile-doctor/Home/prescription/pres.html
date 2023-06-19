@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shifa’a | Home | Doctor</title>
+    <link
+      rel="shortcut icon"
+      href="../../../images/favicon.png"
+      style="width: 30px; height: 30px"
+    />
+    <!-- Render All Element Normally  -->
+    <link rel="stylesheet" href="../../../CSS/normalize.css" />
+    <!-- Font Awesome Library  -->
+    <link rel="stylesheet" href="../../../CSS/all.min.css" />
+    <!-- Header file css  -->
+    <link rel="stylesheet" href="../../header.css" />
+    <!-- Prescription File CSS  -->
+    <link rel="stylesheet" href="pres.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Start Header  -->
+    <div class="header" id="header">
+      <div class="container">
+        <a href="#" class="logo">
+          <img src="../../../images/logo.png" alt="photo-logo" />
+          Shifa’a
+        </a>
+        <div class="nav-bar">
+          <ul class="links">
+            <li><a href="#" style="color: #246bfd">Home</a></li>
+            <li><a href="../../Schedule/schedule.html">Schedule</a></li>
+            <li>
+              <a href="#">Patients</a>
+              <ul class="patient-links">
+                <li class="p-link">
+                  <a href="../../Patients/new-patient/N-patient.html"
+                    ><i class="fa-solid fa-user-group"></i>New Patients</a
+                  >
+                </li>
+                <li class="p-link">
+                  <a href="../../Patients/past-patient/P-patient.html"
+                    ><i class="fa-solid fa-user-group"></i>Past Patients</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li><a href="#">Dashboard</a></li>
+          </ul>
+          <ul class="Profile-toltab">
+            <li>
+              <img src="../home-image/avatar-doctor.png" alt="pro-img" />
+              <div class="tol-tab">
+                <div>
+                  <img src="../home-image/avatar-doctor.png" alt="photo" />
+                  <h2>Abdelmagid Migo</h2>
+                </div>
+                <ul class="tol-links">
+                  <li>
+                    <a href=""
+                      ><i class="fa-regular fa-user"></i>Edit Profile</a
+                    >
+                  </li>
+                  <li>
+                    <a href=""
+                      ><i class="fa-regular fa-bell"></i>Notification</a
+                    >
+                  </li>
+                  <li>
+                    <a href=""
+                      ><i class="far fa-check-circle fa-fw"></i>Security</a
+                    >
+                  </li>
+                  <li>
+                    <a href=""
+                      ><i class="fa-sharp fa-regular fa-globe"></i>Language</a
+                    >
+                  </li>
+                  <li>
+                    <button type="button">
+                      <i class="fa-solid fa-arrow-right-from-bracket"></i>Logout
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- End Header  -->
+    <!-- ******************
+    ************ -->
+    <!-- popuplogout -->
+    <div class="popup" id="POP">
+      <div class="overlay"></div>
+      <div class="popup-content">
+        <h2>Are you sure,</h2>
+        <h2>you want to logout</h2>
+        <div class="pop-btn">
+          <button type="button" id="cancel">Cancel</button>
+          <button type="button" id="logout">Logout</button>
+        </div>
+      </div>
+    </div>
+    <!-- end popuplogout -->
+
+    <!-- Start Prescription Content Doctor  -->
+
+    <div class="prescription">
+      <h2 class="main-title">Patient Details</h2>
+      <div class="container">
+        <div class="head">
+          <div class="comment">
+            <h3>Patient Comment</h3>
+            <p>
+              it is not appropriate to create dummy medical symptoms for any
+              purpose ,including app design. medical symptoms can have serious
+              implications for a persons health and it is important to take them
+              seriously.
+            </p>
+          </div>
+          <div class="medical">
+            <div class="text">
+              <h3>Patient Medical History</h3>
+              <a href="#">Open</a>
+            </div>
+            <img src="../home-image/mdecal-img.png" alt="photo-img" />
+          </div>
+        </div>
+        <!-- Start Add Medicine PopUp  -->
+        <div class="add-medicine" id="Aup">
+          <div class="A-overlay"></div>
+          <div class="popup-add">
+            <img src="../home-image/AddMed.png" alt="Photo-medicine" />
+            <form action="" class="formAdd">
+              <div>
+                <input
+                  type="text"
+                  name="medicineName"
+                  placeholder="Medicine Name"
+                />
+              </div>
+              <div>
+                <select name="medicineType" id="Select">
+                  <option value="" disabled selected hidden>
+                    Medicine Type
+                  </option>
+                  <option value="Capsule">Capsule</option>
+                  <option value="Tablets">Tablets</option>
+                  <option value="Drops">Drops</option>
+                  <option value="Liquid">Liquid</option>
+                  <option value="Spray">Spray</option>
+                  <option value="Injection">Injection</option>
+                  <option value="Topical">Topical</option>
+                  <option value="Inhale">Inhale</option>
+                </select>
+              </div>
+              <div>
+                <input type="text" name="Dosage" placeholder="Dosage in mg" />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  name="Duration"
+                  placeholder="Duration in Days"
+                />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  name="Frequency"
+                  placeholder="Frequency per Day"
+                />
+              </div>
+              <div class="btn">
+                <input
+                  type="text"
+                  name="ScheduleLabel"
+                  placeholder="Add Schedule Label"
+                />
+                <button type="button">Add</button>
+              </div>
+              <div class="buttons">
+                <button type="button" id="cancel">Cancel</button>
+                <button type="submit" id="save">Save</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- End Add Medicine PopUp  -->
+        <div class="write-pre">
+          <h2>Write Prescription</h2>
+          <div class="info-doc">
+            <div class="text1">
+              <h3>Dr.Abdelmagid Awad Ali</h3>
+              <p>Audiology</p>
+            </div>
+            <div class="text2">
+              <p><span>Email: </span> AbdelmagidAli@gmal.com</p>
+              <p><span>Phone: </span> 01152586921</p>
+              <p><span>Date: </span> 19-6-2023</p>
+            </div>
+          </div>
+          <div class="add-mdecine">
+            <div class="textt">
+              <h3>Medicine</h3>
+              <button type="button">Add Medicine</button>
+            </div>
+            <img src="../home-image/Add-Medicine.png" alt="photo-medicine" />
+          </div>
+          <div class="medicine">
+            <div class="box">
+              <div class="cont1">
+                <h3>Panadol Cold Flu</h3>
+                <p>Dose: <span>500 mg</span></p>
+                <p class="time">After Breakfast</p>
+              </div>
+              <div class="cont2">
+                <p>Type: <span>Pills</span></p>
+                <p>Frequency: <span>Twice a day</span></p>
+                <p>Duration: <span>3 Days</span></p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="cont1">
+                <h3>Panadol Cold Flu</h3>
+                <p>Dose: <span>200 mg</span></p>
+                <p class="time">After Breakfast</p>
+              </div>
+              <div class="cont2">
+                <p>Type: <span>Pills</span></p>
+                <p>Frequency: <span>Twice a day</span></p>
+                <p>Duration: <span>3 Days</span></p>
+              </div>
+            </div>
+          </div>
+          <textarea name="Note" id="" placeholder="Note"></textarea>
+          <button class="saveAll" type="button">Save Prescription</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Start Prescription Content Doctor  -->
+
+    <!-- main file js  -->
+    <script type="module" src="pres.js"></script>
+    <!-- Cookies file js  -->
+    <script src="../../../Local/localHelper.js"></script>
+    <!-- network helper file js  -->
+    <script src="../../../Network/remoteHelper.js"></script>
+    <!-- header file js  -->
+    <script src="../../header.js"></script>
+    <!-- log out file js  -->
+    <script type="module" src="../../logOut.js"></script>
+  </body>
+</html>
