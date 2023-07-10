@@ -222,16 +222,26 @@ html::-webkit-scrollbar-thumb:hover {
   bottom: 0;
 }
 
+.search-doctor .container .list-doc .box .image {
+  background-color: #246bfd6e;
+}
+
 .search-doctor .container .list-doc .box img {
-  width: 100%;
+  width: 150px;
   max-width: 100%;
-  height: 220px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  height: 150px;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+  position: relative;
+  top: 30px;
+  border: 3px solid white;
 }
 
 .search-doctor .container .list-doc .box .content {
-  padding: 20px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 35px;
 }
 
 .search-doctor .container .list-doc .box .content h3 {

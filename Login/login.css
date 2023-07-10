@@ -288,20 +288,24 @@ html::-webkit-scrollbar-thumb:hover {
   }
 }
 
+.form .content img {
+  display: none;
+}
+
 .form form {
   width: 65%;
   margin: 15px auto;
-  border-radius: 5px;
-  border: 1px solid var(--main-color);
-  box-shadow: 0 0 10px 2px rgb(0 0 0 / 10%);
-  padding: 75px;
+  border-radius: 10px;
+  /* border: 1px solid var(--main-color); */
+  box-shadow: 0 0 8px 0px rgb(0 0 0 / 10%);
+  padding: 30px 40px;
   background-color: white;
 }
 
 @media (max-width: 767px) {
   .form form {
     width: fit-content;
-    padding: 40px 20px;
+    padding: 25px 30px;
   }
 }
 
@@ -337,12 +341,30 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 .form form div.pass {
-  margin-top: 45px;
-  margin-bottom: 35px;
+  margin-top: 30px;
+  margin-bottom: 25px;
 }
 
 .form form div.pass input {
-  margin-bottom: 35px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 992px) {
+  .form .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+  }
+  .form .content img {
+    width: 50%;
+    height: 450px;
+    max-width: 100%;
+    display: block;
+  }
+  .form form {
+    width: 60%;
+  }
 }
 
 .form form .pass a {
