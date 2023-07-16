@@ -61,7 +61,7 @@ a {
 
 /* Add Scrollbar  */
 html::-webkit-scrollbar {
-  width: 15px;
+  width: 12px;
 }
 
 html::-webkit-scrollbar-track {
@@ -71,7 +71,7 @@ html::-webkit-scrollbar-track {
 
 html::-webkit-scrollbar-thumb {
   background-color: var(--main-color);
-  border-radius: 5px;
+  border-radius: 6px;
   transition: 0.3s;
 }
 
@@ -226,10 +226,6 @@ html::-webkit-scrollbar-thumb:hover {
   color: #e6e6e6;
 }
 
-.header .nav-bar .bottom li:hover {
-  transform: scale(0.9);
-}
-
 /* End Header  */
 /* Start Form  */
 .form {
@@ -309,10 +305,10 @@ html::-webkit-scrollbar-thumb:hover {
 .form form {
   width: 100%;
   margin: auto;
-  border-radius: 15px;
-  border: 1px solid var(--main-color);
-  box-shadow: 0 0 10px 2px rgb(0 0 0 / 10%);
-  padding: 45px;
+  border-radius: 10px;
+  /* border: 1px solid var(--main-color); */
+  box-shadow: 0 0 8px 0px rgb(0 0 0 / 10%);
+  padding: 30px 40px;
   background-color: white;
 }
 

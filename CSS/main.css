@@ -94,7 +94,7 @@ a {
   border: 2px solid #333;
   bottom: -38px;
   background-color: white;
-  animation: animation-color2 1s infinite linear alternate;
+  animation: animation-color2 1s infinite ease-in-out alternate;
 }
 
 @keyframes animation-color1 {
@@ -134,6 +134,13 @@ a {
   width: 83%;
   line-height: 1.7;
   color: var(--second-color);
+  font-size: 18px;
+}
+
+@media (max-width: 767px) {
+  .main-heading p {
+    width: initial;
+  }
 }
 
 /* End main-title */
@@ -141,7 +148,7 @@ a {
 /* End Component  */
 /* Add Scrollbar  */
 html::-webkit-scrollbar {
-  width: 15px;
+  width: 12px;
 }
 
 html::-webkit-scrollbar-track {
@@ -151,7 +158,7 @@ html::-webkit-scrollbar-track {
 
 html::-webkit-scrollbar-thumb {
   background-color: var(--main-color);
-  border-radius: 5px;
+  border-radius: 6px;
   transition: 0.3s;
 }
 
@@ -301,6 +308,7 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 .header .nav-bar .bottom a {
+  font-size: 17px;
   color: black;
   padding: 3px 13px;
   border-radius: 10px;
@@ -328,10 +336,6 @@ html::-webkit-scrollbar-thumb:hover {
 .header .nav-bar .bottom li:last-of-type a:hover {
   background-color: #4368e1;
   color: #e6e6e6;
-}
-
-.header .nav-bar .bottom li:hover {
-  transform: scale(0.9);
 }
 
 /* End Header  */
@@ -709,7 +713,7 @@ html::-webkit-scrollbar-thumb:hover {
 .download {
   padding-top: var(--main-padding);
   padding-bottom: var(--main-padding);
-  /* background-color: #fefefe; */
+  background-color: #fefefe;
   position: relative;
 }
 
@@ -723,6 +727,7 @@ html::-webkit-scrollbar-thumb:hover {
 .download .left {
   top: 100px;
   left: 10px;
+  z-index: 1;
   animation: dot-anim-left 5s infinite alternate;
 }
 
@@ -872,7 +877,7 @@ html::-webkit-scrollbar-thumb:hover {
   z-index: 1;
   border-radius: 20px;
   box-shadow: 0 0 10px 2px rgb(0 0 0 / 10%);
-  height: 70vh;
+  height: 66vh;
   overflow: hidden;
 }
 
@@ -912,11 +917,13 @@ html::-webkit-scrollbar-thumb:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  row-gap: 20px;
-}
-
-.feedback .container .slide-row:not(:first-child) {
-  margin-left: 20px;
+  row-gap: 10px;
+  margin-left: 40px;
+  /*  */
+  width: 35%;
+  background-color: var(--section-background);
+  border-radius: 150px;
+  box-shadow: 0 0 8px 0 rgb(0 0 0 / 10%);
 }
 
 @media (max-width: 767px) {
@@ -924,13 +931,18 @@ html::-webkit-scrollbar-thumb:hover {
     width: 277%;
   }
 
-  .feedback .container .slide-row:not(:first-child) {
-    margin-left: 10px;
+  .feedback .container .slide-row {
+    width: 30%;
+    border-radius: 20px;
+    margin-left: 3%;
   }
 }
 
 .feedback .info {
   text-align: center;
+  /*  */
+  position: relative;
+  top: -25px;
 }
 
 .feedback .info img {
@@ -955,15 +967,18 @@ html::-webkit-scrollbar-thumb:hover {
 .feedback .info h4 {
   margin: 15px auto 0px;
   font-weight: bold;
-  font-size: 19px;
+  font-size: 20px;
 }
 
 .feedback .opinion {
   text-align: center;
+  /*  */
+  position: relative;
+  top: -15px;
 }
 
 .feedback .opinion p {
-  font-size: 20px;
+  font-size: 19px;
   line-height: 1.7;
   color: var(--second-color);
   text-align: center;
@@ -973,12 +988,17 @@ html::-webkit-scrollbar-thumb:hover {
 @media (max-width: 767px) {
   .feedback .opinion p {
     padding: 0 15px;
+    font-size: 18px;
   }
 }
 
 .feedback .scroll-icone {
   margin: 27px auto 0;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 
 .feedback .scroll-icone button {
@@ -1007,6 +1027,22 @@ html::-webkit-scrollbar-thumb:hover {
 
 .feedback .scroll-icone button:last-child {
   margin-left: 10px;
+}
+
+.feedback .scroll-icone .dots {
+  display: flex;
+  gap: 10px;
+}
+
+.feedback .scroll-icone .dots li {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid var(--main-color);
+}
+.active {
+  background-color: var(--main-color);
+  transform: scale(1.3);
 }
 
 /*  End Feedback */

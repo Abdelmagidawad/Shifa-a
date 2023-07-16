@@ -61,7 +61,7 @@ a {
 
 /* Add Scrollbar  */
 html::-webkit-scrollbar {
-  width: 15px;
+  width: 12px;
 }
 
 html::-webkit-scrollbar-track {
@@ -71,7 +71,7 @@ html::-webkit-scrollbar-track {
 
 html::-webkit-scrollbar-thumb {
   background-color: var(--main-color);
-  border-radius: 5px;
+  border-radius: 6px;
   transition: 0.3s;
 }
 
@@ -216,6 +216,7 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 .header .nav-bar .bottom li a {
+  font-size: 17px;
   background-color: var(--main-color);
   color: white;
   box-shadow: 0 0 8px 0px rgb(0 0 0 / 15%);
@@ -224,10 +225,6 @@ html::-webkit-scrollbar-thumb:hover {
 .header .nav-bar .bottom li:last-of-type a:hover {
   background-color: #4368e1;
   color: #e6e6e6;
-}
-
-.header .nav-bar .bottom li:hover {
-  transform: scale(0.9);
 }
 
 /* End Header  */

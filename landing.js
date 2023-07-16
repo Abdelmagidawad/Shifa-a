@@ -1,53 +1,58 @@
-let parentSlid = document.getElementById("slide");
-let contentSlid = document.querySelectorAll(".test .slide-row");
+var nextButton = document.getElementById("next");
+var prevButton = document.getElementById("previse");
+var slideContainer = document.getElementById("slide");
+var slideRows = slideContainer.getElementsByClassName("slide-row");
 
-let preButton = document.querySelector(".scroll-icone #previse");
-let nextButton = document.querySelector(".scroll-icone #next");
+let dotsIcone = document.querySelectorAll(".dots li");
 
-let currentIndex = 0;
+var currentSlideIndex = 0;
 
-nextButton.onclick = function () {
-  if (currentIndex < contentSlid.length - 1) {
-    currentIndex++;
+// Function to show the current slide
 
-    // Calculate the translation distance based on the width of slide-row elements
-    let slideWidth = contentSlid[0].offsetWidth; // Assuming all slide-rows have the same width
-    let translation =
-      (-(currentIndex * slideWidth * 1.03) / parentSlid.offsetWidth) * 100 +
-      2.5;
-    parentSlid.style.transform = `translateX(${translation}%)`;
+function showSlide(index) {
+  // Hide all the slide rows
+  for (var i = 0; i < slideRows.length; i++) {
+    slideRows[i].style.display = "none";
 
-    // Check if the next button is at the last slide-row
-    if (currentIndex === contentSlid.length - 1) {
-      nextButton.style.cursor = "no-drop";
-    } else {
-      nextButton.style.cursor = "pointer";
-    }
-
-    // Reset the cursor style of the previous button
-    preButton.style.cursor = "pointer";
+    dotsIcone[i].classList.remove("active");
   }
-};
 
-preButton.onclick = function () {
-  if (currentIndex > 0) {
-    currentIndex--;
+  slideRows[index].style.display = "block";
 
-    // Calculate the translation distance based on the width of slide-row elements
-    let slideWidth = contentSlid[0].offsetWidth; // Assuming all slide-rows have the same width
-    let translation =
-      (-(currentIndex * slideWidth * 1.03) / parentSlid.offsetWidth) * 100 +
-      2.5;
-    parentSlid.style.transform = `translateX(${translation}%)`;
+  dotsIcone[index].classList.add("active");
 
-    // Check if the previous button is at the first slide-row
-    if (currentIndex === 0) {
-      preButton.style.cursor = "no-drop";
-    } else {
-      preButton.style.cursor = "pointer";
-    }
-
-    // Reset the cursor style of the next button
+  // Enable/disable buttons and set cursor style based on slide index
+  if (index === 0) {
+    prevButton.disabled = true;
+    nextButton.disabled = false;
+    prevButton.style.cursor = "not-allowed";
+    nextButton.style.cursor = "pointer";
+  } else if (index === slideRows.length - 1) {
+    prevButton.disabled = false;
+    nextButton.disabled = true;
+    prevButton.style.cursor = "pointer";
+    nextButton.style.cursor = "not-allowed";
+  } else {
+    prevButton.disabled = false;
+    nextButton.disabled = false;
+    prevButton.style.cursor = "pointer";
     nextButton.style.cursor = "pointer";
   }
-};
+}
+
+function nextSlide() {
+  currentSlideIndex++;
+
+  showSlide(currentSlideIndex);
+}
+
+function prevSlide() {
+  currentSlideIndex--;
+
+  showSlide(currentSlideIndex);
+}
+nextButton.addEventListener("click", nextSlide);
+prevButton.addEventListener("click", prevSlide);
+
+// Show the initial slide
+showSlide(currentSlideIndex);
