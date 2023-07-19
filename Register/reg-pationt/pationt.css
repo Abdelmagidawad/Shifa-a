@@ -369,6 +369,7 @@ html::-webkit-scrollbar-thumb:hover {
 .form form div {
   text-align: left;
   margin-top: 30px;
+  position: relative;
 }
 
 .form form div:first-child {
@@ -451,6 +452,17 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 /* ****** */
+
+.form form div.pass i,
+.form form div.con-pass i {
+  position: absolute;
+  top: 63%;
+  right: 4%;
+  color: var(--second-color);
+  cursor: pointer;
+  font-weight: bold;
+}
+
 .form form .submit {
   text-align: center;
   margin-top: 60px;

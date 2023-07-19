@@ -398,6 +398,7 @@ html::-webkit-scrollbar-thumb:hover {
 .form form div.pass {
   margin-top: 30px;
   margin-bottom: 25px;
+  position: relative;
 }
 
 .form form div.pass input {
@@ -447,6 +448,15 @@ html::-webkit-scrollbar-thumb:hover {
 
 .form form div input:focus::placeholder {
   opacity: 0;
+}
+
+.form form .pass i {
+  position: absolute;
+  top: 45%;
+  right: 4%;
+  color: var(--second-color);
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .form form .submit {

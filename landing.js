@@ -30,6 +30,7 @@ function showSlide(index) {
   }
 
   slideRows[index].style.display = "block";
+  slideRows[index].style.transform = "display 0.4s";
 
   dotsIcone[index].classList.add("active");
 

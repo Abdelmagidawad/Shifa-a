@@ -380,6 +380,7 @@ html::-webkit-scrollbar-thumb:hover {
 .form form div {
   text-align: left;
   margin-top: 25px;
+  position: relative;
 }
 
 .form form div label {
@@ -414,6 +415,15 @@ html::-webkit-scrollbar-thumb:hover {
 
 .form form div input:focus::placeholder {
   opacity: 0;
+}
+
+.form form div i {
+  position: absolute;
+  top: 63%;
+  right: 4%;
+  color: var(--second-color);
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .form form div.submit {

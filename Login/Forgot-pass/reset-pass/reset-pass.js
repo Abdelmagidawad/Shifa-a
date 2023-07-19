@@ -8,3 +8,33 @@ iconMenu.addEventListener("click", () => {
   iconMenu.lastElementChild.classList.toggle("anemy3");
   pLinks.classList.toggle("visible");
 });
+
+// Icon hidden&show password
+let inputPassword = document.querySelector("[name='new-password']");
+let inputConPassword = document.querySelector("[name='confirm-new-password']");
+let iconPass = document.querySelector(".pass i");
+let iconConPass = document.querySelector(".con-pass i");
+
+iconPass.addEventListener("click", function () {
+  if (this.classList.contains("fa-eye-slash")) {
+    inputPassword.setAttribute("type", "text");
+    this.classList.remove("fa-eye-slash");
+    this.classList.add("fa-eye");
+  } else {
+    inputPassword.setAttribute("type", "password");
+    this.classList.remove("fa-eye");
+    this.classList.add("fa-eye-slash");
+  }
+});
+
+iconConPass.addEventListener("click", function () {
+  if (this.classList.contains("fa-eye-slash")) {
+    inputConPassword.setAttribute("type", "text");
+    this.classList.remove("fa-eye-slash");
+    this.classList.add("fa-eye");
+  } else {
+    inputConPassword.setAttribute("type", "password");
+    this.classList.remove("fa-eye");
+    this.classList.add("fa-eye-slash");
+  }
+});

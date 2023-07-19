@@ -73,6 +73,34 @@ function validateForm() {
   return true; // Allow form submission
 }
 
+// Icon hidden&show password
+let iconPass = document.querySelector(".pass i");
+let iconConPass = document.querySelector(".con-pass i");
+
+iconPass.addEventListener("click", function () {
+  if (this.classList.contains("fa-eye-slash")) {
+    inputPassword.setAttribute("type", "text");
+    this.classList.remove("fa-eye-slash");
+    this.classList.add("fa-eye");
+  } else {
+    inputPassword.setAttribute("type", "password");
+    this.classList.remove("fa-eye");
+    this.classList.add("fa-eye-slash");
+  }
+});
+
+iconConPass.addEventListener("click", function () {
+  if (this.classList.contains("fa-eye-slash")) {
+    inputPasswordCon.setAttribute("type", "text");
+    this.classList.remove("fa-eye-slash");
+    this.classList.add("fa-eye");
+  } else {
+    inputPasswordCon.setAttribute("type", "password");
+    this.classList.remove("fa-eye");
+    this.classList.add("fa-eye-slash");
+  }
+});
+
 // Links Header
 let iconMenu = document.querySelector(".menu-links .icon");
 let pLinks = document.querySelector(".menu-links .links");
