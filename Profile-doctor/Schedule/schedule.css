@@ -33,7 +33,7 @@ a {
 
 /* Add Scrollbar  */
 html::-webkit-scrollbar {
-  width: 15px;
+  width: 12px;
 }
 
 html::-webkit-scrollbar-track {
@@ -43,7 +43,7 @@ html::-webkit-scrollbar-track {
 
 html::-webkit-scrollbar-thumb {
   background-color: var(--main-color);
-  border-radius: 5px;
+  border-radius: 6px;
   transition: 0.3s;
 }
 
