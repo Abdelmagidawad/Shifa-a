@@ -66,9 +66,10 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 .list-schedule .select-day {
-  padding: 0 3%;
   display: flex;
+  justify-content: space-between;
   gap: 30px;
+  border-radius: 10px;
   background-color: var(--section-background);
 }
 
@@ -83,11 +84,21 @@ html::-webkit-scrollbar-thumb:hover {
   font-size: 20px;
   font-weight: bold;
   box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
+  transition: var(--main-transition);
+}
+.list-schedule .select-day div:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.list-schedule .select-day div:hover > p {
+  color: white;
 }
 
 .list-schedule .select-day div p {
   color: var(--main-color);
   margin: 6px 0 0;
+  transition: var(--main-transition);
 }
 .list-schedule .select-day div:nth-child(3) {
   background-color: var(--main-color);
@@ -99,13 +110,13 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 .list-schedule .list-patient-Sch {
-  width: calc(100% - 65px);
+  /* width: calc(100% - 65px); */
   margin: auto;
   background-color: white;
   border-radius: 15px;
-  padding: 30px;
+  padding: 25px;
   margin-top: 50px;
-  box-shadow: 0 0 7px 1px rgb(0 0 0 /10%);
+  box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
   transition: var(--main-transition);
 }
 
@@ -178,6 +189,14 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+  .list-schedule .select-day {
+    gap: 20px;
+  }
+
+  .list-schedule .list-patient-Sch {
+    padding: 20px;
+  }
+
   .list-schedule .list-patient-Sch .title {
     font-size: 20px;
     margin-bottom: 6px;
@@ -199,7 +218,8 @@ html::-webkit-scrollbar-thumb:hover {
     margin-right: 10px;
   }
   .list-schedule .list-patient-Sch .list-patient .box .button button {
-    padding: 5px 5px;
+    padding: 6px;
+    border-radius: 6px;
   }
 }
 
@@ -394,6 +414,11 @@ html::-webkit-scrollbar-thumb:hover {
   font-size: 35px;
   border-radius: 50%;
   cursor: pointer;
+  transition: var(--main-transition);
+}
+
+.seeMore-up .popup-seeMore button i:hover {
+  color: #e4e6eb;
 }
 
 /* End See More PopUp   */

@@ -65,84 +65,59 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 .list-completed .links-appointments {
-  padding-right: 30px;
   display: flex;
-  gap: 40px;
+  justify-content: space-between;
+  border-radius: 15px;
+  background-color: var(--section-background);
 }
 
-.list-completed .links-appointments input[type="radio"] {
-  -webkit-appearance: none;
-  appearance: none;
-}
 .list-completed .links-appointments div {
   width: 30%;
-}
-.list-completed .links-appointments .up-appoint {
-  margin-left: -9px;
-}
-.list-completed .links-appointments label {
-  display: block;
-  cursor: pointer;
-  text-align: center;
   background-color: white;
+  text-align: center;
+  cursor: pointer;
   border-radius: 15px;
-  padding: 20px 0px;
+  padding: 20px 0;
   font-size: 20px;
   font-weight: bold;
+  color: var(--main-color);
   box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
+  transition: 0.5s;
 }
+
+.list-completed .links-appointments div:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.list-completed .links-appointments div.com-appoint {
+  background-color: var(--main-color);
+  color: white;
+}
+
 @media (max-width: 767px) {
-  .list-completed .links-appointments label {
-    border-radius: 11px;
-    padding: 14px 4px;
+  .list-completed .links-appointments div {
+    border-radius: 10px;
+    padding: 14px 0px;
     font-size: 14px;
   }
-
-  .list-completed .links-appointments {
-    padding-right: 0px;
-    display: flex;
-    gap: 5px;
-    padding: 0 10px;
-  }
-  .list-completed .links-appointments .up-appoint {
-    margin-left: 0px;
-  }
 }
+
 @media (min-width: 768px) and (max-width: 991px) {
-  .list-completed .links-appointments {
-    gap: 20px;
-  }
-  .list-completed .links-appointments .up-appoint {
-    margin-left: 9px;
-  }
-  .list-completed .links-appointments label {
-    padding: 16px 0px;
+  .list-completed .links-appointments div {
+    /* padding: 16px 0px; */
     font-size: 17px;
   }
 }
 
-.list-completed .links-appointments input[type="radio"]:checked + div label {
-  background-color: var(--main-color);
-}
-.list-completed .links-appointments input[type="radio"]:checked + div label a {
-  color: white;
-}
-
-.list-completed .links-appointments label a {
-  display: block;
-  width: fit-content;
-  margin: auto;
-  color: var(--main-color);
-}
-
 .list-completed .list-doctor-Com {
-  width: calc(100% - 60px);
+  /* width: calc(100% - 60px); */
   margin: auto;
   background-color: white;
   border-radius: 15px;
-  padding: 30px;
+  padding: 25px;
   margin-top: 50px;
-  box-shadow: 0 0 7px 1px rgb(0 0 0 /10%);
+  box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
 }
 
 .list-completed .list-doctor-Com .list-doctor .header-doc {
@@ -217,6 +192,10 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+  .list-completed .list-doctor-Com {
+    padding: 20px;
+  }
+
   .list-completed .list-doctor-Com .title {
     font-size: 20px;
     margin-bottom: 6px;
@@ -239,9 +218,11 @@ html::-webkit-scrollbar-thumb:hover {
   }
   .list-completed .list-doctor-Com .list-doctor .box .button .a,
   .list-completed .list-doctor-Com .list-doctor .box .button a {
-    padding: 5px 5px;
+    padding: 6px;
+    border-radius: 6px;
   }
 }
+
 .list-completed .list-doctor-Com .list-doctor .box .button .a:hover,
 .list-completed .list-doctor-Com .list-doctor .box .button a:hover {
   background-color: var(--main-color);
@@ -432,7 +413,12 @@ html::-webkit-scrollbar-thumb:hover {
   font-size: 30px;
   border-radius: 50%;
   cursor: pointer;
+  transition: var(--main-transition);
 }
+.review-up .popup-review .buttons button:first-child i:hover {
+  color: #e4e6eb;
+}
+
 .review-up .popup-review .buttons button:last-child {
   background-color: var(--main-color);
   color: white;

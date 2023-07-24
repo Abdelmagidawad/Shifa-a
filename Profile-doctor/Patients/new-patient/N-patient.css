@@ -58,9 +58,10 @@ html::-webkit-scrollbar-thumb:hover {
 
 /* Start List Patient  */
 .list-patient {
-  padding-top: var(--main-padding);
+  padding-top: 60px;
   padding-bottom: var(--main-padding);
   background-color: var(--section-background);
+  min-height: 100vh;
 }
 
 .list-patient .main-heading {
@@ -71,7 +72,7 @@ html::-webkit-scrollbar-thumb:hover {
   font-size: 35px;
   margin: 0;
   font-weight: bold;
-  letter-spacing: 3px;
+  /* letter-spacing: 3px; */
   color: var(--main-color);
 }
 
@@ -87,57 +88,58 @@ html::-webkit-scrollbar-thumb:hover {
   font-size: 20px;
   color: var(--second-color);
 }
+.list-patient .main-heading p span {
+  font-weight: bold;
+}
 
-.list-patient .ccontainer {
-  box-shadow: 0 0 7px 1px rgb(0 0 0 /10%);
+.list-patient .container {
+  box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
   background-color: white;
-  padding-top: 45px;
-  padding-bottom: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 55px 20px 20px;
   border-radius: 15px;
-  width: calc(100% - 55px);
   margin: auto;
+  position: relative;
 }
 
-.list-patient .ccontainer .filter {
+.list-patient .container .filter {
   position: absolute;
-  top: 247px;
-  right: 86px;
+  top: -49px;
+  right: 27px;
 }
 
-.list-patient .ccontainer .filter i {
-  font-size: 23px;
+.list-patient .container .filter i {
+  font-size: 24px;
   margin: 5px 5px 0 0;
   color: var(--main-color);
 }
 
-.list-patient .ccontainer .filter select {
+.list-patient .container .filter select {
   cursor: pointer;
   outline: none;
-  border-radius: 5px;
+  border-radius: 7px;
   border: 2px solid #cbcfdd;
-  padding: 0px 20px;
+  padding: 0px 30px;
   font-size: 17px;
   font-weight: bold;
   color: var(--second-color);
+  transition: var(--main-transition);
 }
 
-.list-patient .ccontainer .filter select:focus {
+.list-patient .container .filter select:focus {
   box-shadow: 0 0 5px 0 var(--main-color);
   outline: none;
 }
 
-.list-patient .ccontainer table {
+.list-patient .container table {
   width: 100%;
   border-spacing: 0px;
 }
 
-.list-patient .ccontainer table thead tr {
+.list-patient .container table thead tr {
   background-color: var(--section-background);
 }
 
-.list-patient .ccontainer table thead tr td {
+.list-patient .container table thead tr td {
   padding: 20px;
   font-size: 19px;
   font-weight: bold;
@@ -151,46 +153,41 @@ html::-webkit-scrollbar-thumb:hover {
     letter-spacing: 1px;
   }
 
-  .list-patient .ccontainer {
-    padding: 45px 11px 15px 11px;
-    width: calc(100% - 25px);
+  .list-patient .container {
+    padding: 45px 15px 15px;
   }
 
-  .list-patient .ccontainer .filter {
-    right: 56px;
-  }
-
-  .list-patient .ccontainer .filter i {
+  .list-patient .container .filter i {
     font-size: 20px;
   }
 
-  .list-patient .ccontainer .filter select {
-    padding: 0px 15px;
+  .list-patient .container .filter select {
+    padding: 0px 25px;
     font-size: 15px;
   }
 
-  .list-patient .ccontainer table thead tr td {
+  .list-patient .container table thead tr td {
     padding: 10px;
     font-size: 16px;
   }
 }
 
-.list-patient .ccontainer table thead tr td:first-child {
+.list-patient .container table thead tr td:first-child {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
 
-.list-patient .ccontainer table thead tr td:last-child {
+.list-patient .container table thead tr td:last-child {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 
-.list-patient .ccontainer table tbody tr {
+.list-patient .container table tbody tr {
   position: relative;
   z-index: 1;
 }
 
-.list-patient .ccontainer table tbody tr::before {
+.list-patient .container table tbody tr::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -203,11 +200,11 @@ html::-webkit-scrollbar-thumb:hover {
   transition: 0.5s;
 }
 
-.list-patient .ccontainer table tbody tr:hover::before {
+.list-patient .container table tbody tr:hover::before {
   width: 100%;
 }
 
-.list-patient .ccontainer table tbody tr td {
+.list-patient .container table tbody tr td {
   padding: 10px 20px;
   font-size: 17px;
   font-weight: bold;
@@ -215,27 +212,27 @@ html::-webkit-scrollbar-thumb:hover {
   border-bottom: 2px solid #e5e5e5;
 }
 
-.list-patient .ccontainer table tbody tr td:first-child {
+.list-patient .container table tbody tr td:first-child {
   padding-left: 0px;
   display: flex;
   align-items: center;
   margin-top: 10px;
 }
 
-.list-patient .ccontainer table tbody tr td img {
+.list-patient .container table tbody tr td img {
   max-width: 50px;
   border-radius: 50%;
   margin-right: 10px;
 }
 
-.list-patient .ccontainer table tbody tr td:nth-child(5) span {
+.list-patient .container table tbody tr td:nth-child(5) span {
   display: block;
   font-size: 14px;
   color: #c7c4c4;
   margin-top: 3px;
 }
 
-.list-patient .ccontainer table tbody tr td:nth-child(6) span {
+.list-patient .container table tbody tr td:nth-child(6) span {
   background-color: #00f260;
   color: white;
   font-weight: bold;
@@ -244,17 +241,17 @@ html::-webkit-scrollbar-thumb:hover {
   border-radius: 6px;
 }
 
-.list-patient .ccontainer table tbody tr td:nth-child(6) span.des {
+.list-patient .container table tbody tr td:nth-child(6) span.des {
   background-color: #f00000;
   padding: 0px 9px;
 }
 
-.list-patient .ccontainer table tbody tr td:nth-child(6) span.pen {
+.list-patient .container table tbody tr td:nth-child(6) span.pen {
   background-color: #b2b2b2;
   padding: 0px 10px;
 }
 
-.list-patient .ccontainer table tbody tr td:last-child i {
+.list-patient .container table tbody tr td:last-child i {
   padding: 2px 3px;
   background-color: #246bfd9e;
   color: white;
@@ -262,25 +259,25 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .list-patient .ccontainer table tbody tr td {
+  .list-patient .container table tbody tr td {
     padding: 8px 10px;
     font-size: 14px;
   }
 
-  .list-patient .ccontainer table tbody tr td:first-child {
+  .list-patient .container table tbody tr td:first-child {
     margin-top: 8px;
   }
 
-  .list-patient .ccontainer table tbody tr td img {
+  .list-patient .container table tbody tr td img {
     max-width: 45px;
   }
 
-  .list-patient .ccontainer table tbody tr td:nth-child(5) span {
+  .list-patient .container table tbody tr td:nth-child(5) span {
     font-size: 12px;
   }
 }
 
-.list-patient .ccontainer table tbody tr:hover td:last-child i {
+.list-patient .container table tbody tr:hover td:last-child i {
   animation: animation-see-icon 0.4s linear infinite;
 }
 
@@ -294,14 +291,14 @@ html::-webkit-scrollbar-thumb:hover {
   }
 }
 
-.list-patient .ccontainer table tbody tr td:last-child i:hover {
+.list-patient .container table tbody tr td:last-child i:hover {
   animation-play-state: paused;
 }
 
 /* When open mobile app */
 
 @media (max-width: 767px) {
-  .list-patient .ccontainer {
+  .list-patient > .container {
     display: none;
   }
 }
@@ -313,8 +310,8 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 .list-patient .for-mobile {
-  margin-top: 100px;
-  margin-bottom: 155px;
+  margin-top: 60px;
+  margin-bottom: 120px;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -328,8 +325,8 @@ html::-webkit-scrollbar-thumb:hover {
 .list-patient .for-mobile .container {
   width: fit-content;
   margin: auto;
-  /* background-color: white; */
-  box-shadow: 0 0 7px 1px rgb(0 0 0 / 10%);
+  background-color: transparent;
+  box-shadow: 0 0 8px 0px rgb(0 0 0 / 10%);
   border: 1px solid var(--main-color);
   border-radius: 15px;
   padding: 25px;

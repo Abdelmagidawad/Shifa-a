@@ -3,9 +3,8 @@ let statPending = document.querySelectorAll("tbody tr.pending");
 let statAccepted = document.querySelectorAll("tbody tr.accept");
 let statDecline = document.querySelectorAll("tbody tr.decline");
 
-console.log(statDecline);
-console.log(statAccepted);
-console.log(statPending);
+let pendingNum = document.querySelector(".main-heading span");
+pendingNum.innerHTML = statPending.length;
 
 slector.oninput = function () {
   if (slector.value === "All") {

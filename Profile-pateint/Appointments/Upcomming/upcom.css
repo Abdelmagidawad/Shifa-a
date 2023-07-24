@@ -66,84 +66,58 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 .list-upcoming .links-appointments {
-  padding-right: 30px;
   display: flex;
-  gap: 40px;
+  justify-content: space-between;
+  border-radius: 15px;
+  background-color: var(--section-background);
 }
 
-.list-upcoming .links-appointments input[type="radio"] {
-  -webkit-appearance: none;
-  appearance: none;
-}
 .list-upcoming .links-appointments div {
   width: 30%;
-}
-.list-upcoming .links-appointments .up-appoint {
-  margin-left: -9px;
-}
-.list-upcoming .links-appointments label {
-  display: block;
-  cursor: pointer;
-  text-align: center;
   background-color: white;
+  text-align: center;
+  cursor: pointer;
   border-radius: 15px;
-  padding: 20px 0px;
+  padding: 20px 0;
   font-size: 20px;
   font-weight: bold;
+  color: var(--main-color);
   box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
+  transition: 0.5s;
 }
+.list-upcoming .links-appointments div:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.list-upcoming .links-appointments div.up-appoint {
+  background-color: var(--main-color);
+  color: white;
+}
+
 @media (max-width: 767px) {
-  .list-upcoming .links-appointments label {
-    border-radius: 11px;
-    padding: 14px 4px;
+  .list-upcoming .links-appointments div {
+    border-radius: 10px;
+    padding: 14px 0px;
     font-size: 14px;
   }
-
-  .list-upcoming .links-appointments {
-    padding-right: 0px;
-    display: flex;
-    gap: 5px;
-    padding: 0 10px;
-  }
-  .list-upcoming .links-appointments .up-appoint {
-    margin-left: 0px;
-  }
 }
+
 @media (min-width: 768px) and (max-width: 991px) {
-  .list-upcoming .links-appointments {
-    gap: 20px;
-  }
-  .list-upcoming .links-appointments .up-appoint {
-    margin-left: 9px;
-  }
-  .list-upcoming .links-appointments label {
-    padding: 16px 0px;
+  .list-upcoming .links-appointments div {
+    /* padding: 16px 0px; */
     font-size: 17px;
   }
 }
 
-.list-upcoming .links-appointments input[type="radio"]:checked + div label {
-  background-color: var(--main-color);
-}
-.list-upcoming .links-appointments input[type="radio"]:checked + div label a {
-  color: white;
-}
-
-.list-upcoming .links-appointments label a {
-  display: block;
-  width: fit-content;
-  margin: auto;
-  color: var(--main-color);
-}
-
 .list-upcoming .list-doctor-Up {
-  width: calc(100% - 60px);
+  /* width: calc(100% - 60px); */
   margin: auto;
   background-color: white;
   border-radius: 15px;
-  padding: 30px;
+  padding: 25px;
   margin-top: 50px;
-  box-shadow: 0 0 7px 1px rgb(0 0 0 /10%);
+  box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
 }
 
 .list-upcoming .list-doctor-Up .list-doctor .header-doc {
@@ -218,6 +192,9 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+  .list-upcoming .list-doctor-Up {
+    padding: 20px;
+  }
   .list-upcoming .list-doctor-Up .title {
     font-size: 20px;
     margin-bottom: 6px;
@@ -240,7 +217,8 @@ html::-webkit-scrollbar-thumb:hover {
   }
   .list-upcoming .list-doctor-Up .list-doctor .box .button .a,
   .list-upcoming .list-doctor-Up .list-doctor .box .button a {
-    padding: 5px 5px;
+    padding: 6px;
+    border-radius: 6px;
   }
 }
 

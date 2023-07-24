@@ -1,3 +1,19 @@
+// links appointments
+let completeAppoint = document.querySelector(
+  ".links-appointments .com-appoint"
+);
+let canceledAppoint = document.querySelector(
+  ".links-appointments .can-appoint"
+);
+
+completeAppoint.addEventListener("click", () => {
+  window.location.assign("../Commpleted/commplet.html");
+});
+canceledAppoint.addEventListener("click", () => {
+  window.location.assign("../Canceled/cancel.html");
+});
+
+// list doctor Upcoming
 // let cancelBtn = document.querySelectorAll(".button .cancel");
 // let buttons = document.querySelectorAll(".button ");
 // let boxContent = document.querySelectorAll(".list-doctor .box");
