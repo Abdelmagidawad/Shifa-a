@@ -1,3 +1,12 @@
+//  Preloading Page
+let preLoad = document.querySelector(".preloading");
+
+window.addEventListener("load", function () {
+  this.setTimeout(function () {
+    preLoad.style.display = "none";
+  }, 1000);
+});
+
 // Links Header
 let iconMenu = document.querySelector(".menu-links .icon");
 let pLinks = document.querySelector(".menu-links .links");

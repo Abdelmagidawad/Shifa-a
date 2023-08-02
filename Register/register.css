@@ -292,7 +292,7 @@ html::-webkit-scrollbar-thumb:hover {
 /* End Header  */
 /* Start Join Us  */
 .join {
-  padding-top: 100px;
+  padding-top: 60px;
   padding-bottom: 100px;
   background-color: var(--section-background);
 }
@@ -366,6 +366,7 @@ html::-webkit-scrollbar-thumb:hover {
 
 .join .container .box:first-child {
   animation: box-doctor 0.75s ease-in-out 1;
+  animation-delay: 1s;
 }
 
 @keyframes box-doctor {
@@ -380,6 +381,7 @@ html::-webkit-scrollbar-thumb:hover {
 
 .join .container .box:last-child {
   animation: box-patient 0.75s ease-in-out 1;
+  animation-delay: 1s;
 }
 
 @keyframes box-patient {

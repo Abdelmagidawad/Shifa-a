@@ -36,10 +36,10 @@ closeBtn.addEventListener("click", function () {
 
 // to test Button submit
 submit.addEventListener("click", function () {
-  // stars.forEach(function (star) {
-  //   star.style.fontWeight = "200";
-  //   currentRate.innerHTML = "0 of 5";
-  // });
+  stars.forEach(function (star) {
+    star.style.fontWeight = "200";
+    currentRate.innerHTML = "0 of 5";
+  });
   parentContentRate.parentElement.classList.toggle("active");
 });
 
