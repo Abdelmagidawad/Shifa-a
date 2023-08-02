@@ -355,7 +355,7 @@ html::-webkit-scrollbar-thumb:hover {
   border-radius: 10px;
   /* border: 1px solid var(--main-color); */
   box-shadow: 0 0 8px 0px rgb(0 0 0 / 10%);
-  padding: 50px;
+  padding: 40px 55px;
   background-color: white;
 }
 
@@ -389,6 +389,7 @@ html::-webkit-scrollbar-thumb:hover {
   border-radius: 7px;
   margin-top: 15px;
   caret-color: var(--main-color);
+  transition: 0.3s;
 }
 
 .form form div:not(:last-of-type, .gender) input:focus {
@@ -465,7 +466,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .form form .submit {
   text-align: center;
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
 .form form .submit .input {
@@ -478,7 +479,7 @@ input[type="number"]::-webkit-inner-spin-button {
   border: none;
   cursor: pointer;
   border-radius: 5px;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
   transition: var(--main-transition);
 }
 
@@ -504,10 +505,10 @@ input[type="number"]::-webkit-inner-spin-button {
 
 /* Start Footer  */
 .footer {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   background-color: #64b8f3;
-  animation: footer-anim 7s infinite linear;
+  /* animation: footer-anim 7s infinite linear; */
 }
 
 @keyframes footer-anim {
@@ -614,3 +615,34 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 /* End Footer */
+
+/* Icon Scroll to top  */
+.UP {
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #246bfdc4;
+  box-shadow: 0 0 8px 0 rgb(0 0 0 / 10%);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 11px;
+  line-height: 40px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+
+.UP:hover {
+  background-color: var(--main-color);
+}
+
+.UP.show {
+  opacity: 1;
+  z-index: 50;
+}

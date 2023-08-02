@@ -9,6 +9,22 @@ iconMenu.addEventListener("click", () => {
   pLinks.classList.toggle("visible");
 });
 
+// Scroll Top Code
+let iconScrollTop = document.querySelector(".UP");
+
+window.addEventListener("scroll", function () {
+  this.scrollY >= 500
+    ? iconScrollTop.classList.add("show")
+    : iconScrollTop.classList.remove("show");
+});
+
+iconScrollTop.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+
 // Feedback Code
 var nextButton = document.getElementById("next");
 var prevButton = document.getElementById("previse");

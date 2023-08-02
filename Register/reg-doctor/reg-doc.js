@@ -73,6 +73,26 @@ function validateForm() {
   return true; // Allow form submission
 }
 
+// sort specialty
+function sortDatalistOptions() {
+  const datalist = document.getElementById("specialty");
+  const options = Array.from(datalist.options);
+  options.sort((a, b) => a.value.localeCompare(b.value));
+
+  console.log(options.length);
+
+  // Clear existing options in the datalist
+  while (datalist.firstChild) {
+    datalist.removeChild(datalist.firstChild);
+  }
+
+  // Add sorted options back to the datalist
+  options.forEach((option) => {
+    datalist.appendChild(option);
+  });
+}
+sortDatalistOptions();
+
 // Icon hidden&show password
 let iconPass = document.querySelector(".pass i");
 let iconConPass = document.querySelector(".con-pass i");
@@ -110,4 +130,20 @@ iconMenu.addEventListener("click", () => {
   iconMenu.firstElementChild.nextElementSibling.classList.toggle("anemy1");
   iconMenu.lastElementChild.classList.toggle("anemy3");
   pLinks.classList.toggle("visible");
+});
+
+// Scroll Top Code
+let iconScrollTop = document.querySelector(".UP");
+
+window.addEventListener("scroll", function () {
+  this.scrollY >= 300
+    ? iconScrollTop.classList.add("show")
+    : iconScrollTop.classList.remove("show");
+});
+
+iconScrollTop.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 });

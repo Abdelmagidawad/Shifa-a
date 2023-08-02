@@ -22,3 +22,19 @@ let toolTip = document.querySelector(".Profile-toltab .tol-tab");
 imagHeader.addEventListener("click", function () {
   toolTip.classList.toggle("visible");
 });
+
+// Scroll Top Code
+let iconScrollTop = document.querySelector(".UP");
+
+window.addEventListener("scroll", function () {
+  this.scrollY >= 400
+    ? iconScrollTop.classList.add("Showw")
+    : iconScrollTop.classList.remove("Showw");
+});
+
+iconScrollTop.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});

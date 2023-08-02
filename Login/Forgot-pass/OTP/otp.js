@@ -24,3 +24,19 @@ inputs.forEach(function (ele, index, array) {
     }
   };
 });
+
+// Scroll Top Code
+let iconScrollTop = document.querySelector(".UP");
+
+window.addEventListener("scroll", function () {
+  this.scrollY >= 300
+    ? iconScrollTop.classList.add("show")
+    : iconScrollTop.classList.remove("show");
+});
+
+iconScrollTop.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});

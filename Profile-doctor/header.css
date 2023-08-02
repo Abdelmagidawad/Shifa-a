@@ -579,3 +579,34 @@ html::-webkit-scrollbar-thumb:hover {
 .popup .pop-btn button:last-child:hover {
   box-shadow: 0 0 7px 1px red;
 }
+
+/*Start Icon Scroll to top  */
+.UP {
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #246bfdc4;
+  box-shadow: 0 0 8px 0 rgb(0 0 0 / 10%);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 11px;
+  line-height: 40px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+
+.UP:hover {
+  background-color: var(--main-color);
+}
+
+.UP.Showw {
+  opacity: 1;
+  z-index: 50;
+}
