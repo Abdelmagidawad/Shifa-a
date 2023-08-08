@@ -296,8 +296,7 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 .header .nav-bar .overlinks {
-  /* background-color: #4c4c4c14; */
-  background-color: #4c4c4c59;
+  background-color: #4c4c4c14;
   position: fixed;
   top: 0;
   left: 0;
