@@ -56,6 +56,7 @@ boxContent.forEach(function (box) {
 let seeMoreBtn = document.querySelectorAll(".button .more");
 let parentContentComment = document.querySelector(".popup-seeMore");
 let closeButton = document.querySelector("#close i");
+let overlay = document.querySelector(".seeMore-up .S-overlay");
 
 seeMoreBtn.forEach(function (ele) {
   ele.onclick = function () {
@@ -67,5 +68,9 @@ seeMoreBtn.forEach(function (ele) {
 });
 
 closeButton.addEventListener("click", function () {
+  parentContentComment.parentElement.classList.toggle("active");
+});
+
+overlay.addEventListener("click", function () {
   parentContentComment.parentElement.classList.toggle("active");
 });

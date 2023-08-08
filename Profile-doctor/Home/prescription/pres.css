@@ -101,20 +101,20 @@ html::-webkit-scrollbar-thumb:hover {
 }
 .prescription .head {
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 .prescription .head .comment {
   width: 60%;
   /* background-color: #fefefe; */
   background-color: #fefcfc;
   border-radius: 12px;
-  padding: 20px;
+  padding: 25px;
   box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
 }
 .prescription .head .comment h3 {
   font-size: 21px;
   margin: 0;
-  color: var(--second-color);
+  /* color: var(--second-color); */
 }
 .prescription .head .comment p {
   line-height: 1.6;
@@ -140,6 +140,7 @@ html::-webkit-scrollbar-thumb:hover {
   .prescription .head .comment,
   .prescription .head .medical {
     width: 100%;
+    padding: 20px;
   }
 }
 .prescription .head .medical .text h3 {
@@ -193,7 +194,7 @@ html::-webkit-scrollbar-thumb:hover {
   background-color: #fefcfc;
   display: flex;
   justify-content: space-between;
-  padding: 20px 50px;
+  padding: 20px 30px;
   gap: 20px;
   box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
   border-radius: 12px;
@@ -201,6 +202,7 @@ html::-webkit-scrollbar-thumb:hover {
 .prescription .write-pre .info-doc .text1 h3 {
   font-size: 21px;
   color: var(--second-color);
+  margin-bottom: 0;
 }
 .prescription .write-pre .info-doc .text1 p {
   color: var(--main-color);
@@ -226,7 +228,7 @@ html::-webkit-scrollbar-thumb:hover {
   margin: 30px 0;
   background-color: #fffdfdcc;
   border-radius: 12px;
-  padding: 20px 50px;
+  padding: 20px 40px;
   box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
 }
 
@@ -239,8 +241,9 @@ html::-webkit-scrollbar-thumb:hover {
     flex-direction: column;
     padding: 20px;
     gap: 0;
+    text-align: center;
   }
-  .prescription .write-pre .info-doc .text2,
+  .prescription .write-pre .info-doc .text1,
   .prescription .write-pre .info-doc .text2 {
     width: 100%;
   }
@@ -249,7 +252,7 @@ html::-webkit-scrollbar-thumb:hover {
 .prescription .write-pre .add-mdecine .textt h3 {
   font-size: 21px;
   color: var(--second-color);
-  margin-bottom: 35px;
+  margin-bottom: 25px;
 }
 .prescription .write-pre .add-mdecine .textt button {
   border: none;
@@ -261,6 +264,7 @@ html::-webkit-scrollbar-thumb:hover {
   font-weight: bold;
   cursor: pointer;
   transition: var(--main-transition);
+  margin-bottom: 10px;
 }
 .prescription .write-pre .add-mdecine .textt button:hover {
   box-shadow: 0 0 8px 1px var(--main-color);
@@ -270,6 +274,19 @@ html::-webkit-scrollbar-thumb:hover {
   width: 100px;
   height: 100px;
   max-width: 100%;
+  animation: mdecine-img 3s infinite ease-in-out;
+}
+
+@keyframes mdecine-img {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  0% {
+    transform: translateY(0);
+  }
 }
 
 .prescription .medicine {
@@ -290,7 +307,15 @@ html::-webkit-scrollbar-thumb:hover {
   border-radius: 12px;
   background-color: #fefcfc;
   box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
+  flex-wrap: wrap;
 }
+
+@media (max-width: 767px) {
+  .prescription .medicine .box {
+    padding: 10px 12px;
+  }
+}
+
 .prescription .medicine .box .cont1 h3 {
   font-size: 20px;
 }
@@ -303,14 +328,28 @@ html::-webkit-scrollbar-thumb:hover {
 .prescription .medicine .box .cont2 p span {
   color: var(--second-color);
 }
-.prescription .medicine .box .cont1 .time {
+
+.prescription .medicine .box .cont2 {
+  width: 50%;
+}
+
+.prescription .medicine .box .cont3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+  width: 100%;
+  row-gap: 15px;
+  margin-bottom: 10px;
+}
+
+.prescription .medicine .box .cont3 .time {
   background-color: var(--section-background);
   color: var(--second-color);
   padding: 10px 15px;
   border-radius: 10px;
-}
-.prescription .medicine .box .cont2 {
-  width: 50%;
+  width: fit-content;
+  margin: 0;
+  height: fit-content;
+  font-size: 18px;
 }
 
 .prescription .write-pre textarea {
@@ -387,9 +426,8 @@ html::-webkit-scrollbar-thumb:hover {
   background-color: white;
   z-index: 104;
   border-radius: 15px;
-  padding: 40px 50px;
+  padding: 0px 40px 50px;
   /* padding: 30px; */
-  padding-top: 0px;
   background-color: #fefefe;
   box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
   transition: var(--main-transition);
@@ -397,7 +435,8 @@ html::-webkit-scrollbar-thumb:hover {
 
 @media (max-width: 767px) {
   .add-medicine .popup-add {
-    width: 373px;
+    width: 355px;
+    padding: 0px 25px 30px;
   }
 }
 /* event */
@@ -417,6 +456,19 @@ html::-webkit-scrollbar-thumb:hover {
   aspect-ratio: 1/1;
   margin: auto;
   display: block;
+  animation: mdecineUp-img 2.5s infinite ease-in-out;
+}
+
+@keyframes mdecineUp-img {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  0% {
+    transform: translateY(0);
+  }
 }
 
 .add-medicine .popup-add .formAdd div {
@@ -473,7 +525,50 @@ html::-webkit-scrollbar-thumb:hover {
   background-color: var(--main-color);
   color: white;
 }
+/*  */
+.addShedule {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 17px 0;
+  margin: 15px 0 !important;
+}
+.addShedule .T {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--section-background);
+  border-radius: 9px;
+  font-size: 18px;
+  padding: 15px;
+  width: 48%;
+}
+@media (max-width: 767px) {
+  .addShedule .T {
+    width: 100%;
+  }
+}
+.addShedule .T p {
+  margin: 0;
+  color: var(--second-color);
+}
+.addShedule .T i {
+  /* color: var(--second-color); */
+  color: #246bfd82;
+  cursor: pointer;
+  padding: 3px 8px;
+  font-size: 15px;
+  border-radius: 3px;
+  transition: var(--main-transition);
+}
 
+.addShedule .T:hover i {
+  background-color: #f0f0f0;
+  color: var(--main-color);
+}
+
+/*  */
 .add-medicine .popup-add .formAdd .buttons {
   display: flex;
   justify-content: space-around;

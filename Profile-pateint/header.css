@@ -185,19 +185,6 @@ html::-webkit-scrollbar-thumb:hover {
   margin-right: 12px;
 }
 
-@media (max-width: 767px) {
-  .header .logo {
-    height: 50px;
-    margin-top: 5px;
-  }
-
-  .header .logo img {
-    width: 33px;
-    position: relative;
-    margin-right: 3px;
-  }
-}
-
 .header .nav-bar {
   display: flex;
   justify-content: space-between;
@@ -205,35 +192,67 @@ html::-webkit-scrollbar-thumb:hover {
   flex: 1;
 }
 
+.header .nav-bar .overlinks {
+  background-color: #4c4c4c14;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  display: none;
+  transition-delay: 1s;
+  transition: var(--main-transition);
+}
+.overvisible {
+  transition: 0.5s;
+  display: initial !important;
+}
+
+@media (max-width: 767px) {
+  .header .logo {
+    height: 50px;
+    background-color: #64b8f3;
+    color: white;
+    margin: 0 -15px;
+    box-shadow: 0 0 3px 1px rgb(0 0 0 /10%);
+  }
+
+  .header .logo img {
+    width: 35px;
+    position: relative;
+  }
+}
+
 /* mobile icone */
 .header .nav-bar .icon {
-  width: 40px;
-  height: 31px;
+  width: 53px;
+  height: 36px;
   cursor: pointer;
   display: none;
   position: relative;
   border-radius: 5px;
   background-color: #fefcfc;
-  box-shadow: 0 0 8px 0px rgb(0 0 0 / 10%);
+  box-shadow: 0 0 3px 1px rgb(0 0 0 / 10%);
 }
 
 .header .nav-bar .icon span {
   height: 4px;
-  width: 75%;
+  width: 60%;
   position: absolute;
-  left: 5px;
+  left: 11px;
   background-color: var(--main-color);
   border-radius: 10px;
   transition: all 0.4s;
 }
 .header .nav-bar .icon span:first-child {
-  top: 4px;
+  top: 8px;
 }
 .header .nav-bar .icon span:nth-child(2) {
-  top: 13px;
+  top: 16px;
 }
 .header .nav-bar .icon span:last-child {
-  top: 22px;
+  top: 24px;
 }
 
 .anemy1 {
@@ -299,22 +318,23 @@ html::-webkit-scrollbar-thumb:hover {
 
   .header .nav-bar .icon {
     display: block;
+    z-index: 11;
+    background-color: transparent;
   }
 
   .header .nav-bar .links {
     margin-left: 0;
     position: absolute;
-    width: 90%;
-    /* height: 100vh; */
+    width: 96vw;
+    padding: 40px 20px;
     top: 65px;
-    left: -14px;
     text-align: center;
     flex-direction: column;
     background-color: #fefcfc;
     z-index: 50;
     box-shadow: 2px 4px 8px 0px rgb(0 0 0 / 10%);
-    left: -100%;
-    transition: var(--main-transition);
+    left: -115%;
+    transition: 0.3s ease-in-out;
   }
   .visiblle {
     left: -14px !important;
@@ -346,15 +366,15 @@ html::-webkit-scrollbar-thumb:hover {
 
 .header .nav-bar .Profile-toltab > li .note > span {
   position: absolute;
-  top: -9px;
-  right: -9px;
+  top: -10px;
+  right: -10px;
   padding: 9px;
   border-radius: 50%;
   background-color: red;
   font-weight: bold;
   font-size: 15px;
-  width: 19px;
-  height: 19px;
+  width: 23px;
+  height: 23px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -622,6 +642,7 @@ html::-webkit-scrollbar-thumb:hover {
 
 .UP:hover {
   background-color: var(--main-color);
+  transform: translateY(-5px);
 }
 
 .UP.Showw {
