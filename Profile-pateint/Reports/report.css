@@ -61,11 +61,11 @@ a {
 
 /* Add Scrollbar  */
 html::-webkit-scrollbar {
-  width: 12px;
+  width: 7px;
 }
 
 html::-webkit-scrollbar-track {
-  box-shadow: 0 0 7px #777 inset;
+  box-shadow: 0 0 7px 1px #eef0f2 inset;
   background-color: #ddd;
 }
 

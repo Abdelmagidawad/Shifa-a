@@ -61,9 +61,6 @@ let overlay = document.querySelector(".seeMore-up .S-overlay");
 seeMoreBtn.forEach(function (ele) {
   ele.onclick = function () {
     parentContentComment.parentElement.classList.toggle("active");
-    let reviewBtnRect = ele.getBoundingClientRect();
-    let topPosition = reviewBtnRect.top + window.pageYOffset;
-    parentContentComment.style.top = `${topPosition}px`;
   };
 });
 
@@ -72,5 +69,5 @@ closeButton.addEventListener("click", function () {
 });
 
 overlay.addEventListener("click", function () {
-  parentContentComment.parentElement.classList.toggle("active");
+  closeButton.click();
 });

@@ -61,11 +61,11 @@ a {
 
 /* Add Scrollbar  */
 html::-webkit-scrollbar {
-  width: 12px;
+  width: 7px;
 }
 
 html::-webkit-scrollbar-track {
-  box-shadow: 0 0 7px #777 inset;
+  box-shadow: 0 0 7px 1px #eef0f2 inset;
   background-color: #ddd;
 }
 
@@ -176,7 +176,7 @@ html::-webkit-scrollbar-thumb:hover {
   50% {
     transform: translateY(-4px);
   }
-  0% {
+  100% {
     transform: translateY(0);
   }
 }
@@ -284,7 +284,7 @@ html::-webkit-scrollbar-thumb:hover {
   50% {
     transform: translateY(-4px);
   }
-  0% {
+  100% {
     transform: translateY(0);
   }
 }
@@ -402,7 +402,7 @@ html::-webkit-scrollbar-thumb:hover {
   }
 }
 
-/* End Add Medicine PopUp   */
+/* Start Add Medicine PopUp   */
 
 .add-medicine .A-overlay {
   position: fixed;
@@ -466,7 +466,7 @@ html::-webkit-scrollbar-thumb:hover {
   50% {
     transform: translateY(-4px);
   }
-  0% {
+  100% {
     transform: translateY(0);
   }
 }

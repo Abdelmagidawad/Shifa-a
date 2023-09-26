@@ -11,16 +11,15 @@ let closeButton = document.querySelector(".buttons #cancel");
 let saveButton = document.querySelector(".buttons #save");
 let overlay = document.querySelector(".add-medicine .A-overlay");
 
-AddMedicine.addEventListener("click", function () {
+function popUp() {
   parentContentAdd.parentElement.classList.toggle("active");
-});
+}
+AddMedicine.addEventListener("click", popUp);
 
-closeButton.addEventListener("click", function () {
-  parentContentAdd.parentElement.classList.toggle("active");
-});
+closeButton.addEventListener("click", popUp);
 
-overlay.addEventListener("click", function () {
-  parentContentAdd.parentElement.classList.toggle("active");
+overlay.addEventListener("click", () => {
+  closeButton.click();
 });
 
 // ********************************************************************

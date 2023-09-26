@@ -25,9 +25,6 @@ let overlay = document.querySelector(".review-up .r-overlay");
 reviewBtn.forEach(function (ele) {
   ele.onclick = function () {
     parentContentRate.parentElement.classList.toggle("active");
-    let reviewBtnRect = ele.getBoundingClientRect();
-    let topPosition = reviewBtnRect.top + window.pageYOffset;
-    parentContentRate.style.top = `${topPosition}px`;
   };
 });
 
@@ -36,7 +33,7 @@ closeBtn.addEventListener("click", function () {
 });
 
 overlay.addEventListener("click", function () {
-  parentContentRate.parentElement.classList.toggle("active");
+  closeBtn.click();
 });
 
 // to test Button submit
