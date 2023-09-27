@@ -384,16 +384,15 @@ html::-webkit-scrollbar-thumb:hover {
   width: 65%;
   margin: 15px auto;
   border-radius: 10px;
-  /* border: 1px solid var(--main-color); */
   box-shadow: 0 0 8px 0px rgb(0 0 0 / 10%);
-  padding: 40px 55px;
+  padding: 35px 40px;
   background-color: white;
 }
 
 @media (max-width: 767px) {
-  .form form {
-    width: 95%;
-    padding: 25px 30px;
+  .form .content form {
+    width: 90%;
+    padding: 25px 25px;
   }
 }
 
@@ -456,6 +455,33 @@ html::-webkit-scrollbar-thumb:hover {
 @media (max-width: 991px) {
   .form form .gender label:first-of-type {
     margin-right: 30%;
+  }
+  /* **** */
+  .form .content img {
+    width: 40%;
+  }
+  .form .head-loading h2 {
+    margin: 0 auto 0px;
+  }
+}
+
+@media (min-width: 992px) {
+  .form .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+  }
+  .form .content img {
+    width: 50%;
+    height: 450px;
+    max-width: 100%;
+    display: block;
+    position: sticky;
+    top: 60px;
+  }
+  .form form {
+    width: 60%;
   }
 }
 
