@@ -57,7 +57,7 @@ html::-webkit-scrollbar-thumb:hover {
 /* ******************************* */
 /* Start About Patient  */
 .see-patient {
-  padding-top: 85px;
+  padding-top: 60px;
   padding-bottom: var(--main-padding);
   background-color: var(--section-background);
 }
@@ -68,7 +68,7 @@ html::-webkit-scrollbar-thumb:hover {
   right: 0px;
   opacity: 0;
   z-index: -1;
-  animation: anim-img 4s infinite linear;
+  /* animation: anim-img 4s infinite linear; */
 }
 
 @keyframes anim-img {
@@ -95,36 +95,47 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 .see-patient .container .box {
-  box-shadow: 0 0 10px 2px rgb(0 0 0 / 10%);
-  border: 1px solid var(--main-color);
-  background-color: white;
   width: 70%;
-  padding: 40px 45px;
+  padding: 35px 40px;
   margin: 50px auto 0;
   border-radius: 16px;
   background-color: #fefefe;
-}
-
-@media (max-width: 767px) {
-  .see-patient .main-heading {
-    font-size: 32px;
-  }
-
-  .see-patient .container .box {
-    width: 100%;
-    padding: 30px 20px;
-  }
+  box-shadow: 0 0 8px 1px rgb(0 0 0 / 10%);
 }
 
 .see-patient .container .box .head {
   display: flex;
   align-items: center;
   padding-bottom: 21px;
-  border-bottom: 2px solid #e5e5e5;
+  border-bottom: 3px solid #e5e5e5;
+  gap: 25px;
+}
+
+@media (max-width: 767px) {
+  .see-patient .main-heading {
+    font-size: 30px;
+  }
+  .see-patient .container .box {
+    width: 100%;
+    padding: 25px;
+    gap: 20px;
+  }
+  .see-patient .container .box .head {
+    gap: 0px;
+  }
+}
+
+@media (768 <=width <=991px) {
+  .see-patient .container .box {
+    padding: 30px;
+  }
+  .see-patient .container .box .head {
+    gap: 0px;
+  }
 }
 
 .see-patient .container .box .head img {
-  max-width: 110px;
+  max-width: 105px;
   border-radius: 50%;
   margin-right: 30px;
   border: 3px solid transparent;
@@ -161,22 +172,54 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 .see-patient .container .box .button {
-  margin: 40px 20px 0px;
   display: flex;
-  gap: 70px;
-  text-align: center;
-  letter-spacing: 1px;
+  justify-content: space-between;
+  margin: 25px 45px 0;
 }
 
-.see-patient .container .box .button a {
-  padding: 15px 20px;
+.see-patient .container .box .button button {
+  display: block;
+  border-radius: 8px;
+  padding: 10px 50px;
   font-size: 20px;
-  font-weight: bold;
-  border-radius: 10px;
-  border: 2px solid var(--main-color);
-  color: var(--main-color);
+  font-weight: 900;
+  color: #fefcfc;
+  cursor: pointer;
+  outline: none;
+  border: none;
   transition: var(--main-transition);
-  position: relative;
+}
+
+@media (width <=767px) {
+  .see-patient .container .box .button {
+    margin: 25px 0px 0px;
+  }
+  .see-patient .container .box .button button {
+    padding: 10px 30px;
+    font-size: 18px;
+  }
+}
+
+@media (768px <= width <=991px) {
+  .see-patient .container .box .button {
+    margin: 25px 20px 0;
+  }
+}
+
+.see-patient .container .box .button .decline {
+  background-color: #f00000;
+}
+
+.see-patient .container .box .button .decline:hover {
+  box-shadow: 0 0 8px 2px #f00000;
+}
+
+.see-patient .container .box .button .accept {
+  background-color: var(--main-color);
+}
+
+.see-patient .container .box .button .accept:hover {
+  box-shadow: 0 0 8px 2px var(--main-color);
 }
 
 @media (max-width: 767px) {
@@ -188,47 +231,6 @@ html::-webkit-scrollbar-thumb:hover {
   .see-patient .container .box .head h2 {
     font-size: 24px;
   }
-
-  .see-patient .container .box .button {
-    margin: 40px 0px 0px;
-    gap: 60px;
-  }
-
-  .see-patient .container .box .button a {
-    padding: 10px 0px;
-    font-size: 18px;
-  }
-}
-
-.see-patient .container .box .button a::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0px;
-  width: 0%;
-  height: 100%;
-  background-color: var(--main-color);
-  transition: var(--main-transition);
-  z-index: -1;
-  border-radius: 8px;
-}
-.see-patient .container .box .button a:hover {
-  transition-delay: 0.2s;
-  color: white;
-  border-color: white;
-  transform: scale(0.9);
-}
-
-.see-patient .container .box .button a:hover::before {
-  width: 100%;
-}
-
-.see-patient .container .box .button .accept {
-  width: calc(50% - 20px);
-}
-
-.see-patient .container .box .button .decline {
-  width: calc(50% - 20px);
 }
 
 /* End About Patient */

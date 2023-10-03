@@ -225,14 +225,14 @@ html::-webkit-scrollbar-thumb:hover {
   margin-right: 10px;
 }
 
-.list-patient .container table tbody tr td:nth-child(5) span {
+.list-patient .container table tbody tr td:nth-child(4) span {
   display: block;
   font-size: 14px;
   color: #c7c4c4;
   margin-top: 3px;
 }
 
-.list-patient .container table tbody tr td:nth-child(6) span {
+.list-patient .container table tbody tr td:nth-child(5) span {
   background-color: #00f260;
   color: white;
   font-weight: bold;
@@ -241,12 +241,12 @@ html::-webkit-scrollbar-thumb:hover {
   border-radius: 6px;
 }
 
-.list-patient .container table tbody tr td:nth-child(6) span.des {
+.list-patient .container table tbody tr td span.des {
   background-color: #f00000;
   padding: 0px 9px;
 }
 
-.list-patient .container table tbody tr td:nth-child(6) span.pen {
+.list-patient .container table tbody tr td span.pen {
   background-color: #b2b2b2;
   padding: 0px 10px;
 }

@@ -135,16 +135,20 @@ form.addEventListener("submit", function (event) {
 
     let allPTime = document.querySelectorAll(".addShedule .time");
     allPTime.forEach(function (elP) {
-      elP.parentElement.style.display = "none";
       cont3.append(elP);
     });
 
     // Append the new box to the medicine section
     medicineSection.appendChild(newBox);
+
+    // Reset the form and Container Schedule
+    form.reset();
+    document.querySelectorAll(".addShedule .T").forEach((el) => {
+      el.remove();
+    });
+    closeButton.click();
   } else {
     // **//
     alert("Please Fill All Fields");
   }
-  // Reset the form
-  form.reset();
 });

@@ -17,7 +17,7 @@ selectDay.forEach(function (element) {
   });
 });
 
-// when No Appointment
+// when No Appointment test
 selectDay[3].addEventListener("click", function () {
   secNoapp.style.display = "block";
   secListSchedule.style.display = "none";
