@@ -22,9 +22,23 @@ let currentRate = document.querySelector(".current-rate");
 let parentContentRate = document.querySelector(".popup-review");
 let overlay = document.querySelector(".review-up .r-overlay");
 
+// content PopUp Review data dynamic
+let imgDoctorPopUp = document.querySelector(".popup-review .pop-head img");
+let nameDoctorPopUp = document.querySelector(".popup-review .text h2");
+//
+
 reviewBtn.forEach(function (ele) {
-  ele.onclick = function () {
+  ele.onclick = function (e) {
     parentContentRate.parentElement.classList.toggle("active");
+    //
+    imgDoctorPopUp.setAttribute(
+      "src",
+      e.target.parentElement.parentElement.firstElementChild.firstElementChild.getAttribute(
+        "src"
+      )
+    );
+
+    nameDoctorPopUp.innerHTML = `Dr.${e.target.parentElement.parentElement.firstElementChild.textContent}`;
   };
 });
 

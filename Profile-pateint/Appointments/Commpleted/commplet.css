@@ -355,7 +355,7 @@ html::-webkit-scrollbar-thumb:hover {
 /*  */
 .review-up .popup-review .pop-head {
   display: flex;
-  gap: 40px;
+  gap: 25px;
   padding-bottom: 10px;
   border-bottom: 2px solid var(--second-color);
 }

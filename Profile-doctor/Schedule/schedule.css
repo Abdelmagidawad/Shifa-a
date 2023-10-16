@@ -393,6 +393,7 @@ html::-webkit-scrollbar-thumb:hover {
   margin-top: 20px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 .seeMore-up .popup-seeMore .time p {
   font-weight: bold;
@@ -400,6 +401,7 @@ html::-webkit-scrollbar-thumb:hover {
 }
 .seeMore-up .popup-seeMore .time p i {
   color: var(--main-color);
+  margin-right: 7px;
 }
 
 .seeMore-up .popup-seeMore button {

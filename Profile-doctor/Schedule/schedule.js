@@ -58,9 +58,30 @@ let parentContentComment = document.querySelector(".popup-seeMore");
 let closeButton = document.querySelector("#close i");
 let overlay = document.querySelector(".seeMore-up .S-overlay");
 
+// content PopUp seeMore data dynamic
+let imagePatientPop = document.querySelector(".pop-head img");
+let namePatientPop = document.querySelector(".pop-head h2");
+let datePatientPop = document.querySelector(".popup-seeMore .time");
+//
 seeMoreBtn.forEach(function (ele) {
-  ele.onclick = function () {
+  ele.onclick = function (e) {
     parentContentComment.parentElement.classList.toggle("active");
+    //
+    imagePatientPop.setAttribute(
+      "src",
+      e.target.parentElement.parentElement.firstElementChild.firstElementChild.getAttribute(
+        "src"
+      )
+    );
+    namePatientPop.innerHTML =
+      e.target.parentElement.parentElement.firstElementChild.textContent;
+
+    datePatientPop.firstElementChild.lastChild.textContent =
+      e.target.parentElement.previousElementSibling.previousElementSibling.innerHTML;
+
+    datePatientPop.lastElementChild.lastChild.textContent =
+      e.target.parentElement.previousElementSibling.innerHTML;
+    //
   };
 });
 

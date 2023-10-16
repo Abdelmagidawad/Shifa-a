@@ -148,6 +148,11 @@ html::-webkit-scrollbar-thumb:hover {
   font-size: 20px;
   color: var(--second-color);
 }
+.book-appoint .book-details .info .head .name-spe span i {
+  margin-right: 7px;
+  color: var(--main-color);
+}
+
 .book-appoint .book-details .info .details {
   display: flex;
   justify-content: space-around;
@@ -163,7 +168,7 @@ html::-webkit-scrollbar-thumb:hover {
 .book-appoint .book-details .info .details .box {
   width: 10em;
   background-color: var(--section-background);
-  box-shadow: 0 0 5px 2px rgb(0 0 0 /10%);
+  box-shadow: 0 0 8px 0px rgb(0 0 0 /10%) inset;
   color: var(--main-color);
   text-align: center;
   border-radius: 20px;
