@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shifa’a | Home | Doctor</title>
+    <link
+      rel="shortcut icon"
+      href="../../../../images/favicon.png"
+      style="width: 30px; height: 30px"
+    />
+    <!-- Render All Element Normally  -->
+    <link rel="stylesheet" href="../../../../CSS/normalize.css" />
+    <!-- Font Awesome Library  -->
+    <link rel="stylesheet" href="../../../../CSS/all.min.css" />
+    <!-- Header file css  -->
+    <link rel="stylesheet" href="../../../header.css" />
+    <!-- Patient Medical History File CSS  -->
+    <link rel="stylesheet" href="patientMH.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Preloading Page -->
+    <div class="preloading">
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <span class="name">Shifa’a...</span>
+    </div>
+    <!-- Start Header  -->
+    <div class="header" id="header">
+      <div class="container">
+        <a href="#" class="logo">
+          <img src="../../../../images/logo.png" alt="photo-logo" />
+          Shifa’a
+        </a>
+        <div class="nav-bar">
+          <div class="overlinks"></div>
+          <div class="menu-links">
+            <!-- mobile -->
+            <div class="icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <!-- mobile -->
+            <ul class="links">
+              <li><a href="#" style="color: #246bfd">Home</a></li>
+              <li><a href="../../../Schedule/schedule.html">Schedule</a></li>
+              <li>
+                <a href="#">Patients</a>
+                <ul class="patient-links">
+                  <li class="p-link">
+                    <a href="../../../Patients/new-patient/N-patient.html"
+                      ><i class="fa-solid fa-user-group"></i>New Patients</a
+                    >
+                  </li>
+                  <li class="p-link">
+                    <a href="../../../Patients/past-patient/P-patient.html"
+                      ><i class="fa-solid fa-user-group"></i>Past Patients</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li><a href="#">Dashboard</a></li>
+            </ul>
+          </div>
+          <ul class="Profile-toltab">
+            <li>
+              <div class="note">
+                <i class="fa-regular fa-bell"></i>
+                <span>1</span>
+                <div class="content-note">
+                  <div class="head">
+                    <h2>Notifications</h2>
+                    <i class="fa-solid fa-ellipsis"></i>
+                  </div>
+                  <div class="content">No notifications.</div>
+                </div>
+              </div>
+              <img src="../../home-image/avatar-doctor.png" alt="pro-img" />
+              <div class="tol-tab">
+                <div>
+                  <img src="../../home-image/avatar-doctor.png" alt="photo" />
+                  <h2>Abdelmagid Migo</h2>
+                </div>
+                <ul class="tol-links">
+                  <li>
+                    <a href=""
+                      ><i class="fa-regular fa-user"></i>Edit Profile</a
+                    >
+                  </li>
+                  <li>
+                    <a href=""
+                      ><i class="fa-regular fa-bell"></i>Notification</a
+                    >
+                  </li>
+                  <li>
+                    <a href=""
+                      ><i class="far fa-check-circle fa-fw"></i>Security</a
+                    >
+                  </li>
+                  <li>
+                    <a href=""
+                      ><i class="fa-sharp fa-regular fa-globe"></i>Language</a
+                    >
+                  </li>
+                  <li>
+                    <button type="button">
+                      <i class="fa-solid fa-arrow-right-from-bracket"></i>Logout
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- End Header  -->
+    <!-- ******************
+    ************ -->
+    <!-- popuplogout -->
+    <div class="popup" id="POP">
+      <div class="overlay"></div>
+      <div class="popup-content">
+        <h2>Are you sure,</h2>
+        <h2>you want to logout</h2>
+        <div class="pop-btn">
+          <button type="button" id="cancel">Cancel</button>
+          <button type="button" id="logout">Logout</button>
+        </div>
+      </div>
+    </div>
+    <!-- end popuplogout -->
+
+    <!--  -->
+    <!--  -->
+    <!-- Start Prescription Content Doctor  -->
+
+    <div class="prescription">
+      <h2 class="main-title">Patient Details</h2>
+    </div>
+
+    <!-- Start Prescription Content Doctor  -->
+    <!--  -->
+    <!--  -->
+    <!-- Icon scroll to Top  -->
+    <i class="fa-sharp fa-regular fa-arrow-up UP"></i>
+
+    <!-- main file js  -->
+    <script type="module" src="patientMH.js"></script>
+    <!-- Cookies file js  -->
+    <script src="../../../../Local/localHelper.js"></script>
+    <!-- network helper file js  -->
+    <script src="../../../../Network/remoteHelper.js"></script>
+    <!-- header file js  -->
+    <script src="../../../header.js"></script>
+    <!-- log out file js  -->
+    <script type="module" src="../../../logOut.js"></script>
+  </body>
+</html>
