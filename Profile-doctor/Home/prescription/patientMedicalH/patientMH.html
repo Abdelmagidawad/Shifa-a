@@ -53,7 +53,7 @@
             </div>
             <!-- mobile -->
             <ul class="links">
-              <li><a href="#" style="color: #246bfd">Home</a></li>
+              <li><a href="../pres.html" style="color: #246bfd">Home</a></li>
               <li><a href="../../../Schedule/schedule.html">Schedule</a></li>
               <li>
                 <a href="#">Patients</a>
@@ -142,17 +142,168 @@
     </div>
     <!-- end popuplogout -->
 
-    <!--  -->
-    <!--  -->
-    <!-- Start Prescription Content Doctor  -->
+    <!-- Start Patient medical History  -->
+    <div class="medicalHistory">
+      <h2 class="main-title">Patient Medical History</h2>
 
-    <div class="prescription">
-      <h2 class="main-title">Patient Details</h2>
+      <div class="container">
+        <!-- Start Update popUp  -->
+        <div class="update-info" id="Aup">
+          <div class="A-overlay"></div>
+          <div class="popup-update">
+            <img src="imagePatientMH/imagePopUp.png" alt="Photo-health" />
+
+            <form action="" class="formUp">
+              <div>
+                <select name="bloodType" id="Select">
+                  <option value="" disabled selected hidden>Blood Type</option>
+                  <option value="A+">A+</option>
+                  <option value="A-">A-</option>
+                  <option value="B+">B+</option>
+                  <option value="B-">B-</option>
+                  <option value="AB+">AB+</option>
+                  <option value="AB-">AB-</option>
+                  <option value="O+">O+</option>
+                  <option value="O-">O-</option>
+                </select>
+              </div>
+              <div>
+                <input type="text" name="weight" placeholder="Weight" />
+              </div>
+              <div>
+                <input type="text" name="height" placeholder="Height" />
+              </div>
+              <div class="buttons">
+                <button type="button" id="cancel">Cancel</button>
+                <button type="submit" id="save">Save</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- End Update popUp  -->
+
+        <!-- Start Add Chronic popUp -->
+        <div class="add-Chronic" id="Aup">
+          <div class="a-overlay"></div>
+          <div class="popup-Add">
+            <img src="imagePatientMH/addChronicImg.png" alt="PhotoChronic" />
+
+            <form action="" class="FormAdd">
+              <div>
+                <input
+                  type="text"
+                  name="Disease"
+                  placeholder="Add Chronic Disease"
+                  required
+                />
+              </div>
+              <div class="buttons">
+                <button type="button" id="cancel">Cancel</button>
+                <button type="submit" id="save">Save</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- End Add Chronic popUp -->
+
+        <div class="patientmedical">
+          <div class="head">
+            <img
+              src="../../../Patients/new-patient/new-img/patient3.png"
+              alt="photo-patient"
+            />
+            <h2>Mohamed Ibrahim</h2>
+          </div>
+          <div class="content">
+            <div class="btn">
+              <button type="button">Update</button>
+            </div>
+            <div class="details">
+              <div class="box">
+                <img src="imagePatientMH/Blood.jpg" alt="blood-photo" />
+                <div class="data">
+                  <h3>Blood Type</h3>
+                  <span>AB+</span>
+                </div>
+              </div>
+              <div class="box">
+                <img src="imagePatientMH/Age.png" alt="age-photo" />
+                <div class="data">
+                  <h3>Age</h3>
+                  <span>25 Years</span>
+                </div>
+              </div>
+              <div class="box">
+                <img src="imagePatientMH/Height.png" alt="height-photo" />
+                <div class="data">
+                  <h3>Height</h3>
+                  <span>180 CM</span>
+                </div>
+              </div>
+              <div class="box">
+                <img src="imagePatientMH/Weight.jpg" alt="weight-photo" />
+                <div class="data">
+                  <h3>Weight</h3>
+                  <span>80 KG</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sec-chronic">
+            <div class="sec-head">
+              <h2>Chronic Diseases</h2>
+              <button type="button">Add</button>
+            </div>
+            <div class="chronic-content">
+              <!-- <div class="disease">
+                <p>Heart Disease</p>
+                <i class="fa-solid fa-trash-can"></i>
+              </div>
+              -->
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="patientmedicine">
+          <h2 class="medicne-title">Patient Medication</h2>
+          <div class="sec-medicine">
+            <div class="box-med">
+              <img
+                src="imagePatientMH/image_medicine.png"
+                alt="photo-medicine"
+              />
+              <div class="data">
+                <h3>Panadol Cold Flu</h3>
+                <p>Dose: 200 mg</p>
+              </div>
+            </div>
+            <div class="box-med">
+              <img
+                src="imagePatientMH/image_medicine.png"
+                alt="photo-medicine"
+              />
+              <div class="data">
+                <h3>Panadol Cold Flu</h3>
+                <p>Dose: 200 mg</p>
+              </div>
+            </div>
+            <div class="box-med">
+              <img
+                src="imagePatientMH/image_medicine.png"
+                alt="photo-medicine"
+              />
+              <div class="data">
+                <h3>Panadol Cold Flu</h3>
+                <p>Dose: 200 mg</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- Start Prescription Content Doctor  -->
-    <!--  -->
-    <!--  -->
+    <!-- End Patient medical History  -->
+
     <!-- Icon scroll to Top  -->
     <i class="fa-sharp fa-regular fa-arrow-up UP"></i>
 

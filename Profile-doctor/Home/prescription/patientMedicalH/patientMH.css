@@ -84,21 +84,452 @@ html::-webkit-scrollbar-thumb:hover {
 /* End Global Rules  */
 /* ******************************* */
 
-/*  */
-/*  */
+/* Start Patient medical History   */
 
-/* Start Prescription Content Doctor   */
-
-.prescription {
+.medicalHistory {
   min-height: 100vh;
   padding-top: 60px;
   padding-bottom: var(--main-padding);
   background-color: var(--section-background);
 }
 
-.prescription .main-title {
+.medicalHistory .main-title {
   text-align: center;
   font-size: 30px;
   color: var(--main-color);
   margin: 0 0 40px;
 }
+
+.medicalHistory .patientmedical {
+  width: 70%;
+  margin: auto;
+  background-color: #fefefe;
+  box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
+  border-radius: 16px;
+  padding: 35px 40px;
+}
+.medicalHistory .patientmedical .head {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding-bottom: 20px;
+  border-bottom: 3px solid #e5e5e5;
+}
+.medicalHistory .patientmedical .head img {
+  width: 115px;
+  max-width: 100%;
+  height: 115px;
+  border-radius: 50%;
+}
+.medicalHistory .patientmedical .head h2 {
+  font-size: 28px;
+  color: var(--main-color);
+}
+.medicalHistory .patientmedical .content {
+  margin: 25px 0;
+}
+.medicalHistory .patientmedical .content .btn {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 15px;
+}
+.medicalHistory .patientmedical .content button {
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 8px;
+  display: block;
+  cursor: pointer;
+  background-color: var(--main-color);
+  transition: var(--main-transition) ease-in-out;
+}
+.medicalHistory .patientmedical .content button:hover {
+  box-shadow: 0 0 8px 1px var(--main-color);
+}
+
+.medicalHistory .patientmedical .content .details {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.medicalHistory .patientmedical .content .details .box {
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+  align-items: center;
+  width: calc(50% - 40px);
+  flex-grow: 1;
+  padding: 15px;
+  box-shadow: 0 0 8px 0px rgb(0 0 0 /10%) inset;
+  border-radius: 20px;
+  background-color: var(--section-background);
+}
+.medicalHistory .patientmedical .content .details .box img {
+  width: 60px;
+  max-width: 100%;
+  height: 60px;
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+  .medicalHistory .main-title {
+    font-size: 27px;
+  }
+  .medicalHistory .patientmedical {
+    width: 100%;
+    padding: 30px 15px;
+  }
+  .medicalHistory .patientmedical .head {
+    gap: 10px;
+  }
+  .medicalHistory .patientmedical .head img {
+    width: 85px;
+    height: 85px;
+  }
+  .medicalHistory .patientmedical .head h2 {
+    font-size: 24px;
+  }
+  .medicalHistory .patientmedical .content .details {
+    gap: 20px;
+  }
+  .medicalHistory .patientmedical .content .details .box {
+    padding: 12px;
+    border-radius: 15px;
+  }
+  .medicalHistory .patientmedical .content .details .box img {
+    width: 50px;
+    height: 50px;
+  }
+}
+@media (601px<= width <=991px) {
+  .medicalHistory .patientmedical {
+    width: 85%;
+  }
+  .medicalHistory .patientmedical .head img {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+.patientmedical .content .details .box .data {
+  text-align: center;
+}
+.patientmedical .content .details .box .data h3 {
+  margin: 12px 0;
+  margin: 12px 0;
+  color: var(--second-color);
+  font-weight: 500;
+}
+.patientmedical .content .details .box .data span {
+  font-weight: bold;
+  font-size: 18px;
+  color: var(--main-color);
+}
+.patientmedical .sec-chronic {
+  border-top: 3px solid #e5e5e5;
+}
+.patientmedical .sec-chronic .sec-head {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.patientmedical .sec-chronic .sec-head h2 {
+  margin: 0;
+  color: var(--second-color);
+}
+.patientmedical .sec-chronic .sec-head button {
+  border: none;
+  outline: none;
+  font-weight: bold;
+  padding: 12px 25px;
+  border-radius: 8px;
+  display: block;
+  cursor: pointer;
+  color: var(--second-color);
+  transition: var(--main-transition) ease-in-out;
+}
+.patientmedical .sec-chronic .sec-head button:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.patientmedical .sec-chronic .chronic-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 17px 0;
+  margin: 15px 0 !important;
+}
+.patientmedical .sec-chronic .chronic-content .disease {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--section-background);
+  border-radius: 9px;
+  font-size: 20px;
+  padding: 15px;
+  width: 48%;
+}
+@media only screen and (max-width: 600px) {
+  .patientmedical .sec-chronic .chronic-content .disease {
+    width: 100%;
+  }
+}
+.patientmedical .sec-chronic .chronic-content .disease p {
+  margin: 0;
+  color: var(--second-color);
+}
+.patientmedical .sec-chronic .chronic-content .disease i {
+  color: #246bfd82;
+  cursor: pointer;
+  padding: 3px 8px;
+  font-size: 17px;
+  border-radius: 3px;
+  transition: var(--main-transition);
+}
+.patientmedical .sec-chronic .chronic-content .disease:hover i {
+  background-color: #f0f0f0;
+  color: var(--main-color);
+}
+
+/* Start Update popUp */
+.add-Chronic .a-overlay,
+.update-info .A-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0, 0, 0, 0.7);
+  z-index: 103;
+  /*  */
+  display: none;
+}
+.add-Chronic .popup-Add,
+.update-info .popup-update {
+  width: 355px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /*  */
+  transform: translate(-50%, -50%) scale(0);
+  background-color: white;
+  z-index: 104;
+  border-radius: 15px;
+  padding: 25px;
+  background-color: #fefefe;
+  box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
+  transition: var(--main-transition);
+}
+
+@media (max-width: 767px) {
+  .add-Chronic .popup-Add,
+  .update-info .popup-update {
+    width: 320px;
+  }
+}
+/* event */
+.active .a-overlay,
+.active .A-overlay {
+  display: block;
+}
+.active .popup-Add,
+.active .popup-update {
+  transition: all var(--main-transition) ease-in;
+  transform: translate(-50%, -50%) scale(1);
+}
+/*  */
+
+.add-Chronic .popup-Add img,
+.update-info .popup-update img {
+  display: block;
+  width: 90px;
+  max-width: 100%;
+  height: 90px;
+  aspect-ratio: 1/1;
+  margin: auto;
+  margin-bottom: 10px;
+  animation: mdecineUp-img 2.5s infinite ease-in-out;
+}
+
+@keyframes mdecineUp-img {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.add-Chronic .popup-Add .FormAdd div,
+.update-info .popup-update .formUp div {
+  margin: 0px;
+}
+
+.add-Chronic .popup-Add .FormAdd div input,
+.update-info .popup-update .formUp div #Select,
+.update-info .popup-update .formUp div input {
+  outline: none;
+  border: 2px solid #e9edf9;
+  padding: 15px 20px;
+  width: 100%;
+  border-radius: 7px;
+  margin-top: 15px;
+  caret-color: var(--main-color);
+  transition: var(--main-transition);
+}
+
+.add-Chronic .popup-Add .FormAdd div input:focus,
+.update-info .popup-update .formUp div #Select:focus,
+.update-info .popup-update .formUp div input:focus {
+  box-shadow: 0 0 5px 0 var(--main-color);
+}
+.update-info .popup-update .formUp div input::placeholder {
+  transition: opacity 0.5s;
+}
+
+.add-Chronic .popup-Add .FormAdd div input:focus::placeholder,
+.update-info .popup-update .formUp div input:focus::placeholder {
+  opacity: 0;
+}
+
+.update-info .popup-update .formUp div #Select {
+  color: var(--second-color);
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+.add-Chronic .popup-Add .FormAdd .buttons,
+.update-info .popup-update .formUp .buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 15px 0px;
+  text-align: center;
+}
+
+.add-Chronic .popup-Add .FormAdd .buttons button,
+.update-info .popup-update .formUp .buttons button {
+  padding: 11px 30px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 17px;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.add-Chronic .popup-Add .FormAdd .buttons #cancel,
+.update-info .popup-update .formUp .buttons button#cancel {
+  background-color: red;
+}
+.update-info .popup-update .formUp .buttons button#cancel:hover {
+  box-shadow: 0 0 8px 1px red;
+}
+
+.add-Chronic .popup-Add .FormAdd .buttons #save,
+.update-info .popup-update .formUp .buttons button#save {
+  background-color: var(--main-color);
+}
+.update-info .popup-update .formUp .buttons button#save:hover {
+  box-shadow: 0 0 8px 1px var(--main-color);
+}
+
+/* End Update popUp */
+/*  */
+/* Start Add Chronic popUp  */
+.add-Chronic .a-overlay {
+  z-index: 105;
+}
+.add-Chronic .popup-Add {
+  z-index: 106;
+}
+
+.add-Chronic .popup-Add img {
+  border-radius: 50%;
+}
+
+.add-Chronic .popup-Add .FormAdd div input::placeholder {
+  font-size: 18px;
+  transition: opacity 0.5s;
+}
+
+.add-Chronic .popup-Add .FormAdd .buttons {
+  margin: 30px 20px 0px;
+}
+.add-Chronic .popup-Add .FormAdd .buttons button {
+  padding: 11px 25px;
+}
+
+.add-Chronic .popup-Add .FormAdd .buttons #cancel:hover {
+  box-shadow: 0 0 8px 0.5px red;
+}
+
+.add-Chronic .popup-Add .FormAdd .buttons #save:hover {
+  box-shadow: 0 0 8px 0.5px var(--main-color);
+}
+
+/* End Add Chronic popUp  */
+
+/*  */
+.medicalHistory .container .patientmedicine {
+  width: 70%;
+  margin: 30px auto 0px;
+}
+
+.medicalHistory .container .patientmedicine .medicne-title {
+  color: var(--main-color);
+  font-size: 26px;
+}
+.medicalHistory .container .patientmedicine .sec-medicine {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+  gap: 30px;
+}
+
+.container .patientmedicine .sec-medicine .box-med {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fefefe;
+  padding: 20px;
+  box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
+  border-radius: 10px;
+  transition: var(--main-transition);
+}
+@media only screen and (max-width: 600px) {
+  .medicalHistory .container .patientmedicine {
+    width: 100%;
+  }
+  .container .patientmedicine .sec-medicine .box-med {
+    padding: 20px 30px;
+  }
+}
+@media (601px<= width <=991px) {
+  .medicalHistory .container .patientmedicine {
+    width: 85%;
+  }
+}
+.container .patientmedicine .sec-medicine .box-med:hover {
+  box-shadow: 0 0 15px 2px rgb(0 0 0 /10%);
+}
+
+.container .patientmedicine .sec-medicine .box-med img {
+  width: 90px;
+  max-width: 100%;
+  height: 90px;
+}
+
+.container .patientmedicine .sec-medicine .box-med .data h3 {
+  font-size: 20px;
+}
+.container .patientmedicine .sec-medicine .box-med .data p {
+  font-weight: bold;
+  color: var(--second-color);
+}
+
+/* End Patient medical History   */
