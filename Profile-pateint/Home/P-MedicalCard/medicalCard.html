@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shifa’a | Home | Patient | Medical Card</title>
+    <link
+      rel="shortcut icon"
+      href="../../../images/favicon.png"
+      style="width: 30px; height: 30px"
+    />
+    <!-- Render All Element Normally  -->
+    <link rel="stylesheet" href="../../../CSS/normalize.css" />
+    <!-- Font Awesome Library  -->
+    <link rel="stylesheet" href="../../../CSS/all.min.css" />
+    <!-- Header file css  -->
+    <link rel="stylesheet" href="../../header.css" />
+    <!-- Patient Medical Card File CSS  -->
+    <link rel="stylesheet" href="medicalCard.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Preloading Page -->
+    <div class="preloading">
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <span class="name">Shifa’a...</span>
+    </div>
+    <!-- Start Header  -->
+    <div class="header" id="header">
+      <div class="container">
+        <a href="#" class="logo">
+          <img src="../../../images/logo.png" alt="photo-logo" />
+          Shifa’a
+        </a>
+        <div class="nav-bar">
+          <div class="overlinks"></div>
+          <div class="menu-links">
+            <!-- mobile -->
+            <div class="icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <!-- mobile -->
+            <ul class="links">
+              <li>
+                <a href="../home.html" style="color: #246bfd">Home</a>
+              </li>
+              <li><a href="../../Reports/report.html">Reports</a></li>
+              <li>
+                <a href="../../Appointments/Upcomming/upcom.html"
+                  >Appointments</a
+                >
+              </li>
+              <li><a href="#">Medicine</a></li>
+            </ul>
+          </div>
+          <ul class="Profile-toltab">
+            <li>
+              <div class="note">
+                <i class="fa-regular fa-bell"></i>
+                <span>1</span>
+                <div class="content-note">
+                  <div class="head">
+                    <h2>Notifications</h2>
+                    <i class="fa-solid fa-ellipsis"></i>
+                  </div>
+                  <div class="content">No notifications.</div>
+                </div>
+              </div>
+              <img src="../Home-img/profile-img.png" alt="pro-img" />
+              <div class="tol-tab">
+                <div>
+                  <img src="../Home-img/profile-img.png" alt="photo" />
+                  <h2>Ahmed Ibrahim</h2>
+                </div>
+                <ul class="tol-links">
+                  <li>
+                    <a href="#"
+                      ><i class="fa-regular fa-user"></i>Edit Profile</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-regular fa-bell"></i>Notification</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="far fa-check-circle fa-fw"></i>Security</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-sharp fa-regular fa-globe"></i>Language</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-solid fa-circle-question"></i>Help Center</a
+                    >
+                  </li>
+                  <li>
+                    <button type="button">
+                      <i class="fa-solid fa-arrow-right-from-bracket"></i>Logout
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- End Header  -->
+    <!-- ******************
+      ************ -->
+    <!-- popuplogout -->
+    <div class="popup" id="POP">
+      <div class="overlay"></div>
+      <div class="popup-content">
+        <h2>Are you sure,</h2>
+        <h2>you want to logout</h2>
+        <div class="pop-btn">
+          <button type="button" id="cancel">Cancel</button>
+          <button type="button" id="logout">Logout</button>
+        </div>
+      </div>
+    </div>
+    <!-- end popuplogout -->
+
+    <!-- Start Patient medical Card-->
+    <div class="medicalCard">
+      <h2 class="main-title">Medical Card</h2>
+
+      <div class="container">
+        <!-- Start Edit Phone  popUp -->
+        <div class="edit-Phone" id="Aup">
+          <div class="a-overlay"></div>
+          <div class="popup-Edit">
+            <img src="MedicalCard-Img/phone.jpg" alt="PhotoPhone" />
+
+            <form action="" class="FormEdit">
+              <div>
+                <input
+                  type="text"
+                  name="Phone"
+                  placeholder="Mobile Number"
+                  required
+                />
+              </div>
+              <div class="buttons">
+                <button type="button" id="cancel">Cancel</button>
+                <button type="submit" id="save">Save</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- End Edit Phone  popUp -->
+
+        <div class="patientmedical">
+          <div class="qrCode">
+            <button type="button">
+              <img src="MedicalCard-Img/qr-code.png" alt="QR Code" />
+            </button>
+          </div>
+          <div class="head">
+            <img src="../Home-img/profile-img.png" alt="photo-patient" />
+            <h2>Mohamed Ibrahim</h2>
+          </div>
+
+          <div class="details">
+            <div class="box">
+              <img src="MedicalCard-Img/Blood.jpg" alt="blood-photo" />
+              <div class="data">
+                <h3>Blood Type</h3>
+                <span>AB+</span>
+              </div>
+            </div>
+            <div class="box">
+              <img src="MedicalCard-Img/Age.png" alt="age-photo" />
+              <div class="data">
+                <h3>Age</h3>
+                <span>25 Years</span>
+              </div>
+            </div>
+            <div class="box">
+              <img src="MedicalCard-Img/Height.png" alt="height-photo" />
+              <div class="data">
+                <h3>Height</h3>
+                <span>180 CM</span>
+              </div>
+            </div>
+            <div class="box">
+              <img src="MedicalCard-Img/Weight.jpg" alt="weight-photo" />
+              <div class="data">
+                <h3>Weight</h3>
+                <span>80 KG</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="sec-chronic">
+            <h2 class="sec-head">Chronic Diseases</h2>
+            <div class="chronic-content">
+              <div class="disease">
+                <i class="fa-solid fa-disease"></i>
+                <p>Heart Disease</p>
+              </div>
+              <div class="disease">
+                <i class="fa-solid fa-disease"></i>
+                <p>High Blood Pressure</p>
+              </div>
+              <div class="disease">
+                <i class="fa-solid fa-disease"></i>
+                <p>Diabetes</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="sec-contact">
+            <h2 class="sec-head">Emergency contacts</h2>
+
+            <div class="contacts">
+              <div class="cont">
+                <div class="phon-num">
+                  <i class="fa-regular fa-mobile"></i>
+                  <span>01018251768</span>
+                </div>
+                <button type="button" class="Edit">Edit</button>
+              </div>
+              <div class="cont">
+                <div class="phon-num">
+                  <i class="fa-regular fa-mobile"></i>
+                  <span>01118251766</span>
+                </div>
+                <button type="button" class="Edit">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- End Patient medical Card  -->
+
+    <!-- Icon scroll to Top  -->
+    <i class="fa-sharp fa-regular fa-arrow-up UP"></i>
+
+    <!-- main file js  -->
+    <script type="module" src="medicalCard.js"></script>
+    <!-- Cookies file js  -->
+    <script src="../../../Local/localHelper.js"></script>
+    <!-- network helper file js  -->
+    <script src="../../../Network/remoteHelper.js"></script>
+    <!-- header file js  -->
+    <script src="../../header.js"></script>
+    <!-- log out file js  -->
+    <script type="module" src="../../logOut.js"></script>
+  </body>
+</html>

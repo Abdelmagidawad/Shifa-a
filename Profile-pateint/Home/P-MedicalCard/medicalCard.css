@@ -1,0 +1,509 @@
+/* Start Global Rules  */
+:root {
+  --main-color: #246bfd;
+  --second-color: #7d7987;
+  --main-padding: 100px;
+  --main-transition: 0.4s;
+  --section-background: #e5e5e533;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* start container  */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* End container  */
+
+/* Add Scrollbar  */
+html::-webkit-scrollbar {
+  width: 7px;
+}
+
+html::-webkit-scrollbar-track {
+  box-shadow: 0 0 7px 1px #eef0f2 inset;
+  background-color: #ddd;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-color: #3055cb;
+}
+
+/* End Scrollbar  */
+
+/* End Global Rules  */
+/* ******************************* */
+
+/* Start Patient medical Card */
+
+.medicalCard {
+  min-height: 100vh;
+  padding-top: 60px;
+  padding-bottom: var(--main-padding);
+  background-color: var(--section-background);
+}
+
+.medicalCard .main-title {
+  text-align: center;
+  font-size: 30px;
+  color: var(--main-color);
+  margin: 0 0 40px;
+}
+
+.medicalCard .patientmedical {
+  width: 70%;
+  margin: auto;
+  background-color: #fefefe;
+  box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
+  border-radius: 16px;
+  padding: 35px 40px;
+}
+
+.medicalCard .patientmedical .qrCode {
+  display: flex;
+  justify-content: end;
+  position: relative;
+}
+
+.medicalCard .patientmedical .qrCode button {
+  position: absolute;
+  top: -15px;
+  /*  */
+  border: none;
+  outline: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 8px;
+  display: block;
+  cursor: pointer;
+  background-color: var(--section-background);
+  box-shadow: 0 0 8px 0 rgb(0 0 0 /10%);
+  transition: var(--main-transition) ease-in-out;
+}
+.medicalCard .patientmedical .qrCode button:hover {
+  box-shadow: 0 0 10px 2px rgb(0 0 0 /10%);
+}
+
+.medicalCard .patientmedical .qrCode button > img {
+  width: 40px;
+  height: 40px;
+}
+
+.medicalCard .patientmedical .head {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding-bottom: 20px;
+  border-bottom: 3px solid #e5e5e5;
+}
+
+@media (width<=767px) {
+  .medicalCard .patientmedical .qrCode button {
+    top: -17px;
+  }
+  .medicalCard .patientmedical .qrCode button > img {
+    width: 30px;
+    height: 30px;
+  }
+  .medicalCard .patientmedical .head {
+    padding-top: 15px;
+  }
+}
+.medicalCard .patientmedical .head img {
+  width: 115px;
+  max-width: 100%;
+  height: 115px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  animation: anim-img-avatar 1.5s infinite;
+}
+@keyframes anim-img-avatar {
+  0% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: var(--main-color);
+  }
+}
+
+.medicalCard .patientmedical .head h2 {
+  font-size: 28px;
+  color: var(--main-color);
+}
+
+.medicalCard .patientmedical .details {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin: 30px 0;
+}
+.medicalCard .patientmedical .details .box {
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+  align-items: center;
+  width: calc(50% - 40px);
+  flex-grow: 1;
+  padding: 15px;
+  box-shadow: 0 0 8px 0px rgb(0 0 0 /10%) inset;
+  border-radius: 20px;
+  background-color: var(--section-background);
+}
+.medicalCard .patientmedical .details .box img {
+  width: 60px;
+  max-width: 100%;
+  height: 60px;
+  border-radius: 50%;
+}
+@media (width<=767px) {
+  .medicalCard .patientmedical {
+    padding: 35px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .medicalCard .main-title {
+    font-size: 27px;
+  }
+  .medicalCard .patientmedical {
+    width: 100%;
+    padding: 30px 16px;
+  }
+  .medicalCard .patientmedical .head {
+    gap: 15px;
+  }
+  .medicalCard .patientmedical .head img {
+    width: 80px;
+    height: 80px;
+  }
+  .medicalCard .patientmedical .head h2 {
+    font-size: 24px;
+  }
+  .medicalCard .patientmedical .details {
+    gap: 20px;
+  }
+
+  .medicalCard .patientmedical .details .box:first-of-type {
+    gap: 2px;
+  }
+
+  .medicalCard .patientmedical .details .box {
+    padding: 6px;
+    border-radius: 15px;
+  }
+  .medicalCard .patientmedical .details .box img {
+    width: 45px;
+    height: 45px;
+  }
+}
+@media (601px<= width <=991px) {
+  .medicalCard .patientmedical {
+    width: 85%;
+  }
+  .medicalCard .patientmedical .head img {
+    width: 105px;
+    height: 105px;
+  }
+}
+
+.patientmedical .details .box .data {
+  text-align: center;
+}
+.patientmedical .details .box .data h3 {
+  margin: 12px 0;
+  color: var(--second-color);
+  font-weight: 500;
+}
+
+.patientmedical .details .box .data span {
+  font-weight: bold;
+  font-size: 18px;
+  color: var(--main-color);
+}
+
+.patientmedical .sec-chronic {
+  border-top: 3px solid #e5e5e5;
+}
+
+.patientmedical .sec-chronic .sec-head {
+  margin: 0;
+  margin-top: 20px;
+  color: var(--second-color);
+}
+
+.patientmedical .sec-chronic .chronic-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+  gap: 30px 40px;
+  margin: 15px 0;
+  margin-bottom: 30px;
+}
+.patientmedical .sec-chronic .chronic-content .disease {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--section-background);
+  border-radius: 9px;
+  font-size: 20px;
+  padding: 15px 20px;
+  /* padding: 15px 25px; */
+  box-shadow: 0 0 3px 0 rgb(0 0 0 /10%);
+}
+.patientmedical .sec-chronic .chronic-content .disease i {
+  color: var(--main-color);
+}
+.patientmedical .sec-chronic .chronic-content .disease p {
+  margin: 0;
+  color: var(--second-color);
+}
+
+@media (width<=767px) {
+  .patientmedical .details .box .data h3 {
+    font-size: 17px;
+  }
+  .patientmedical .sec-chronic .chronic-content {
+    gap: 25px;
+  }
+  .patientmedical .sec-chronic .chronic-content .disease p {
+    font-size: 17px;
+  }
+}
+
+/*  */
+.patientmedical .sec-contact {
+  border-top: 3px solid #e5e5e5;
+}
+.patientmedical .sec-contact .sec-head {
+  margin: 0;
+  margin-top: 20px;
+  color: var(--second-color);
+}
+.patientmedical .sec-contact .contacts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 35px 50px;
+  margin: 20px 0;
+}
+.patientmedical .sec-contact .contacts .cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.patientmedical .sec-contact .contacts .cont .phon-num {
+  font-size: 20px;
+}
+
+@media (width<=767px) {
+  .patientmedical .sec-contact .contacts .cont .phon-num {
+    font-size: 18px;
+  }
+}
+.patientmedical .sec-contact .contacts .cont .phon-num i {
+  font-weight: bold;
+  color: var(--main-color);
+  margin-right: 10px;
+  font-size: 21px;
+}
+.patientmedical .sec-contact .contacts .cont .phon-num span {
+  color: var(--second-color);
+}
+.patientmedical .sec-contact .contacts .cont button {
+  border: none;
+  outline: none;
+  font-weight: bold;
+  padding: 5px 15px;
+  border-radius: 7px;
+  display: block;
+  cursor: pointer;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  background-color: transparent;
+  transition: var(--main-transition) ease-in-out;
+}
+
+.patientmedical .sec-contact .contacts .cont button:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+
+/* Start Edit Phone  popUp */
+.edit-Phone .a-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0, 0, 0, 0.7);
+  z-index: 103;
+  /*  */
+  display: none;
+}
+.edit-Phone .popup-Edit {
+  width: 355px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /*  */
+  transform: translate(-50%, -50%) scale(0);
+  background-color: white;
+  z-index: 104;
+  border-radius: 15px;
+  padding: 25px;
+  background-color: #fefefe;
+  box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
+  transition: var(--main-transition);
+}
+
+@media (max-width: 767px) {
+  .edit-Phone .popup-Edit {
+    width: 320px;
+  }
+}
+/* event */
+.active .a-overlay {
+  display: block;
+}
+.active .popup-Edit {
+  transition: all var(--main-transition) ease-in;
+  transform: translate(-50%, -50%) scale(1);
+}
+/*  */
+
+.edit-Phone .popup-Edit img {
+  display: block;
+  width: 90px;
+  max-width: 100%;
+  height: 90px;
+  aspect-ratio: 1/1;
+  margin: auto;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  animation: editPhoneUp-img 2.5s infinite ease-in-out;
+}
+
+@keyframes editPhoneUp-img {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.edit-Phone .popup-Edit .FormEdit div {
+  margin: 0px;
+}
+
+.edit-Phone .popup-Edit .FormEdit div input {
+  outline: none;
+  border: 2px solid #e9edf9;
+  padding: 10px 20px;
+  line-height: 0.8;
+  /*  */
+  width: 100%;
+  border-radius: 7px;
+  margin-top: 15px;
+  font-size: 18px;
+  caret-color: var(--main-color);
+  transition: var(--main-transition);
+}
+
+.edit-Phone .popup-Edit .FormEdit div input:focus {
+  box-shadow: 0 0 5px 0 var(--main-color);
+}
+
+.update-info .popup-Edit .FormEdit div input::placeholder {
+  font-size: 18px;
+  transition: opacity 0.5s;
+}
+
+.edit-Phone .popup-Edit .FormEdit div input:focus::placeholder {
+  opacity: 0;
+}
+
+.edit-Phone .popup-Edit .FormEdit .buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 20px 0px;
+  text-align: center;
+}
+
+.edit-Phone .popup-Edit .FormEdit .buttons button {
+  padding: 11px 25px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 17px;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+
+.edit-Phone .popup-Edit .FormEdit .buttons #cancel {
+  background-color: red;
+}
+.edit-Phone .popup-Edit .FormEdit .buttons #cancel:hover {
+  box-shadow: 0 0 8px 0.5px red;
+}
+
+.edit-Phone .popup-Edit .FormEdit .buttons #save {
+  background-color: var(--main-color);
+}
+
+.edit-Phone .popup-Edit .FormEdit .buttons #save:hover {
+  box-shadow: 0 0 8px 0.5px var(--main-color);
+}
+
+/* End Edit Phone  popUp */

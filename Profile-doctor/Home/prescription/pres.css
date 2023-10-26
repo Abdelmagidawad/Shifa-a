@@ -133,16 +133,7 @@ html::-webkit-scrollbar-thumb:hover {
   padding: 20px;
   background-color: var(--main-color);
 }
-@media (max-width: 767px) {
-  .prescription .head {
-    flex-direction: column;
-  }
-  .prescription .head .comment,
-  .prescription .head .medical {
-    width: 100%;
-    padding: 20px;
-  }
-}
+
 .prescription .head .medical .text h3 {
   font-size: 20px;
   color: white;
@@ -178,6 +169,22 @@ html::-webkit-scrollbar-thumb:hover {
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 767px) {
+  .prescription .head {
+    flex-direction: column;
+  }
+  .prescription .head .comment,
+  .prescription .head .medical {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .prescription .head .medical img {
+    width: 80px;
+    height: 80px;
   }
 }
 
@@ -235,7 +242,7 @@ html::-webkit-scrollbar-thumb:hover {
 @media (max-width: 767px) {
   .prescription .write-pre .add-mdecine {
     width: 100%;
-    padding: 20px;
+    padding: 15px;
   }
   .prescription .write-pre .info-doc {
     flex-direction: column;
