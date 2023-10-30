@@ -1,0 +1,70 @@
+/* Start Patient medical Card */
+.medicalCard {
+  padding-top: 40px;
+}
+
+@media (width<=767px) {
+  .medicalCard .patientmedical .head {
+    padding-top: 0px;
+  }
+}
+
+.patientmedical .sec-contact .contacts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
+  gap: 35px 50px;
+  margin: 20px 0;
+}
+
+.patientmedical .sec-contact .contacts .phon-num {
+  font-size: 20px;
+}
+
+@media (width<=767px) {
+  .patientmedical .sec-contact .contacts .phon-num {
+    font-size: 18px;
+  }
+}
+.patientmedical .sec-contact .contacts .phon-num i {
+  font-weight: bold;
+  color: var(--main-color);
+  margin-right: 10px;
+  font-size: 21px;
+}
+.patientmedical .sec-contact .contacts .phon-num span {
+  color: var(--second-color);
+}
+
+/* End Patient medical Card */
+
+/*Start Icon Scroll to top  */
+.UP {
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #246bfdc4;
+  box-shadow: 0 0 8px 0 rgb(0 0 0 / 10%);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 11px;
+  line-height: 40px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+
+.UP:hover {
+  background-color: var(--main-color);
+  transform: translateY(-5px);
+}
+
+.UP.Showw {
+  opacity: 1;
+  z-index: 50;
+}

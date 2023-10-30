@@ -127,7 +127,8 @@ html::-webkit-scrollbar-thumb:hover {
   display: block;
   cursor: pointer;
   background-color: var(--section-background);
-  box-shadow: 0 0 8px 0 rgb(0 0 0 /10%);
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 0 6px 0 rgb(0 0 0 /10%);
   transition: var(--main-transition) ease-in-out;
 }
 .medicalCard .patientmedical .qrCode button:hover {
@@ -507,3 +508,57 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 /* End Edit Phone  popUp */
+
+/* Start Generate QR Code  popUp  */
+.generat-QR .A-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0, 0, 0, 0.7);
+  z-index: 105;
+  /*  */
+  display: none;
+}
+.generat-QR .popup-QR {
+  width: 355px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /*  */
+  transform: translate(-50%, -50%) scale(0);
+  background-color: white;
+  z-index: 106;
+  border-radius: 15px;
+  padding: 25px;
+  background-color: #fefefe;
+  box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
+  transition: var(--main-transition);
+}
+
+@media (max-width: 767px) {
+  .generat-QR .popup-QR {
+    width: 320px;
+  }
+}
+/* event */
+.active .A-overlay {
+  display: block;
+}
+.active .popup-QR {
+  transition: all var(--main-transition) ease-in;
+  transform: translate(-50%, -50%) scale(1);
+}
+/*  */
+
+.generat-QR .popup-QR img {
+  display: block;
+  width: 170px;
+  max-width: 100%;
+  height: 170px;
+  aspect-ratio: 1/1;
+  margin: 20px auto;
+}
+
+/* End Generate QR Code  popUp  */
