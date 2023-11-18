@@ -1,4 +1,37 @@
-// Links Header
+// from validation
+let form = document.querySelector(".Form");
+let inputsCode = document.querySelectorAll("[name='code']");
+let buttonVerify = document.querySelector(".input");
+//
+// let secCodeMassg = document.querySelector(".Form .error>p");
+
+let coutT = 0;
+inputsCode.forEach((ele) => {
+  ele.addEventListener("input", () => {
+    ele.value !== "" ? coutT++ : coutT--;
+  });
+  ele.addEventListener("blur", () => {
+    if (coutT === 4) form.classList.remove("invalid");
+    else form.classList.add("invalid");
+  });
+});
+
+buttonVerify.addEventListener("click", function (event) {
+  event.preventDefault();
+
+  inputsCode.forEach((ele) => {
+    if (ele.value === "") {
+      form.classList.add("invalid");
+    } else {
+      form.classList.remove("invalid");
+    }
+  });
+  //
+  if (coutT === 4) window.location.assign("../reset-pass/reset-pass.html");
+  //
+});
+
+// Links Header when mobile
 let iconMenu = document.querySelector(".menu-links .icon");
 let pLinks = document.querySelector(".menu-links .links");
 let overlayLinks = document.querySelector(".nav-bar .overlinks");
@@ -12,13 +45,12 @@ iconMenu.addEventListener("click", () => {
 });
 
 //input OTP
-let inputs = document.querySelectorAll(".code input");
 
 window.onload = function () {
-  inputs[0].focus();
+  // inputsCode[0].focus();
 };
 
-inputs.forEach(function (ele, index, array) {
+inputsCode.forEach(function (ele, index, array) {
   ele.oninput = function () {
     if (ele.value !== "" && ele.value < 10) {
       ele.blur();

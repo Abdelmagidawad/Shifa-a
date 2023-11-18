@@ -79,7 +79,7 @@
         </div>
         <div class="content">
           <img src="../images/login-img.gif" alt="image-login" />
-          <form action="" method="post">
+          <form action="" method="post" class="Form">
             <div class="email">
               <label for="">Email</label><br />
               <input
@@ -89,6 +89,10 @@
                 required
                 autofocus
               />
+              <span class="error email-error">
+                <i class="fa-regular fa-circle-exclamation"></i>
+                <p>Please enter a Valid email</p>
+              </span>
             </div>
             <div class="pass">
               <label for="">Password</label><br />
@@ -99,6 +103,11 @@
                 required
                 minlength="8"
               />
+              <span class="error pass-error">
+                <i class="fa-regular fa-circle-exclamation"></i>
+                <p>Password must be between 8 and 16 characters</p>
+              </span>
+
               <a href="../Login/Forgot-pass/email-phone/send-email.html"
                 >Forgot Password ?</a
               >

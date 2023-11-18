@@ -318,7 +318,7 @@ html::-webkit-scrollbar-thumb:hover {
 /* End Header  */
 /* Start Form  */
 .form {
-  padding-top: 100px;
+  padding-top: 60px;
   padding-bottom: 100px;
   background-color: var(--section-background);
 }
@@ -360,6 +360,7 @@ html::-webkit-scrollbar-thumb:hover {
   }
 
   .form .container .image img {
+    width: 65%;
     margin: auto;
     margin-top: 0px;
   }
@@ -373,18 +374,12 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 .form h2 {
-  font-size: 35px;
+  font-size: 32px;
   font-weight: bold;
   margin: 0 auto 43px;
   color: var(--main-color);
   line-height: 1;
   /* mix-blend-mode: color-dodge; */
-}
-
-@media (max-width: 767px) {
-  .form h2 {
-    font-size: 31px;
-  }
 }
 
 .form form {
@@ -398,9 +393,18 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 @media (max-width: 767px) {
+  .form h2 {
+    font-size: 27px;
+  }
   .form form {
     width: fit-content;
-    padding: 40px 20px;
+    padding: 25px 20px;
+  }
+}
+
+@media (768px<=width<=991px) {
+  .form form {
+    width: 75%;
   }
 }
 
@@ -417,7 +421,7 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 .form form div.submit {
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .form form div label {
@@ -442,6 +446,7 @@ html::-webkit-scrollbar-thumb:hover {
   width: 100%;
   border-radius: 7px;
   margin-top: 15px;
+  font-size: 19px;
   caret-color: var(--main-color);
   transition: 0.3s;
 }
@@ -463,7 +468,7 @@ html::-webkit-scrollbar-thumb:hover {
   text-align: center;
 }
 
-.form form .submit input {
+.form form .submit .input {
   display: block;
   width: 100%;
   padding: 15px;
@@ -477,7 +482,7 @@ html::-webkit-scrollbar-thumb:hover {
   transition: var(--main-transition);
 }
 
-.form form .submit input:hover {
+.form form .submit .input:hover {
   background-color: #1296f3;
   transform: scale(0.9);
 }
@@ -492,6 +497,40 @@ html::-webkit-scrollbar-thumb:hover {
 .form form .submit a:hover {
   color: #64b8f3;
 }
+
+/*  */
+.Form {
+  & .error {
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+    font-size: 15px;
+    color: #d93025;
+    /*  */
+    display: none;
+    transition: var(--main-transition);
+    & i {
+      font-weight: bold;
+    }
+    & p {
+      margin: 0;
+    }
+  }
+}
+/*  */
+.invalid {
+  & .error {
+    display: flex;
+  }
+}
+.form .Form .invalid input {
+  border-color: #e3756d;
+}
+
+.form .Form .invalid input:focus {
+  box-shadow: 0 0 5px 0px #e3756d;
+}
+/*  */
 
 /* End Form  */
 /* Start Footer  */

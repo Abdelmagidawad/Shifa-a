@@ -82,7 +82,7 @@
           <div class="head-loading">
             <h2>Create New Password</h2>
           </div>
-          <form action="" method="get">
+          <form action="" method="get" class="Form">
             <div class="pass">
               <label for="">Password</label><br />
               <input
@@ -94,6 +94,10 @@
                 autofocus
               />
               <i class="fa-regular fa-eye-slash"></i>
+              <span class="error pass-error">
+                <i class="fa-regular fa-circle-exclamation"></i>
+                <p>Password must be between 8 and 16 characters</p>
+              </span>
             </div>
             <div class="con-pass">
               <label for="">Confirm Password</label><br />
@@ -105,13 +109,18 @@
                 minlength="8"
               />
               <i class="fa-regular fa-eye-slash"></i>
+              <span class="error pass-error">
+                <i class="fa-regular fa-circle-exclamation"></i>
+                <p>Password don't match</p>
+              </span>
             </div>
             <div class="submit">
-              <input
+              <!-- <input
                 type="submit"
                 value="Reset Password"
                 formaction="../../login.html"
-              />
+              /> -->
+              <button type="submit" class="input">Reset Password</button>
             </div>
           </form>
         </div>

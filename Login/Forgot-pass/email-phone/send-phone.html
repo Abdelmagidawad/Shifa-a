@@ -80,7 +80,7 @@
           <div class="head-loading">
             <h2>Forgot Your Password</h2>
           </div>
-          <form action="" method="get">
+          <form action="" method="get" class="Form">
             <p class="hint">
               Please enter the mobile number associated with your account
             </p>
@@ -95,9 +95,13 @@
                 min="1000000000"
                 max="9999999999"
               />
+              <span class="error phon-error">
+                <i class="fa-regular fa-circle-exclamation"></i>
+                <p>Please enter a Valid phone number</p>
+              </span>
             </div>
             <div class="submit">
-              <input type="submit" value="Send" formaction="../OTP/otp.html" />
+              <button type="submit" class="input">Send</button>
               <a href="send-email.html">Try another way?</a>
             </div>
           </form>

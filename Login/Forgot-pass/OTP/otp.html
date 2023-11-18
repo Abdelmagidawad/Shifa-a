@@ -78,7 +78,7 @@
         <div class="head-loading">
           <h2>Enter Verification Code</h2>
         </div>
-        <form action="" method="get">
+        <form action="" method="get" class="Form">
           <img src="../forgot-image/otp.png" alt="otp-photo" />
           <h3>Code has been send to</h3>
           <div class="code">
@@ -115,12 +115,12 @@
               step="1"
             />
           </div>
+          <span class="error phon-error">
+            <i class="fa-regular fa-circle-exclamation"></i>
+            <p>Verification code is required</p>
+          </span>
           <div class="submit">
-            <input
-              type="submit"
-              value="Verify"
-              formaction="../reset-pass/reset-pass.html"
-            />
+            <button type="submit" class="input">Verify</button>
           </div>
         </form>
       </div>

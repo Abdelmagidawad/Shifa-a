@@ -366,7 +366,7 @@ html::-webkit-scrollbar-thumb:hover {
 .form .head-loading h2 {
   font-size: 35px;
   font-weight: bold;
-  margin: 0 auto 43px;
+  margin: 0 auto 35px;
   color: var(--main-color);
   line-height: 1;
   mix-blend-mode: color-dodge;
@@ -383,14 +383,14 @@ html::-webkit-scrollbar-thumb:hover {
   margin: 15px auto;
   border-radius: 10px;
   box-shadow: 0 0 8px 0px rgb(0 0 0 / 10%);
-  padding: 35px 40px;
+  padding: 25px 40px;
   background-color: white;
 }
 
 @media (max-width: 767px) {
   .form .content form {
     width: fit-content;
-    padding: 25px 25px;
+    padding: 25px;
   }
 }
 
@@ -416,6 +416,7 @@ html::-webkit-scrollbar-thumb:hover {
   width: 100%;
   border-radius: 7px;
   margin-top: 15px;
+  font-size: 19px;
   caret-color: var(--main-color);
   transition: 0.3s;
 }
@@ -480,7 +481,7 @@ html::-webkit-scrollbar-thumb:hover {
     top: 60px;
   }
   .form form {
-    width: 60%;
+    width: 55%;
   }
 }
 
@@ -510,11 +511,11 @@ input[type="number"]::-webkit-inner-spin-button {
 
 /* ****** */
 
-.form form div.pass i,
-.form form div.con-pass i {
+.form form div.pass > i,
+.form form div.con-pass > i {
   position: absolute;
-  top: 63%;
-  right: 4%;
+  top: 64px;
+  right: 17px;
   color: var(--second-color);
   cursor: pointer;
   font-weight: bold;
@@ -522,7 +523,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .form form .submit {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .form form .submit .input {
@@ -556,6 +557,40 @@ input[type="number"]::-webkit-inner-spin-button {
 .form form .submit p a:hover {
   transform: scale(0.9);
 }
+
+/*  */
+.Form {
+  & .error {
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+    font-size: 15px;
+    color: #d93025;
+    /*  */
+    display: none;
+    transition: var(--main-transition);
+    & i {
+      font-weight: bold;
+    }
+    & p {
+      margin: 0;
+    }
+  }
+}
+/*  */
+.invalid {
+  & .error {
+    display: flex;
+  }
+}
+.form .Form .invalid input {
+  border-color: #e3756d;
+}
+
+.form .Form .invalid input:focus {
+  box-shadow: 0 0 5px 0px #e3756d;
+}
+/*  */
 
 /* End Section Form  */
 

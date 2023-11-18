@@ -358,9 +358,9 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 .join h2 {
-  font-size: 38px;
+  font-size: 35px;
   font-weight: bold;
-  margin: 0 auto 60px;
+  margin: 0 auto 30px;
   color: var(--main-color);
   line-height: 1;
   mix-blend-mode: color-dodge;
@@ -432,7 +432,7 @@ html::-webkit-scrollbar-thumb:hover {
 .join .container h2 {
   font-size: 35px;
   font-weight: bold;
-  margin: 15px auto 43px;
+  margin: 15px auto 20px;
   color: var(--main-color);
 }
 
@@ -440,14 +440,23 @@ html::-webkit-scrollbar-thumb:hover {
   margin-top: 24px;
 }
 
+@media (width<=991px) {
+  .join .container {
+    gap: 50px;
+  }
+}
+
 @media (max-width: 767px) {
   .join .container {
     flex-direction: column-reverse;
-    gap: 60px;
+    /* gap: 50px; */
   }
 
   .join .container .box {
     margin: auto;
+  }
+  .join .container img {
+    width: 360px;
   }
 }
 

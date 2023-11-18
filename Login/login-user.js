@@ -3,12 +3,35 @@ import { NetworkHelper } from "../Network/remoteHelper.js";
 let inputEmail = document.querySelector("[name='email']");
 let inputPassword = document.querySelector("[name='password']");
 let buttonSubmit = document.querySelector(".input");
+//
+let secEmail = document.querySelector(".Form .email");
+let secEmailMassg = document.querySelector(".Form .email .error>p");
+let secPassword = document.querySelector(".Form .pass");
+let secPasswordMassg = document.querySelector(".Form .pass .error>p");
 
 const networkHelper = new NetworkHelper();
 
 buttonSubmit.addEventListener("click", function (event) {
   event.preventDefault();
 
+  //Email
+  CheckInputEmpty(
+    inputEmail,
+    secEmailMassg,
+    secEmail,
+    "Email is required",
+    "Please enter a Valid email"
+  );
+  //Password
+  CheckInputEmpty(
+    inputPassword,
+    secPasswordMassg,
+    secPassword,
+    "Password is required",
+    "Password must be between 8 and 16 characters"
+  );
+
+  /////
   let isValid = validateForm();
   if (isValid) {
     networkHelper.loginUser(inputEmail.value, inputPassword.value);
@@ -18,23 +41,93 @@ buttonSubmit.addEventListener("click", function (event) {
   }
 });
 
+// ***************
+
+const mailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+const passPattern = /^(?=.*\d)?(?=.*[a-z])?(?=.*[A-Z])?.{8,16}$/;
+
+inputEmail.addEventListener("keyup", () => {
+  testVWKeyUp(
+    mailPattern,
+    inputEmail,
+    secEmail,
+    secEmailMassg,
+    "Please enter a Valid email",
+    "Email is required"
+  );
+});
+
+inputPassword.addEventListener("keyup", () => {
+  testVWKeyUp(
+    passPattern,
+    inputPassword,
+    secPassword,
+    secPasswordMassg,
+    "Password must be between 8 and 16 characters",
+    "Password is required"
+  );
+});
+
 function validateForm() {
-  if (inputEmail.value === "" || inputPassword.value === "") {
-    alert("Please fill all fields");
-    return false; // Prevent form submission
-  }
-
-  if (inputPassword.value.length < 8 || inputPassword.value.length > 16) {
-    alert("Password should be between 8 and 16 characters");
+  //
+  if (
+    !Validation(mailPattern, inputEmail, secEmail) ||
+    !Validation(passPattern, inputPassword, secPassword)
+  )
     return false;
-  }
-
-  return true; // Allow form submission
+  return true;
 }
+
+// /////
+function Validation(pattern, inputField, secFiled) {
+  if (!pattern.test(inputField.value)) {
+    secFiled.classList.add("invalid");
+    return false;
+  } else {
+    secFiled.classList.remove("invalid");
+    return true;
+  }
+}
+
+function CheckInputEmpty(
+  inputField,
+  secInputMassg,
+  secInput,
+  massageDefault,
+  massageReplace
+) {
+  if (inputField.value === "") {
+    secInputMassg.innerHTML = massageDefault;
+    secInput.classList.add("invalid");
+  } else {
+    secInputMassg.innerHTML = massageReplace;
+  }
+}
+
+function testVWKeyUp(
+  pattern,
+  inputField,
+  secInput,
+  secInputMassg,
+  defaultmassage,
+  replacemassage
+) {
+  if (!pattern.test(inputField.value)) {
+    secInputMassg.innerHTML = defaultmassage;
+    secInput.classList.add("invalid");
+  } else {
+    secInput.classList.remove("invalid");
+  }
+  if (inputField.value === "") {
+    secInputMassg.innerHTML = replacemassage;
+  }
+}
+// /////
+// ***************
 
 // Icon hidden&show password
 
-let iconPass = document.querySelector(".pass i");
+let iconPass = document.querySelector(".pass>i");
 
 iconPass.addEventListener("click", function () {
   if (this.classList.contains("fa-eye-slash")) {
