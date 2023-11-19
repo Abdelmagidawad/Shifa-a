@@ -95,7 +95,7 @@ form.addEventListener("submit", function (event) {
 
     // Create the span element inside p1 and set its text content to dosage
     const span1 = document.createElement("span");
-    span1.textContent = dosage + " mg";
+    span1.textContent = `${parseInt(dosage)} Mg`;
     p1.appendChild(span1);
 
     // Create the cont2 element
@@ -125,7 +125,7 @@ form.addEventListener("submit", function (event) {
     cont2.appendChild(pDur);
 
     const spanDur = document.createElement("span");
-    spanDur.textContent = duration + " Days";
+    spanDur.textContent = `${parseInt(duration)} Days`;
     pDur.appendChild(spanDur);
 
     // Create the cont3 element

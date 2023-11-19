@@ -377,6 +377,12 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 /* Start Edit Phone  popUp */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .generat-QR .A-overlay,
 .edit-Phone .a-overlay {
   position: fixed;
@@ -511,6 +517,39 @@ html::-webkit-scrollbar-thumb:hover {
 .edit-Phone .popup-Edit .FormEdit .buttons #save:hover {
   box-shadow: 0 0 8px 0.5px var(--main-color);
 }
+
+/*  */
+.edit-Phone {
+  & .error {
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+    font-size: 15px;
+    color: #d93025;
+    display: none;
+    transition: var(--main-transition);
+    & i {
+      font-weight: bold;
+    }
+    & p {
+      margin: 0;
+    }
+  }
+}
+/*  */
+.invalid {
+  & .error {
+    display: flex;
+  }
+}
+.popup-Edit .FormEdit div.invalid input {
+  border-color: #e3756d;
+}
+
+.popup-Edit .FormEdit div.invalid input:focus {
+  box-shadow: 0 0 5px 0px #e3756d;
+}
+/*  */
 
 /* End Edit Phone  popUp */
 

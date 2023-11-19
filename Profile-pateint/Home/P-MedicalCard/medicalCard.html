@@ -151,13 +151,19 @@
             <img src="MedicalCard-Img/phone.jpg" alt="PhotoPhone" />
 
             <form action="" class="FormEdit">
-              <div>
+              <div class="phone">
                 <input
-                  type="text"
+                  type="number"
                   name="Phone"
                   placeholder="Mobile Number"
                   required
+                  min="1000000000"
+                  max="9999999999"
                 />
+                <span class="error phon-error">
+                  <i class="fa-regular fa-circle-exclamation"></i>
+                  <p>Please enter a Valid phone number</p>
+                </span>
               </div>
               <div class="buttons">
                 <button type="button" id="cancel">Cancel</button>

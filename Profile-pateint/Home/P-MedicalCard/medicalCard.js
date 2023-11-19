@@ -36,6 +36,10 @@ let editOverlay = document.querySelector(".edit-Phone .a-overlay");
 let editSaveBtn = document.querySelector(".FormEdit #save");
 let editCancelBtn = document.querySelector(".FormEdit #cancel");
 let inputPhone = document.querySelector("input[name='Phone']");
+//
+let secPhone = document.querySelector(".FormEdit .phone");
+let secPhoneMassg = document.querySelector(".FormEdit .phone .error>p");
+const phonePattern = /^01[0125][0-9]{8}$/;
 
 let phoneNum;
 // to Show Edit PopUp
@@ -55,8 +59,38 @@ editOverlay.addEventListener("click", () => editCancelBtn.click());
 
 editSaveBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  if (inputPhone.value !== "") {
+
+  if (inputPhone.value === "") {
+    secPhoneMassg.innerHTML = "Phone number is required";
+    secPhone.classList.add("invalid");
+  } else {
+    secPhoneMassg.innerHTML = "Please enter a Valid phone number";
+  }
+
+  if (Validation(phonePattern, inputPhone, secPhone)) {
     phoneNum.innerHTML = inputPhone.value;
     editCancelBtn.click();
+  }
+});
+
+function Validation(pattern, inputField, secFiled) {
+  if (!pattern.test(inputField.value)) {
+    secFiled.classList.add("invalid");
+    return false;
+  } else {
+    secFiled.classList.remove("invalid");
+    return true;
+  }
+}
+
+inputPhone.addEventListener("keyup", () => {
+  if (!phonePattern.test(inputPhone.value)) {
+    secPhoneMassg.innerHTML = "Please enter a Valid phone number";
+    secPhone.classList.add("invalid");
+  } else {
+    secPhone.classList.remove("invalid");
+  }
+  if (inputPhone.value === "") {
+    secPhoneMassg.innerHTML = "Phone number is required";
   }
 });
