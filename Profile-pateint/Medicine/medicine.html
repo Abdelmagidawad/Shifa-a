@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shifa’a | Home | Patient</title>
+    <title>Shifa’a | Medicine | Patient</title>
     <link
       rel="shortcut icon"
       href="../../images/favicon.png"
@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="../../CSS/all.min.css" />
     <!-- Header-patient file css  -->
     <link rel="stylesheet" href="../header.css" />
-    <!-- Home File CSS  -->
-    <link rel="stylesheet" href="home.css" />
+    <!-- Medicine File CSS  -->
+    <link rel="stylesheet" href="medicine.css" />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -53,14 +53,12 @@
             </div>
             <!-- mobile -->
             <ul class="links">
-              <li>
-                <a href="#" style="color: #246bfd">Home</a>
-              </li>
+              <li><a href="../Home/home.html">Home</a></li>
               <li><a href="../Reports/report.html">Reports</a></li>
               <li>
                 <a href="../Appointments/Upcomming/upcom.html">Appointments</a>
               </li>
-              <li><a href="../Medicine/medicine.html">Medicine</a></li>
+              <li><a href="#" style="color: #246bfd">Medicine</a></li>
             </ul>
           </div>
           <ul class="Profile-toltab">
@@ -76,10 +74,10 @@
                   <div class="content">No notifications.</div>
                 </div>
               </div>
-              <img src="Home-img/profile-img.png" alt="pro-img" />
+              <img src="../Home/Home-img/profile-img.png" alt="pro-img" />
               <div class="tol-tab">
                 <div>
-                  <img src="Home-img/profile-img.png" alt="photo" />
+                  <img src="../Home/Home-img/profile-img.png" alt="photo" />
                   <h2>Ahmed Ibrahim</h2>
                 </div>
                 <ul class="tol-links">
@@ -137,127 +135,116 @@
     </div>
     <!-- end popuplogout -->
 
-    <!-- Start home patient  -->
-    <div class="Home-content">
+    <!-- start Medicine Patient -->
+
+    <div class="medicine">
       <div class="container">
-        <div class="find-doc">
-          <div class="appoint">
-            <h2>Need to Find a Doctor?</h2>
-            <h2>Go online with us!</h2>
-            <a href="search-doctor/search-doc.html">Book Appointment</a>
+        <div class="select-day">
+          <div>
+            <span>01</span>
+            <p>Saturday</p>
           </div>
-          <img src="Home-img/home-imge.png" alt="imageHello" />
-        </div>
-        <div class="medical-car">
-          <div class="text">
-            <h2>Medical Card</h2>
-            <p>Emergency Profile</p>
-            <a href="P-MedicalCard/medicalCard.html">Open Profile</a>
+          <div>
+            <span>02</span>
+            <p>Sunday</p>
           </div>
-          <img src="Home-img/medical.png" alt="photo-card" />
-        </div>
-        <div class="appointment">
-          <h2>Upcoming Appointments</h2>
-          <div class="up-list-doc">
-            <div class="box">
-              <h3>Dr.Mohamed Ibrahim</h3>
-              <p>Osteopathy</p>
-              <div class="time-D">
-                <p><i class="fa-solid fa-calendar-days"></i> 15-5-2023</p>
-                <p><i class="fa-solid fa-clock"></i> 11:30 Am</p>
-              </div>
-            </div>
-            <div class="box">
-              <h3>Dr.Mohamed Ali</h3>
-              <p>Rheumatology</p>
-              <div class="time-D">
-                <p><i class="fa-solid fa-calendar-days"></i> 15-5-2023</p>
-                <p><i class="fa-solid fa-clock"></i> 12:30 Pm</p>
-              </div>
-            </div>
-            <div class="box">
-              <h3>Dr.Kholoud Ahmed</h3>
-              <p>Osteopathy</p>
-              <div class="time-D">
-                <p><i class="fa-solid fa-calendar-days"></i> 1-6-2023</p>
-                <p><i class="fa-solid fa-clock"></i> 11:30 Am</p>
-              </div>
-            </div>
-            <div class="box">
-              <h3>Dr.Mahmoud Reda</h3>
-              <p>Vascular Surgery</p>
-              <div class="time-D">
-                <p><i class="fa-solid fa-calendar-days"></i> 5-6-2023</p>
-                <p><i class="fa-solid fa-clock"></i> 10:00 Am</p>
-              </div>
-            </div>
-            <div class="box">
-              <h3>Dr.Mohamed Hassan</h3>
-              <p>Osteopathy</p>
-              <div class="time-D">
-                <p><i class="fa-solid fa-calendar-days"></i> 13-6-2023</p>
-                <p><i class="fa-solid fa-clock"></i> 2:30 Pm</p>
-              </div>
-            </div>
+          <div>
+            <span>03</span>
+            <p>Monday</p>
+          </div>
+          <div>
+            <span>04</span>
+            <p>Tuesday</p>
+          </div>
+          <div>
+            <span>05</span>
+            <p>Wednesday</p>
+          </div>
+          <div>
+            <span>06</span>
+            <p>Thursday</p>
           </div>
         </div>
+
         <div class="sec-medicine">
-          <h2>Your Daily Reminders</h2>
-          <div class="medicine">
-            <div class="box">
-              <div class="sec1">
-                <img src="Home-img/image_medicine.png" alt="photo-medicine" />
-                <div class="text">
-                  <h3>Panadol Cold Flu</h3>
-                  <p>1 PILL</p>
-                </div>
+          <div class="box-med">
+            <img src="MedicineImage/topical.png" alt="photo-medicine" />
+            <div class="data">
+              <h3><i class="fa-sharp fa-solid fa-pills"></i> Voltaren</h3>
+              <p>Topical</p>
+              <div class="time">
+                <i class="fa-solid fa-bell"></i>
+                <span>10:00 AM</span>
               </div>
-              <div class="sec2">
-                <p class="appoint">After Breakfast</p>
-                <p class="appoint">After Dinner</p>
-              </div>
-              <span>10:00 Am</span>
             </div>
-            <div class="box">
-              <div class="sec1">
-                <img src="Home-img/image_medicine.png" alt="photo-medicine" />
-                <div class="text">
-                  <h3>Panadol Cold Flu</h3>
-                  <p>1 PILL</p>
-                </div>
+          </div>
+          <div class="box-med">
+            <img src="MedicineImage/Tablets (2).png" alt="photo-medicine" />
+            <div class="data">
+              <h3>
+                <i class="fa-sharp fa-solid fa-pills"></i> Panadol Cold Flu
+              </h3>
+              <p>Tablets</p>
+              <div class="time">
+                <i class="fa-solid fa-bell"></i>
+                <span>08:00 AM</span>
               </div>
-              <div class="sec2">
-                <p class="appoint">After Breakfast</p>
-                <p class="appoint">After Dinner</p>
-              </div>
-              <span>10:00 Am</span>
             </div>
-            <div class="box">
-              <div class="sec1">
-                <img src="Home-img/image_medicine.png" alt="photo-medicine" />
-                <div class="text">
-                  <h3>Panadol Cold Flu</h3>
-                  <p>1 PILL</p>
-                </div>
+          </div>
+          <div class="box-med">
+            <img src="MedicineImage/topical.png" alt="photo-medicine" />
+            <div class="data">
+              <h3><i class="fa-sharp fa-solid fa-pills"></i> Voltaren</h3>
+              <p>Topical</p>
+              <div class="time">
+                <i class="fa-solid fa-bell"></i>
+                <span>10:00 AM</span>
               </div>
-              <div class="sec2">
-                <p class="appoint">After Breakfast</p>
-                <p class="appoint">After Dinner</p>
+            </div>
+          </div>
+          <div class="box-med">
+            <img src="MedicineImage/Tablets (2).png" alt="photo-medicine" />
+            <div class="data">
+              <h3>
+                <i class="fa-sharp fa-solid fa-pills"></i> Panadol Cold Flu
+              </h3>
+              <p>Tablets</p>
+              <div class="time">
+                <i class="fa-solid fa-bell"></i>
+                <span>10:00 PM</span>
               </div>
-              <span>10:00 Am</span>
+            </div>
+          </div>
+          <div class="box-med">
+            <img src="MedicineImage/Tablets (2).png" alt="photo-medicine" />
+            <div class="data">
+              <h3>
+                <i class="fa-sharp fa-solid fa-pills"></i> Panadol Cold Flu
+              </h3>
+              <p>Tablets</p>
+              <div class="time">
+                <i class="fa-solid fa-bell"></i>
+                <span>10:00 PM</span>
+              </div>
             </div>
           </div>
         </div>
+        <!-- Start No medicine -->
+        <div class="no-medicine">
+          <img src="MedicineImage/noMedicine.png" alt="photo-medicine" />
+          <h2>You don't have medicine sheduled for this day</h2>
+        </div>
+        <!-- End No medicine -->
       </div>
     </div>
 
-    <!-- End home patient  -->
+    <!-- End Medicine Patient  -->
 
     <!-- Icon scroll to Top  -->
     <i class="fa-sharp fa-regular fa-arrow-up UP"></i>
 
     <!-- main file js  -->
-    <script type="module" src="patient-home.js"></script>
+    <script type="module" src="medicine.js"></script>
     <!-- Cookies file js  -->
     <script src="../../Local/localHelper.js"></script>
     <!-- network helper file js  -->
