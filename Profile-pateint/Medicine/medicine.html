@@ -165,7 +165,32 @@
             <p>Thursday</p>
           </div>
         </div>
-
+        <!-- Start Details Medicine PopUp  -->
+        <div class="details-up" id="Dup">
+          <div class="D-overlay"></div>
+          <div class="popup-details">
+            <div class="img">
+              <img src="" alt="Medicine-photo" />
+            </div>
+            <div class="details">
+              <p id="name">Name: <span></span></p>
+              <p id="frequ">Frequency: <span>Twice a day</span></p>
+              <p id="duration">Duration: <span>3 Days</span></p>
+              <p id="dosage">Dosage: <span>500 mg</span></p>
+            </div>
+            <div class="shedule">
+              <h3>Schedule:</h3>
+              <div id="schedule">
+                <p>After Breakfast</p>
+                <p>After Dinner</p>
+              </div>
+            </div>
+            <button type="button" id="close">
+              <i class="fa-solid fa-circle-xmark"></i>
+            </button>
+          </div>
+        </div>
+        <!-- End Details Medicine PopUp  -->
         <div class="sec-medicine">
           <div class="box-med">
             <img src="MedicineImage/topical.png" alt="photo-medicine" />
@@ -248,7 +273,7 @@
     <!-- Cookies file js  -->
     <script src="../../Local/localHelper.js"></script>
     <!-- network helper file js  -->
-    <script src="../../Network/remoteHelper.js"></script>
+    <script type="module" src="../../Network/remoteHelper.js"></script>
     <!-- Header file js  -->
     <script src="../header.js"></script>
     <!-- Logout js file  -->
