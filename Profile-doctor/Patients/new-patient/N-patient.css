@@ -32,22 +32,24 @@ a {
 }
 
 /* Add Scrollbar  */
-html::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 7px;
+  /*  */
+  height: 5px;
 }
 
-html::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   box-shadow: 0 0 7px 1px #eef0f2 inset;
   background-color: #ddd;
 }
 
-html::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background-color: var(--main-color);
   border-radius: 6px;
   transition: 0.3s;
 }
 
-html::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
   background-color: #3055cb;
 }
 
@@ -58,7 +60,7 @@ html::-webkit-scrollbar-thumb:hover {
 
 /* Start List Patient  */
 .list-patient {
-  padding-top: 60px;
+  padding-top: 45px;
   padding-bottom: var(--main-padding);
   background-color: var(--section-background);
   min-height: 100vh;
@@ -69,22 +71,14 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 .list-patient .main-heading h2 {
-  font-size: 35px;
+  font-size: 32px;
   margin: 0;
   font-weight: bold;
-  /* letter-spacing: 3px; */
   color: var(--main-color);
 }
 
-@media (max-width: 767px) {
-  .list-patient .main-heading h2 {
-    font-size: 32px;
-    letter-spacing: 0px;
-  }
-}
-
 .list-patient .main-heading p {
-  margin: 8px 0 50px;
+  margin: 8px 0 20px;
   font-size: 20px;
   color: var(--second-color);
 }
@@ -92,24 +86,24 @@ html::-webkit-scrollbar-thumb:hover {
   font-weight: bold;
 }
 
-.list-patient .container {
+/* .list-patient .container { */
+.list-patient .sec-table {
   box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
   background-color: white;
-  padding: 55px 20px 20px;
+  padding: 45px 20px;
   border-radius: 15px;
   margin: auto;
   position: relative;
 }
 
 .list-patient .container .filter {
-  position: absolute;
-  top: -49px;
-  right: 27px;
+  margin-bottom: 15px;
+  text-align: end;
 }
 
 .list-patient .container .filter i {
-  font-size: 24px;
-  margin: 5px 5px 0 0;
+  font-size: 30px;
+  margin-right: 10px;
   color: var(--main-color);
 }
 
@@ -118,8 +112,8 @@ html::-webkit-scrollbar-thumb:hover {
   outline: none;
   border-radius: 7px;
   border: 2px solid #cbcfdd;
-  padding: 0px 30px;
-  font-size: 17px;
+  padding: 4px 35px;
+  font-size: 18px;
   font-weight: bold;
   color: var(--second-color);
   transition: var(--main-transition);
@@ -147,22 +141,21 @@ html::-webkit-scrollbar-thumb:hover {
   border-bottom: 2px solid lightgrey;
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (width<= 991px) {
   .list-patient .main-heading h2 {
     font-size: 33px;
     letter-spacing: 1px;
   }
 
-  .list-patient .container {
-    padding: 45px 15px 15px;
+  .list-patient .sec-table {
+    padding: 35px 20px;
   }
 
   .list-patient .container .filter i {
-    font-size: 20px;
+    font-size: 28px;
   }
 
   .list-patient .container .filter select {
-    padding: 0px 25px;
     font-size: 15px;
   }
 
@@ -258,7 +251,7 @@ html::-webkit-scrollbar-thumb:hover {
   border-radius: 5px;
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (width<= 991px) {
   .list-patient .container table tbody tr td {
     padding: 8px 10px;
     font-size: 14px;
@@ -296,20 +289,30 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 /* When open mobile app */
-
 @media (max-width: 767px) {
+  .list-patient .container .res {
+    overflow-x: scroll;
+  }
+  .list-patient .container table {
+    min-width: 700px;
+  }
+}
+
+/* ********* */
+/* Old When open mobile app */
+/* @media (max-width: 767px) {
   .list-patient > .container {
     display: none;
   }
-}
+} */
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .list-patient .for-mobile {
     display: none;
   }
-}
+} */
 
-.list-patient .for-mobile {
+/* .list-patient .for-mobile {
   margin-top: 60px;
   margin-bottom: 120px;
   padding-left: 15px;
@@ -377,7 +380,7 @@ html::-webkit-scrollbar-thumb:hover {
 
 .list-patient .for-mobile a:hover {
   transform: scale(0.9);
-}
+} */
 
 /* End mobile */
 

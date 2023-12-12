@@ -32,22 +32,24 @@ a {
 }
 
 /* Add Scrollbar  */
-html::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 7px;
+  /*  */
+  height: 5px;
 }
 
-html::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   box-shadow: 0 0 7px 1px #eef0f2 inset;
   background-color: #ddd;
 }
 
-html::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background-color: var(--main-color);
   border-radius: 6px;
   transition: 0.3s;
 }
 
-html::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
   background-color: #3055cb;
 }
 
@@ -86,6 +88,17 @@ html::-webkit-scrollbar-thumb:hover {
   box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
   transition: var(--main-transition);
 }
+
+@media (width<=767px) {
+  .list-schedule .select-day {
+    overflow-x: auto;
+    background-color: transparent;
+  }
+  .list-schedule .select-day div {
+    width: max-content;
+  }
+}
+
 .list-schedule .select-day div:hover {
   background-color: var(--main-color) !important;
   color: white !important;
@@ -188,7 +201,7 @@ html::-webkit-scrollbar-thumb:hover {
   transition: 0.5s;
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (width<= 991px) {
   .list-schedule .select-day {
     gap: 20px;
   }
@@ -240,88 +253,14 @@ html::-webkit-scrollbar-thumb:hover {
 /* When open mobile app */
 
 @media (max-width: 767px) {
-  .list-schedule .select-day,
-  .list-schedule .list-patient-Sch {
-    display: none;
+  .list-schedule .list-patient-Sch .list-patient {
+    overflow-x: scroll;
+  }
+  .list-schedule .list-patient-Sch .list-patient .header-patient,
+  .list-schedule .list-patient-Sch .list-patient .box {
+    width: 686px;
   }
 }
-
-@media (min-width: 768px) {
-  .list-schedule .for-mobile {
-    display: none;
-  }
-}
-
-.list-schedule .for-mobile {
-  /* margin-top: 110px; */
-  margin-bottom: 120px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.list-schedule .for-mobile .img-back {
-  max-width: 90%;
-  position: absolute;
-  z-index: -1;
-}
-
-.list-schedule .for-mobile .container {
-  width: fit-content;
-  margin: auto;
-  box-shadow: 0 0 7px 1px rgb(0 0 0 / 10%);
-  border: 1px solid var(--main-color);
-  border-radius: 15px;
-  padding: 25px;
-  text-align: center;
-}
-
-.list-schedule .for-mobile .imge {
-  max-width: 75px;
-  border-radius: 50%;
-  margin: 15px 0 0px;
-  animation: for-mobile-img 1.5s ease-in-out infinite;
-}
-
-@keyframes for-mobile-img {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-7px);
-  }
-}
-
-.list-schedule .for-mobile div {
-  margin: 10px 0 20px;
-}
-
-.list-schedule .for-mobile div h2 {
-  font-size: 30px;
-  margin-bottom: 50px;
-  color: var(--second-color);
-  padding-top: 30px;
-  border-top: 2px solid #e5e5e5;
-}
-
-.list-schedule .for-mobile a {
-  display: block;
-  width: fit-content;
-  margin: auto;
-  padding: 10px 15px;
-  background-color: var(--main-color);
-  color: white;
-  border-radius: 10px;
-  font-weight: bold;
-  transition: var(--main-transition);
-}
-
-.list-schedule .for-mobile a:hover {
-  transform: scale(0.9);
-}
-
-/* End mobile */
 
 /* Start See More PopUp   */
 
@@ -389,6 +328,25 @@ html::-webkit-scrollbar-thumb:hover {
   font-size: 18px;
   color: var(--second-color);
 }
+
+@media (width<=767px) {
+  .seeMore-up .popup-seeMore {
+    width: 330px;
+    padding: 20px;
+  }
+  .seeMore-up .popup-seeMore .pop-head {
+    gap: 15px;
+    padding-bottom: 10px;
+  }
+  .seeMore-up .popup-seeMore .pop-head img {
+    width: 90px;
+    height: 90px;
+  }
+  .seeMore-up .popup-seeMore .pop-head h2 {
+    font-size: 20px;
+  }
+}
+
 .seeMore-up .popup-seeMore .time {
   margin-top: 20px;
   display: flex;

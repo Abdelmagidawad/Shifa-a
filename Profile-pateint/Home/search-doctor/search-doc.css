@@ -255,6 +255,9 @@ html::-webkit-scrollbar-thumb:hover {
   font-size: 19px;
   color: var(--second-color);
 }
+.search-doctor .container .list-doc .box .content > span i {
+  color: var(--main-color);
+}
 
 .search-doctor .container .list-doc .box .content .rate {
   margin: 15px 0px;
