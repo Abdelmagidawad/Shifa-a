@@ -1,7 +1,40 @@
 let selectDay = document.querySelectorAll(".select-day div");
 let secNoapp = document.querySelector(".no-app");
 let secListSchedule = document.querySelector(".list-patient-Sch");
+// To Dynamic day&date
+document.addEventListener("DOMContentLoaded", function () {
+  const daysOfWeek = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  const currentDate = new Date();
 
+  for (let i = 1; i <= 6; i++) {
+    const dayElement = document.getElementById(`day${i}`);
+    const dateElement = document.getElementById(`date${i}`);
+
+    // Calculate the date for each day
+    const futureDate = new Date(currentDate);
+    futureDate.setDate(currentDate.getDate() + i - 1);
+
+    dayElement.textContent = daysOfWeek[futureDate.getDay()];
+    dateElement.textContent =
+      (futureDate.getDate() < 10 ? "0" : "") + futureDate.getDate();
+    //
+    if (futureDate.getDate() === currentDate.getDate()) {
+      selectDay[i - 1].style.cssText =
+        "background-color: #246bfd;color: white;";
+      dayElement.style.color = "white";
+      selectDay[i - 1].click();
+    }
+  }
+});
+//
 selectDay.forEach(function (element) {
   element.addEventListener("click", function () {
     //
@@ -10,10 +43,10 @@ selectDay.forEach(function (element) {
     //
     selectDay.forEach(function (ele) {
       ele.style.cssText = " background-color: white;color: #7d7987;";
-      ele.firstElementChild.style.color = "#246bfd";
+      ele.lastElementChild.style.color = "#246bfd";
     });
     this.style.cssText = " background-color: #246bfd;color: white;";
-    this.firstElementChild.style.color = "white";
+    this.lastElementChild.style.color = "white";
   });
 });
 
@@ -28,7 +61,6 @@ selectDay[5].addEventListener("click", function () {
 });
 
 // button canceled to remove box
-
 let cancelBtn = document.querySelectorAll(".button .cancel");
 let buttons = document.querySelectorAll(".button ");
 let boxContent = document.querySelectorAll(".list-patient .box");

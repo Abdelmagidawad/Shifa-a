@@ -87,7 +87,7 @@ html::-webkit-scrollbar-thumb:hover {
 /* Start Book Appointment  */
 
 .book-appoint {
-  padding-top: 60px;
+  padding-top: 50px;
   padding-bottom: var(--main-padding);
   background-color: var(--section-background);
 }
@@ -103,16 +103,27 @@ html::-webkit-scrollbar-thumb:hover {
   width: 80%;
   margin: 30px auto 0;
 }
-@media (max-width: 991px) {
+@media (width<= 600px) {
   .book-appoint .container .book-details {
     width: 100%;
   }
 }
+@media (601<=width<= 767px) {
+  .book-appoint .container .book-details {
+    width: 85%;
+  }
+}
+@media (768px<= width<=991px) {
+  .book-appoint .container .book-details {
+    width: 100%;
+  }
+}
+
 /* Start info section  */
 .book-appoint .book-details .info {
   background-color: #ffffffb3;
   box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
-  border-radius: 10px;
+  border-radius: 15px;
   padding: 40px;
 }
 .book-appoint .book-details .info .head {
@@ -157,7 +168,6 @@ html::-webkit-scrollbar-thumb:hover {
   display: flex;
   justify-content: space-around;
   margin: 35px 50px;
-  /* gap: 25px; */
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .book-appoint .book-details .info .details {
@@ -166,16 +176,18 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 .book-appoint .book-details .info .details .box {
-  width: 10em;
-  background-color: var(--section-background);
-  box-shadow: 0 0 8px 0px rgb(0 0 0 /10%) inset;
+  width: 10rem;
+  box-shadow: 4px 4px 8px 0px rgb(0 0 0 /10%) inset;
   color: var(--main-color);
   text-align: center;
-  border-radius: 20px;
+  border-radius: 15px;
+  background-color: #f2f2f236;
 }
 .book-appoint .book-details .info .details .box h4 {
-  font-size: 18px;
+  font-size: 17px;
   margin: 15px 0 10px;
+  font-weight: 500;
+  color: var(--second-color);
 }
 .book-appoint .book-details .info .details .box span {
   display: block;
@@ -194,22 +206,23 @@ html::-webkit-scrollbar-thumb:hover {
   color: var(--second-color);
   margin: 0;
 }
-
+@media (width<=600px) {
+  .book-appoint .book-details .info .head img {
+    width: 90px;
+    height: 90px;
+    margin-right: 1rem;
+  }
+  .book-appoint .book-details .info .details {
+    margin: 20px 0px;
+  }
+}
 @media (max-width: 767px) {
   .book-appoint .book-details .info {
     padding: 20px 15px;
   }
-  .book-appoint .book-details .info .head img {
-    width: 90px;
-    height: 90px;
-    margin-right: 20px;
-  }
   .book-appoint .book-details .info .head .name-spe h2 {
     font-size: 25px;
     margin-bottom: 7px;
-  }
-  .book-appoint .book-details .info .details {
-    margin: 30px 10px;
   }
   .book-appoint .book-details .info .details .box {
     width: 28%;
@@ -248,78 +261,101 @@ html::-webkit-scrollbar-thumb:hover {
   margin: 0;
   color: var(--second-color);
 }
+/*  */
 .book-appoint .select-d-t .date-time .clender .t-cle {
   box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
   background-color: #ffffffb3;
   border-radius: 10px;
-  padding: 16px;
   margin-top: 15px;
+  padding: 15px;
 }
-@media (max-width: 767px) {
-  .book-appoint .select-d-t .date-time .clender .t-cle {
-    padding: 15px;
-  }
-}
-
-.book-appoint .select-d-t .date-time .clender .mounth {
+.select-d-t .date-time .clender .t-cle .headd {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 15px 10px 20px;
 }
-.book-appoint .select-d-t .date-time .clender .mounth p {
+.clender .t-cle .headd .current-date {
   margin: 0;
-  font-size: 20px;
-  font-weight: bold;
-}
-.book-appoint .select-d-t .date-time .clender .mounth i {
-  padding: 8px;
-  font-size: 13px;
-  font-weight: bold;
-  color: var(--second-color);
-  border-radius: 50%;
-  border: 1px solid #e9edf9;
-  cursor: pointer;
-  transition: var(--main-transition);
-}
-.book-appoint .select-d-t .date-time .clender .mounth i:first-of-type {
-  margin-right: 5px;
-}
-.book-appoint .select-d-t .date-time .clender .mounth i:hover {
-  color: white;
-  background-color: var(--main-color);
-  border-color: transparent;
+  font-size: 1.4rem;
+  font-weight: 500;
 }
 
-.book-appoint .select-d-t .clender table {
-  width: 100%;
-  margin-top: 10px;
-  background-color: var(--section-background);
-  border-radius: 7px;
-  padding: 5px;
+.clender .t-cle .headd .slider {
+  display: flex;
+  gap: 5px;
 }
-.book-appoint .select-d-t .clender table thead tr td {
-  color: var(--second-color);
-  font-weight: bold;
+.clender .t-cle .headd .slider i {
+  width: 35px;
+  height: 35px;
+  margin: 0 1px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #878787;
+  /* border: 1px solid #e9edf9; */
+  transition: var(--main-transition);
+}
+.select-d-t .date-time .clender .t-cle .headd .slider i:last-child {
+  margin-right: -10px;
+}
+.select-d-t .date-time .clender .t-cle .headd .slider i:hover {
+  background-color: #f2f2f2;
+}
+
+.calender ul {
+  display: flex;
+  flex-wrap: wrap;
   text-align: center;
 }
 
-.book-appoint .select-d-t .clender table tbody tr td {
-  text-align: center;
-  aspect-ratio: 1/1;
-  cursor: pointer;
-  border-radius: 50%;
-  padding: 10px;
-  transition: var(--main-transition);
-}
-.book-appoint .select-d-t .clender table tbody tr td:hover {
-  background-color: #40e0d085;
+.calender ul li {
+  width: calc(100% / 7);
+  position: relative;
 }
 
-/* selected default */
-.book-appoint .select-d-t .clender table tbody tr:nth-child(3) td:nth-child(6) {
-  background-color: var(--main-color);
-  color: white;
+.calender .weeks li {
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.calender .days {
+  margin-top: -5px;
+  padding-bottom: 10px;
+}
+.calender .days li {
+  margin-top: 25px;
+  cursor: pointer;
+  z-index: 1;
+}
+/*  */
+.days li.inactive {
+  color: #aaa;
+}
+.days li.active {
+  color: #fff;
+}
+
+.calender .days li::before {
+  content: "";
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border-radius: 50%;
+  transition: var(--main-transition);
+}
+
+.calender .days li:not(.active):hover::before {
+  background-color: #f2f2f2;
+}
+/*  */
+.days li.active::before {
+  background-color: var(--main-color);
 }
 
 .book-appoint .select-d-t .date-time .hour h3 {
@@ -328,17 +364,15 @@ html::-webkit-scrollbar-thumb:hover {
   color: var(--second-color);
 }
 .book-appoint .select-d-t .date-time .hour .time {
+  height: 90%;
+  /*  */
   box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
   background-color: #ffffffb3;
   border-radius: 10px;
   padding: 30px;
   margin-top: 15px;
 }
-@media (max-width: 767px) {
-  .book-appoint .select-d-t .date-time .hour .time {
-    padding: 20px;
-  }
-}
+
 .book-appoint .select-d-t .date-time .hour ul li {
   display: flex;
   justify-content: space-between;
@@ -353,10 +387,13 @@ html::-webkit-scrollbar-thumb:hover {
   border: 2px solid var(--main-color);
   color: var(--main-color);
   cursor: pointer;
+  transition: var(--main-transition);
 }
-.book-appoint .select-d-t .date-time .hour ul li:nth-child(2) p:last-child {
+
+.time li p.active,
+.date-time .hour ul li p:hover {
+  color: #fff !important;
   background-color: var(--main-color);
-  color: white;
 }
 
 /* start problem description */
@@ -414,5 +451,12 @@ html::-webkit-scrollbar-thumb:hover {
   background-color: #4368e1;
   box-shadow: 0 0 10px 0px var(--main-color);
 }
-
+@media (width<= 600px) {
+  .book-appoint .select-d-t .date-time .hour .time {
+    padding: 20px;
+  }
+  .book-appoint .book-now {
+    width: 80%;
+  }
+}
 /* Start Book Appointment  */

@@ -154,7 +154,7 @@
             <div class="details">
               <div class="box">
                 <h4>Patients</h4>
-                <span>+100</span>
+                <span>100+</span>
               </div>
               <div class="box">
                 <h4>Experience</h4>
@@ -168,7 +168,7 @@
             <div class="about">
               <h3>About</h3>
               <p>
-                MBBS,PH.D.,Fellow,International College of Surgeons.
+                MBBS,PH.D.,Fellow,International College of Surgeons.<br />
                 EX-Professor&Head Of Department Department of Internal Medicine
                 Dhaka Medical College&Hospital.
               </p>
@@ -180,93 +180,54 @@
             <div class="date-time">
               <div class="clender">
                 <h3>Select Date</h3>
+
                 <div class="t-cle">
-                  <div class="mounth">
-                    <p>September 2022</p>
+                  <div class="headd">
+                    <p class="current-date"></p>
                     <div class="slider">
-                      <i class="fa-solid fa-chevron-left"></i>
-                      <i class="fa-sharp fa-solid fa-chevron-right"></i>
+                      <i id="prev" class="fa-solid fa-chevron-left"></i>
+                      <i
+                        id="next"
+                        class="fa-sharp fa-solid fa-chevron-right"
+                      ></i>
                     </div>
                   </div>
-                  <table>
-                    <thead>
-                      <tr>
-                        <td>Sun</td>
-                        <td>Man</td>
-                        <td>Tue</td>
-                        <td>Wen</td>
-                        <td>Thu</td>
-                        <td>Fri</td>
-                        <td>Sat</td>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
-                        <td>5</td>
-                        <td>6</td>
-                        <td>7</td>
-                      </tr>
-                      <tr>
-                        <td>8</td>
-                        <td>9</td>
-                        <td>10</td>
-                        <td>11</td>
-                        <td>12</td>
-                        <td>13</td>
-                        <td>14</td>
-                      </tr>
-                      <tr>
-                        <td>15</td>
-                        <td>16</td>
-                        <td>17</td>
-                        <td>18</td>
-                        <td>19</td>
-                        <td>20</td>
-                        <td>21</td>
-                      </tr>
-                      <tr>
-                        <td>22</td>
-                        <td>23</td>
-                        <td>24</td>
-                        <td>25</td>
-                        <td>26</td>
-                        <td>27</td>
-                        <td>28</td>
-                      </tr>
-                      <tr>
-                        <td>29</td>
-                        <td>30</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <div class="calender">
+                    <ul class="weeks">
+                      <li>Sun</li>
+                      <li>Man</li>
+                      <li>Tue</li>
+                      <li>Wen</li>
+                      <li>Thu</li>
+                      <li>Fri</li>
+                      <li>Sat</li>
+                    </ul>
+                    <ul class="days"></ul>
+                  </div>
                 </div>
               </div>
               <div class="hour">
                 <h3>Select Hour</h3>
                 <ul class="time">
                   <li>
-                    <p>09.00 AM</p>
-                    <p>09.30 AM</p>
-                    <p>10.00 AM</p>
+                    <p>09:00 AM</p>
+                    <p>09:30 AM</p>
+                    <p>10:00 AM</p>
                   </li>
                   <li>
-                    <p>10.30 PM</p>
-                    <p>11.00 PM</p>
-                    <p>11.30 PM</p>
+                    <p>10:30 AM</p>
+                    <p>11:00 AM</p>
+                    <p>11:30 AM</p>
                   </li>
                   <li>
-                    <p>15.00 PM</p>
-                    <p>15.30 PM</p>
-                    <p>16.00 PM</p>
+                    <p>12:00 PM</p>
+                    <p>12:30 PM</p>
+                    <p>1:00 PM</p>
                   </li>
                   <li>
-                    <p>16.30 PM</p>
-                    <p>17.00 PM</p>
-                    <p>17.30 PM</p>
+                    <p>1:30 PM</p>
+                    <p>2:00 PM</p>
+                    <p>2:30 PM</p>
                   </li>
                 </ul>
               </div>
@@ -293,9 +254,9 @@
     <!-- Main File Book Js  -->
     <script type="module" src="book.js"></script>
     <!-- Cookies file js  -->
-    <script src="../../../../Local/localHelper.js"></script>
+    <script type="module" src="../../../../Local/localHelper.js"></script>
     <!-- network helper file js  -->
-    <script src="../../../../Network/remoteHelper.js"></script>
+    <script type="module" src="../../../../Network/remoteHelper.js"></script>
     <!-- Header file js  -->
     <script src="../../../header.js"></script>
     <!-- Logout js file  -->

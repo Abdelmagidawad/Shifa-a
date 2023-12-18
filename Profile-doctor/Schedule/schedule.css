@@ -61,7 +61,7 @@ a {
 /* Start Upcoming of Doctor  */
 
 .list-schedule {
-  padding-top: 60px;
+  padding-top: 50px;
   padding-bottom: var(--main-padding);
   background-color: var(--section-background);
   min-height: 100vh;
@@ -78,7 +78,6 @@ a {
 .list-schedule .select-day div {
   width: 30%;
   cursor: pointer;
-  color: var(--second-color);
   text-align: center;
   background-color: white;
   border-radius: 10px;
@@ -86,6 +85,7 @@ a {
   font-size: 20px;
   font-weight: bold;
   box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
+  color: var(--second-color);
   transition: var(--main-transition);
 }
 
@@ -99,27 +99,18 @@ a {
   }
 }
 
-.list-schedule .select-day div:hover {
-  background-color: var(--main-color) !important;
-  color: white !important;
-}
-
-.list-schedule .select-day div:hover > p {
-  color: white !important;
-}
-
 .list-schedule .select-day div p {
   color: var(--main-color);
   margin: 6px 0 0;
   transition: var(--main-transition);
 }
-.list-schedule .select-day div:nth-child(3) {
-  background-color: var(--main-color);
-  color: white;
-}
 
-.list-schedule .select-day div:nth-child(3) p {
-  color: white;
+.list-schedule .select-day div:hover {
+  background-color: var(--main-color) !important;
+}
+.list-schedule .select-day div:hover > p,
+.list-schedule .select-day div:hover {
+  color: white !important;
 }
 
 .list-schedule .list-patient-Sch {

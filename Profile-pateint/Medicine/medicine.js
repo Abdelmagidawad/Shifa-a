@@ -2,7 +2,40 @@
 let selectDay = document.querySelectorAll(".select-day div");
 let secNoMedicne = document.querySelector(".no-medicine");
 let secMedicne = document.querySelector(".sec-medicine");
+// To Dynamic day&date
+document.addEventListener("DOMContentLoaded", function () {
+  const daysOfWeek = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  const currentDate = new Date();
 
+  for (let i = 1; i <= 6; i++) {
+    const dayElement = document.getElementById(`day${i}`);
+    const dateElement = document.getElementById(`date${i}`);
+
+    // Calculate the date for each day
+    const futureDate = new Date(currentDate);
+    futureDate.setDate(currentDate.getDate() + i - 1);
+
+    dayElement.textContent = daysOfWeek[futureDate.getDay()];
+    dateElement.textContent =
+      (futureDate.getDate() < 10 ? "0" : "") + futureDate.getDate();
+    //
+    if (futureDate.getDate() === currentDate.getDate()) {
+      selectDay[i - 1].style.cssText =
+        "background-color: #246bfd;color: white;";
+      dayElement.style.color = "white";
+      selectDay[i - 1].click();
+    }
+  }
+});
+//
 selectDay.forEach(function (element) {
   element.addEventListener("click", function () {
     // test
