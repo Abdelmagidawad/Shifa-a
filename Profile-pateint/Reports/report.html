@@ -137,70 +137,101 @@
 
     <!-- start Report Patient  -->
     <div class="reports">
+      <!-- Start QR COde popUp -->
+      <div class="qrcode-desp" id="Dup">
+        <div class="q-overlay"></div>
+        <div class="popup-qrcode">
+          <p>Scan QR code using Shifaa scanner</p>
+          <img src="../Home/Home-img/qr-code-scanner.jpg" alt="QRCode" />
+          <div class="buttons">
+            <button type="button" id="cancel">Cancel</button>
+            <button type="button" id="done">Done</button>
+          </div>
+        </div>
+      </div>
+      <!-- End QR COde popUp -->
       <h2 class="main-title">Reports</h2>
       <div class="container">
         <div class="box">
-          <div class="text">
-            <div>
-              Doctor Name:
-              <h2>Dr.Mahmude Reda</h2>
-            </div>
-            <div>
-              Specialty:
-              <h2>Chest and Respiratory</h2>
-            </div>
-            <div>
-              Date:
-              <h2>16-04-2023</h2>
-            </div>
-            <div>
-              Time:
-              <h2>9:30 am</h2>
-            </div>
+          <div class="doc-info">
+            <h2 class="name">Abdelmagid Awad</h2>
+            <p class="sep">Osteopathy</p>
+            <p class="mail">
+              <i class="fa-regular fa-envelope"></i>
+              <span>doctor.dev1@gmail.com</span>
+            </p>
+            <p class="phon">
+              <i class="fa-regular fa-phone"></i>
+              <span>01018712568</span>
+            </p>
           </div>
-          <img src="../Home/Home-img/scan.png" alt="Scan-code" />
+          <div class="time">
+            <p class="D">
+              <i class="fa-solid fa-calendar-days"></i>
+              <span>18-Des-2023</span>
+            </p>
+            <p class="T">
+              <i class="fa-solid fa-clock"></i>
+              <span>09:00 AM</span>
+            </p>
+          </div>
+          <div class="note">
+            Take care of yourself and drink much water Take care of yourself and
+            drink much
+          </div>
+          <button class="despense" type="button">Dispense Medicine</button>
         </div>
         <div class="box">
-          <div class="text">
-            <div>
-              Doctor Name:
-              <h2>Dr.Mohamed Hassan</h2>
-            </div>
-            <div>
-              Specialty:
-              <h2>Chest and Respiratory</h2>
-            </div>
-            <div>
-              Date:
-              <h2>10-05-2023</h2>
-            </div>
-            <div>
-              Time:
-              <h2>9:30 am</h2>
-            </div>
+          <div class="doc-info">
+            <h2 class="name">Mahmoud Reda</h2>
+            <p class="sep">General Surgery</p>
+            <p class="mail">
+              <i class="fa-regular fa-envelope"></i>
+              <span>doctor.dev2@gmail.com</span>
+            </p>
+            <p class="phon">
+              <i class="fa-regular fa-phone"></i>
+              <span>01018712568</span>
+            </p>
           </div>
-          <img src="../Home/Home-img/scan.png" alt="Scan-code" />
+          <div class="time">
+            <p class="D">
+              <i class="fa-solid fa-calendar-days"></i>
+              <span>18-Jun-2023</span>
+            </p>
+            <p class="T">
+              <i class="fa-solid fa-clock"></i>
+              <span>10:30 AM</span>
+            </p>
+          </div>
+          <div class="note">Take care of yourself and drink much water</div>
+          <button class="despense" type="button">Dispense Medicine</button>
         </div>
         <div class="box">
-          <div class="text">
-            <div>
-              Doctor Name:
-              <h2>Dr.Abdelmagid Awad</h2>
-            </div>
-            <div>
-              Specialty:
-              <h2>Rheumatology</h2>
-            </div>
-            <div>
-              Date:
-              <h2>16-06-2023</h2>
-            </div>
-            <div>
-              Time:
-              <h2>9:30 am</h2>
-            </div>
+          <div class="doc-info">
+            <h2 class="name">Mohamed Hassan</h2>
+            <p class="sep">Rheumatology</p>
+            <p class="mail">
+              <i class="fa-regular fa-envelope"></i>
+              <span>doctor.dev3@gmail.com</span>
+            </p>
+            <p class="phon">
+              <i class="fa-regular fa-phone"></i>
+              <span>01018712568</span>
+            </p>
           </div>
-          <img src="../Home/Home-img/scan.png" alt="Scan-code" />
+          <div class="time">
+            <p class="D">
+              <i class="fa-solid fa-calendar-days"></i>
+              <span>10-Jul-2023</span>
+            </p>
+            <p class="T">
+              <i class="fa-solid fa-clock"></i>
+              <span>09:30 AM</span>
+            </p>
+          </div>
+          <div class="note">Take care of yourself and drink much water</div>
+          <button class="despense" type="button">Dispense Medicine</button>
         </div>
       </div>
     </div>
@@ -213,9 +244,9 @@
     <!-- main file js  -->
     <script type="module" src="report.js"></script>
     <!-- Cookies file js  -->
-    <script src="../../Local/localHelper.js"></script>
+    <script type="module" src="../../Local/localHelper.js"></script>
     <!-- network helper file js  -->
-    <script src="../../Network/remoteHelper.js"></script>
+    <script type="module" src="../../Network/remoteHelper.js"></script>
     <!-- Header file js  -->
     <script src="../header.js"></script>
     <!-- Logout js file  -->
