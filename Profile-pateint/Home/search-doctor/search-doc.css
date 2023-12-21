@@ -87,7 +87,7 @@ html::-webkit-scrollbar-thumb:hover {
 /* Start List Doctors  */
 
 .search-doctor {
-  padding-top: 60px;
+  padding-top: 50px;
   padding-bottom: var(--main-padding);
   background-color: var(--section-background);
   min-height: 100vh;
@@ -212,7 +212,11 @@ html::-webkit-scrollbar-thumb:hover {
   overflow: hidden;
   transition: var(--main-transition);
 }
-
+/*  */
+.hidden {
+  display: none;
+}
+/*  */
 .search-doctor .container .list-doc .box:hover {
   transform: scale(1.07);
 }
@@ -247,15 +251,17 @@ html::-webkit-scrollbar-thumb:hover {
 .search-doctor .container .list-doc .box .content h3 {
   margin: 0 0 10px;
   font-size: 22px;
-  /* color: var(--main-color); */
   font-weight: bold;
 }
 
-.search-doctor .container .list-doc .box .content > span {
+.search-doctor .container .list-doc .box .content .spe {
   font-size: 19px;
+  margin: 13px 0px;
+}
+.search-doctor .container .list-doc .box .content .spe span {
   color: var(--second-color);
 }
-.search-doctor .container .list-doc .box .content > span i {
+.search-doctor .container .list-doc .box .content .spe i {
   color: var(--main-color);
 }
 
@@ -279,12 +285,12 @@ html::-webkit-scrollbar-thumb:hover {
   color: var(--second-color);
 }
 
-.search-doctor .container .list-doc .box .content p {
+.search-doctor .container .list-doc .box .content .loc {
   font-size: 17px;
   color: var(--second-color);
 }
 
-.search-doctor .container .list-doc .box .content p i {
+.search-doctor .container .list-doc .box .content .loc i {
   color: var(--main-color);
 }
 
@@ -314,5 +320,50 @@ html::-webkit-scrollbar-thumb:hover {
 .search-doctor .container .list-doc .box .content .book a:hover {
   box-shadow: 0 0 8px 0px var(--main-color);
 }
+
+/* Start no result */
+.container {
+  & .no-result {
+    display: none;
+    text-align: center;
+    margin-top: 60px;
+    transition: var(--main-transition);
+    & img {
+      width: 400px;
+      max-width: 100%;
+      animation: animationNoDocs 3s infinite ease-in-out;
+    }
+    & h2 {
+      color: var(--second-color);
+      font-size: 25px;
+      margin: 0;
+    }
+    & p {
+      color: var(--second-color);
+      font-size: 18px;
+    }
+    @media (width<=600px) {
+      & h2 {
+        font-size: 17px;
+      }
+      & p {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@keyframes animationNoDocs {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+/* End no result */
 
 /* End List Doctors  */
