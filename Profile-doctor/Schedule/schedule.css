@@ -58,7 +58,7 @@ a {
 /* End Global Rules  */
 /* ******************************* */
 
-/* Start Upcoming of Doctor  */
+/* Start schedule of Doctor  */
 
 .list-schedule {
   padding-top: 50px;
@@ -374,7 +374,7 @@ a {
 
 /* End See More PopUp   */
 
-/* Start No Appointments  */
+/* Start No Schedule  */
 .no-app {
   text-align: center;
   margin-top: 60px;
@@ -403,6 +403,6 @@ a {
     transform: translateY(0px);
   }
 }
-/* End No Appointments  */
+/* End No schedule  */
 
-/* End Upcoming of Doctor  */
+/* End schedule of Doctor  */

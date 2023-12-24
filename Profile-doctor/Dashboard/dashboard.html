@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shifa’a | Home | Doctor</title>
+    <title>Shifa’a | Dashboard | Doctor</title>
     <link
       rel="shortcut icon"
       href="../../images/favicon.png"
@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="../../CSS/all.min.css" />
     <!-- Header file css  -->
     <link rel="stylesheet" href="../header.css" />
-    <!-- Home File CSS  -->
-    <link rel="stylesheet" href="home.css" />
+    <!-- dashboard File CSS  -->
+    <link rel="stylesheet" href="dashboard.css" />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,7 +38,7 @@
     <!-- Start Header  -->
     <div class="header" id="header">
       <div class="container">
-        <a href="#" class="logo">
+        <a href="" class="logo">
           <img src="../../images/logo.png" alt="photo-logo" />
           Shifa’a
         </a>
@@ -53,7 +53,7 @@
             </div>
             <!-- mobile -->
             <ul class="links">
-              <li><a href="#" style="color: #246bfd">Home</a></li>
+              <li><a href="../Home/home.html">Home</a></li>
               <li><a href="../Schedule/schedule.html">Schedule</a></li>
               <li>
                 <a href="#">Patients</a>
@@ -70,7 +70,7 @@
                   </li>
                 </ul>
               </li>
-              <li><a href="../Dashboard/dashboard.html">Dashboard</a></li>
+              <li><a href="#" style="color: #246bfd">Dashboard</a></li>
             </ul>
           </div>
           <ul class="Profile-toltab">
@@ -86,10 +86,10 @@
                   <div class="content">No notifications.</div>
                 </div>
               </div>
-              <img src="home-image/avatar-doctor.png" alt="pro-img" />
+              <img src="../Home/home-image/avatar-doctor.png" alt="pro-img" />
               <div class="tol-tab">
                 <div>
-                  <img src="home-image/avatar-doctor.png" alt="photo" />
+                  <img src="../Home/home-image/avatar-doctor.png" alt="photo" />
                   <h2>Abdelmagid Migo</h2>
                 </div>
                 <ul class="tol-links">
@@ -126,8 +126,7 @@
       </div>
     </div>
     <!-- End Header  -->
-    <!-- ******************
-    ************ -->
+
     <!-- popuplogout -->
     <div class="popup" id="POP">
       <div class="overlay"></div>
@@ -142,22 +141,55 @@
     </div>
     <!-- end popuplogout -->
 
-    <!-- Start Home Content Doctor  -->
-    <div class="home-content">
+    <!-- Start Dashboard of Doctor -->
+    <div class="content-dash">
       <div class="container">
-        <div class="wel-home">
-          <div class="welcome">
+        <div class="head">
+          <div class="info">
+            <h2>Total Patients This Year</h2>
             <h2>
-              Welcome Back,
-              <p>Dr.Abdelmagid awad</p>
+              <span>70</span>
+              Patients
             </h2>
-            <p>Have a nice day at Work</p>
           </div>
-          <img src="home-image/Home-Hello.png" alt="" />
+          <div class="image"><img src="dash-image/Vector 1.png" alt="Curve" /></div>
         </div>
-        <div class="appoint">
-          <h2>Today's Appointments</h2>
-          <div class="list-appoint">
+
+        <div class="res-month">
+          <h2>This Month</h2>
+          <div class="res">
+            <div class="box one">
+              <p><i class="fa-solid fa-people-group"></i></p>
+              <div>
+                <p>15</p>
+                <span>Patients</span>
+              </div>
+            </div>
+            <div class="box two">
+              <p><i class="fa-solid fa-people-group"></i></p>
+              <div>
+                <p>20</p>
+                <span>Completed</span>
+              </div>
+            </div>
+            <div class="box three">
+              <p><i class="fa-solid fa-people-group"></i></p>
+              <div>
+                <p>10</p>
+                <span>Pending</span>
+              </div>
+            </div>
+          </div>
+          <div class="review">
+            <img src="dash-image/Five_star_review.png" alt="photo-star" />
+            <div>
+              <p>Your Total Starts Reviews: <span>( 4.5 )</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="today-patient">
+          <h2>Today's Patients</h2>
+          <div class="list-patient">
             <div class="box">
               <img
                 src="../Patients/new-patient/new-img/patient1.png"
@@ -218,41 +250,21 @@
                 <p><i class="fa-solid fa-clock"></i> 12:30 Pm</p>
               </div>
             </div>
-            <div class="box">
-              <img
-                src="../Patients/new-patient/new-img/patient1.png"
-                alt="photo-patient"
-              />
-              <div>
-                <h3>Eslam Ahmed</h3>
-                <p><i class="fa-solid fa-clock"></i> 1:30 Pm</p>
-              </div>
-            </div>
-            <div class="box">
-              <img
-                src="../Patients/new-patient/new-img/patient2.png"
-                alt="photo-patient"
-              />
-              <div>
-                <h3>Ibrahim Ahmed</h3>
-                <p><i class="fa-solid fa-clock"></i> 11:30 Am</p>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
     </div>
-    <!-- Start Home Content Doctor  -->
+    <!-- End Dashboard of Doctor -->
 
     <!-- Icon scroll to Top  -->
     <i class="fa-sharp fa-regular fa-arrow-up UP"></i>
 
     <!-- main file js  -->
-    <script type="module" src="doc-home.js"></script>
+    <script type="module" src="dashboard.js"></script>
     <!-- Cookies file js  -->
-    <script src="../../Local/localHelper.js"></script>
+    <script type="module" src="../../Local/localHelper.js"></script>
     <!-- network helper file js  -->
-    <script src="../../Network/remoteHelper.js"></script>
+    <script type="module" src="../../Network/remoteHelper.js"></script>
     <!-- header file js  -->
     <script src="../header.js"></script>
     <!-- log out file js  -->
