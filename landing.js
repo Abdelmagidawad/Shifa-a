@@ -96,3 +96,8 @@ prevButton.addEventListener("click", prevSlide);
 
 // Show the initial slide
 showSlide(currentSlideIndex);
+
+// to make a dynamic year
+let elementYear = document.querySelector(".container > p span");
+let currentYear = new Date().getFullYear();
+elementYear.append(currentYear);

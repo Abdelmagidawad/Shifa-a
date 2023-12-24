@@ -6,3 +6,8 @@ window.addEventListener("load", function () {
     preLoad.style.display = "none";
   }, 1000);
 });
+
+// to make a dynamic year
+let elementYear = document.querySelector(".container > p span");
+let currentYear = new Date().getFullYear();
+elementYear.append(currentYear);
