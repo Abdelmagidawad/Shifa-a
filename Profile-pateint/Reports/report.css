@@ -102,11 +102,11 @@ html::-webkit-scrollbar-thumb:hover {
   .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
-    gap: 50px;
+    gap: 60px;
 
     & .box {
       background-color: #fefefe;
-      box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
+      box-shadow: 0 1px 5px 0px rgb(0 0 0 /10%);
       border-radius: 15px;
       padding: 30px;
       transition: var(--main-transition);
@@ -179,6 +179,7 @@ html::-webkit-scrollbar-thumb:hover {
   @media (width<=768px) {
     & .container {
       grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+      gap: 50px;
       & .box {
         padding: 25px;
       }

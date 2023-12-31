@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shifa’a | Edit Profile | Patient</title>
+    <link
+      rel="shortcut icon"
+      href="../../../images/favicon.png"
+      style="width: 30px; height: 30px"
+    />
+    <!-- Render All Element Normally  -->
+    <link rel="stylesheet" href="../../../CSS/normalize.css" />
+    <!-- Font Awesome Library  -->
+    <link rel="stylesheet" href="../../../CSS/all.min.css" />
+    <!-- Header-patient file css  -->
+    <link rel="stylesheet" href="../../header.css" />
+    <!-- Edit profile File CSS  -->
+    <link rel="stylesheet" href="editprofile.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Preloading Page -->
+    <div class="preloading">
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <span class="name">Shifa’a...</span>
+    </div>
+    <!-- Start Header  -->
+    <div class="header" id="header">
+      <div class="container">
+        <a href="#" class="logo">
+          <img src="../../../images/logo.png" alt="photo-logo" />
+          Shifa’a
+        </a>
+        <div class="nav-bar">
+          <div class="overlinks"></div>
+          <div class="menu-links">
+            <!-- mobile -->
+            <div class="icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <!-- mobile -->
+            <ul class="links">
+              <li><a href="../../Home/home.html">Home</a></li>
+              <li><a href="../../Reports/report.html">Reports</a></li>
+              <li>
+                <a href="../../Appointments/Upcomming/upcom.html"
+                  >Appointments</a
+                >
+              </li>
+              <li><a href="../../Medicine/medicine.html">Medicine</a></li>
+            </ul>
+          </div>
+          <ul class="Profile-toltab">
+            <li>
+              <div class="note">
+                <i class="fa-regular fa-bell"></i>
+                <span>1</span>
+                <div class="content-note">
+                  <div class="head">
+                    <h2>Notifications</h2>
+                    <i class="fa-solid fa-ellipsis"></i>
+                  </div>
+                  <div class="content">No notifications.</div>
+                </div>
+              </div>
+              <img src="../../Home/Home-img/profile-img.png" alt="pro-img" />
+              <div class="tol-tab">
+                <div>
+                  <img src="../../Home/Home-img/profile-img.png" alt="photo" />
+                  <h2>Ahmed Ibrahim</h2>
+                </div>
+                <ul class="tol-links">
+                  <li>
+                    <a href="#" style="color: #a09a9a"
+                      ><i class="fa-regular fa-user"></i>Edit Profile</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-regular fa-bell"></i>Notification</a
+                    >
+                  </li>
+                  <li>
+                    <a href=""
+                      ><i class="far fa-check-circle fa-fw"></i>Security</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-sharp fa-regular fa-globe"></i>Language</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-solid fa-circle-question"></i>Help Center</a
+                    >
+                  </li>
+                  <li>
+                    <button type="button">
+                      <i class="fa-solid fa-arrow-right-from-bracket"></i>Logout
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- End Header  -->
+    <!-- ******************-->
+    <!-- popuplogout -->
+    <div class="popup" id="POP">
+      <div class="overlay"></div>
+      <div class="popup-content">
+        <h2>Are you sure,</h2>
+        <h2>you want to logout</h2>
+        <div class="pop-btn">
+          <button type="button" id="cancel">Cancel</button>
+          <button type="button" id="logout">Logout</button>
+        </div>
+      </div>
+    </div>
+    <!-- end popuplogout -->
+
+    <!-- start Edit Profile  -->
+    <div class="edit-profile">
+      <div class="container">
+        <div class="navbar">
+          <h2 class="main-head">My Profile</h2>
+          <ul class="settings">
+            <li style="background-color: var(--main-color)">
+              <a href="#" style="color: #fefefe"
+                ><i class="fa-regular fa-user"></i>Edit Profile</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="fa-regular fa-bell"></i>Notification</a>
+            </li>
+            <li>
+              <a href=""><i class="far fa-check-circle fa-fw"></i>Security</a>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-circle-question"></i>Help Center</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="cont-profile">
+          <h2 class="main-title">
+            <i class="fa-solid fa-user-pen"></i>
+            Edit Profile
+          </h2>
+          <div class="image">
+            <img
+              src="../../Home/Home-img/profile-img.png"
+              alt="photo-profile"
+            />
+            <i class="fa-solid fa-pen-to-square"></i>
+          </div>
+          <form action="" method="get" class="Form">
+            <div class="full-name">
+              <div class="f-name">
+                <label for="">First Name</label><br />
+                <input
+                  type="text"
+                  placeholder="First Name"
+                  name="first-name"
+                  value="Ahmed"
+                />
+                <!-- <span class="error fName-error">
+                <i class="fa-regular fa-circle-exclamation"></i>
+                <p>First Name is required</p>
+              </span> -->
+              </div>
+              <div class="l-name">
+                <label for="">Last Name</label><br />
+                <input
+                  type="text"
+                  placeholder="Last Name"
+                  name="last-name"
+                  value="Ibrahim"
+                />
+                <!-- <span class="error lName-error">
+                <i class="fa-regular fa-circle-exclamation"></i>
+                <p>Last Name is required</p>
+              </span> -->
+              </div>
+            </div>
+
+            <div class="phone">
+              <label for="">Mobile Number</label><br />
+              <input
+                type="number"
+                placeholder="+20"
+                name="phone"
+                min="1000000000"
+                max="9999999999"
+                value="01018251768"
+              />
+              <!-- <span class="error phon-error">
+                <i class="fa-regular fa-circle-exclamation"></i>
+                <p>Please enter a Valid phone number</p>
+              </span> -->
+            </div>
+
+            <div class="date">
+              <label for="">Date Of Birth</label>
+              <input type="date" name="date-of-birth" value="2000-10-26" />
+              <!-- <span class="error date-error">
+                <i class="fa-regular fa-circle-exclamation"></i>
+                <p>Date Of Birth is required</p>
+              </span> -->
+            </div>
+
+            <div class="buttons">
+              <button type="button" class="cancel">Cancel</button>
+              <button type="submit" class="save">Save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- End Edit Profile  -->
+
+    <!-- Icon scroll to Top  -->
+    <i class="fa-sharp fa-regular fa-arrow-up UP"></i>
+
+    <!-- main file js  -->
+    <script type="module" src="editprofile.js"></script>
+    <!-- Cookies file js  -->
+    <script type="module" src="../../../Local/localHelper.js"></script>
+    <!-- network helper file js  -->
+    <script type="module" src="../../../Network/remoteHelper.js"></script>
+    <!-- Header file js  -->
+    <script src="../../header.js"></script>
+    <!-- Logout js file  -->
+    <script type="module" src="../../logOut.js"></script>
+  </body>
+</html>
