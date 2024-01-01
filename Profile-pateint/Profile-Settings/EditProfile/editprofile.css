@@ -165,9 +165,9 @@ input[type="number"]::-webkit-inner-spin-button {
         text-align: center;
         margin-bottom: 30px;
         & img {
-          width: 120px;
+          width: 130px;
           max-width: 100%;
-          height: 120px;
+          height: 130px;
           border-radius: 50%;
           border: 2px solid #e5e5e5;
         }
@@ -295,6 +295,39 @@ input[type="number"]::-webkit-inner-spin-button {
       & .cont-profile {
         width: 70%;
         padding: 40px 30px;
+      }
+    }
+  }
+}
+
+/* Massage Validation */
+.Form {
+  & .error {
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+    font-size: 15px;
+    color: #d93025;
+    /*  */
+    display: none;
+    transition: var(--main-transition);
+    & i {
+      font-weight: bold;
+    }
+    & p {
+      margin: 0;
+    }
+  }
+  /*  */
+  & .invalid {
+    & .error {
+      display: flex;
+    }
+
+    & input {
+      border-color: #e3756d !important;
+      &:focus {
+        box-shadow: 0 1px 5px 0px #e3756d !important;
       }
     }
   }
