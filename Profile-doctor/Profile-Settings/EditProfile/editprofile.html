@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shifa’a | Edit Profile | Patient</title>
+    <title>Shifa’a | Edit Profile | Doctor</title>
     <link
       rel="shortcut icon"
       href="../../../images/favicon.png"
@@ -14,9 +14,9 @@
     <link rel="stylesheet" href="../../../CSS/normalize.css" />
     <!-- Font Awesome Library  -->
     <link rel="stylesheet" href="../../../CSS/all.min.css" />
-    <!-- Header-patient file css  -->
+    <!-- Header file css  -->
     <link rel="stylesheet" href="../../header.css" />
-    <!-- Edit profile File CSS  -->
+    <!-- Edit Profile File CSS  -->
     <link rel="stylesheet" href="editprofile.css" />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -54,13 +54,23 @@
             <!-- mobile -->
             <ul class="links">
               <li><a href="../../Home/home.html">Home</a></li>
-              <li><a href="../../Reports/report.html">Reports</a></li>
+              <li><a href="../../Schedule/schedule.html">Schedule</a></li>
               <li>
-                <a href="../../Appointments/Upcomming/upcom.html"
-                  >Appointments</a
-                >
+                <a href="#">Patients</a>
+                <ul class="patient-links">
+                  <li class="p-link">
+                    <a href="../../Patients/new-patient/N-patient.html"
+                      ><i class="fa-solid fa-user-group"></i>New Patients</a
+                    >
+                  </li>
+                  <li class="p-link">
+                    <a href="../../Patients/past-patient/P-patient.html"
+                      ><i class="fa-solid fa-user-group"></i>Past Patients</a
+                    >
+                  </li>
+                </ul>
               </li>
-              <li><a href="../../Medicine/medicine.html">Medicine</a></li>
+              <li><a href="../../Dashboard/dashboard.html">Dashboard</a></li>
             </ul>
           </div>
           <ul class="Profile-toltab">
@@ -76,11 +86,17 @@
                   <div class="content">No notifications.</div>
                 </div>
               </div>
-              <img src="../../Home/Home-img/profile-img.png" alt="pro-img" />
+              <img
+                src="../../Home/home-image/avatar-doctor.png"
+                alt="pro-img"
+              />
               <div class="tol-tab">
                 <div>
-                  <img src="../../Home/Home-img/profile-img.png" alt="photo" />
-                  <h2>Ahmed Ibrahim</h2>
+                  <img
+                    src="../../Home/home-image/avatar-doctor.png"
+                    alt="photo"
+                  />
+                  <h2>Abdelmagid Migo</h2>
                 </div>
                 <ul class="tol-links">
                   <li>
@@ -104,11 +120,6 @@
                     >
                   </li>
                   <li>
-                    <a href="#"
-                      ><i class="fa-solid fa-circle-question"></i>Help Center</a
-                    >
-                  </li>
-                  <li>
                     <button type="button">
                       <i class="fa-solid fa-arrow-right-from-bracket"></i>Logout
                     </button>
@@ -121,7 +132,7 @@
       </div>
     </div>
     <!-- End Header  -->
-    <!-- ******************-->
+
     <!-- popuplogout -->
     <div class="popup" id="POP">
       <div class="overlay"></div>
@@ -153,11 +164,6 @@
             <li>
               <a href=""><i class="far fa-check-circle fa-fw"></i>Security</a>
             </li>
-            <li>
-              <a href="#"
-                ><i class="fa-solid fa-circle-question"></i>Help Center</a
-              >
-            </li>
           </ul>
         </div>
 
@@ -168,7 +174,7 @@
           </h2>
           <div class="image">
             <img
-              src="../../Home/Home-img/profile-img.png"
+              src="../../Home/home-image/avatar-doctor.png"
               alt="photo-profile"
             />
             <input type="file" accept="image/*" hidden />
@@ -204,31 +210,113 @@
               </div>
             </div>
 
-            <div class="phone">
-              <label for="">Mobile Number</label><br />
+            <div class="phon-rates">
+              <div class="phone">
+                <label for="">Mobile Number</label><br />
+                <input
+                  type="number"
+                  placeholder="+20"
+                  name="phone"
+                  min="1000000000"
+                  max="9999999999"
+                  value="01018251768"
+                />
+                <span class="error phon-error">
+                  <i class="fa-regular fa-circle-exclamation"></i>
+                  <p>Please enter a Valid phone number</p>
+                </span>
+              </div>
+              <div class="rating">
+                <label for=""
+                  >Rating
+                  <i
+                    class="fa-regular fa-star"
+                    style="font-size: 15px"
+                  ></i></label
+                ><br />
+                <input
+                  type="number"
+                  placeholder="Rating"
+                  name="rating"
+                  min="0"
+                  max="5"
+                  value="5"
+                />
+                <span class="error phon-error">
+                  <i class="fa-regular fa-circle-exclamation"></i>
+                  <p>Please enter a Valid Rating number</p>
+                </span>
+              </div>
+            </div>
+
+            <div class="specialty">
+              <label for="">Specialty</label><br />
               <input
-                type="number"
-                placeholder="+20"
-                name="phone"
-                min="1000000000"
-                max="9999999999"
-                value="01018251768"
+                list="specialty"
+                name="specialty"
+                placeholder="Choose Your Specialty"
+                value="General Surgery"
               />
-              <span class="error phon-error">
+              <datalist id="specialty">
+                <option value="Dermatology"></option>
+                <option value="Dentistry"></option>
+                <option value="Psychiatry"></option>
+                <option value="Pediatrics and New Born"></option>
+                <option value="Neurology"></option>
+                <option value="Orthopedics"></option>
+                <option value="Gynaecology and Infertility"></option>
+                <option value="Ear, Nose and Throat"></option>
+                <option value="Cardiology and Vascular Disease"></option>
+                <option value="Allergy and Immunology"></option>
+                <option value="Andrology and Male Infertility"></option>
+                <option value="Audiology"></option>
+                <option value="Cardiology and Thoracic Surgery"></option>
+                <option value="Chest and Respiratory"></option>
+                <option value="Diabetes and Endocrinology"></option>
+                <option value="Diagnostic Radiology"></option>
+                <option value="Dietitian and Nutrition"></option>
+                <option value="Family Medicine"></option>
+                <option value="Gastroenterology and Endoscopy"></option>
+                <option value="General Practice"></option>
+                <option value="General Surgery"></option>
+                <option value="Geriatrics"></option>
+                <option value="Hematology"></option>
+                <option value="Hepatology"></option>
+                <option value="Internal Medicine"></option>
+                <option value="IVF and Infertility"></option>
+                <option value="Laboratories"></option>
+                <option value="Nephrology"></option>
+                <option value="Obesity and Laparoscopic Surgery"></option>
+                <option value="Oncology"></option>
+                <option value="Oncology Surgery"></option>
+                <option value="Ophthalmology"></option>
+                <option value="Osteopathy"></option>
+                <option value="Pain Management"></option>
+                <option value="Pediatric Surgery"></option>
+                <option value="Phoniatrics"></option>
+                <option value="Plastic Surgery"></option>
+                <option value="Rheumatology"></option>
+                <option value="Spinal Surgery"></option>
+                <option value="Urology"></option>
+                <option value="Vascular Surgery"></option>
+              </datalist>
+              <span class="error specialty">
                 <i class="fa-regular fa-circle-exclamation"></i>
-                <p>Please enter a Valid phone number</p>
+                <p>Specialty is required</p>
               </span>
             </div>
 
-            <div class="date">
-              <label for="">Date Of Birth</label>
-              <input type="date" name="date-of-birth" value="2000-10-26" />
-              <span class="error date-error">
-                <i class="fa-regular fa-circle-exclamation"></i>
-                <p>Date Of Birth is required</p>
-              </span>
+            <div class="aboutYou">
+              <label for="">About You</label> <br />
+              <textarea name="aboutYou" placeholder="Write about you">
+I'm a 5 years experienced doctor specialized in general surgeries with a large number of successful operations
+               </textarea
+              >
+              <!-- <span class="error aboutYou">
+                  <i class="fa-regular fa-circle-exclamation"></i>
+                  <p>About you is required</p>
+                </span> -->
             </div>
-
             <div class="buttons">
               <button type="button" class="cancel">Cancel</button>
               <button type="submit" class="save">Save</button>
@@ -249,9 +337,9 @@
     <script type="module" src="../../../Local/localHelper.js"></script>
     <!-- network helper file js  -->
     <script type="module" src="../../../Network/remoteHelper.js"></script>
-    <!-- Header file js  -->
+    <!-- header file js  -->
     <script src="../../header.js"></script>
-    <!-- Logout js file  -->
+    <!-- log out file js  -->
     <script type="module" src="../../logOut.js"></script>
   </body>
 </html>

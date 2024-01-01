@@ -60,22 +60,22 @@ a {
 /* End container  */
 
 /* Add Scrollbar  */
-html::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 7px;
 }
 
-html::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   box-shadow: 0 0 7px 1px #eef0f2 inset;
   background-color: #ddd;
 }
 
-html::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background-color: var(--main-color);
   border-radius: 6px;
   transition: 0.3s;
 }
 
-html::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
   background-color: #3055cb;
 }
 
@@ -364,12 +364,13 @@ html::-webkit-scrollbar-thumb:hover {
   resize: none;
   border: none;
   height: 200px;
-  padding: 29px;
+  padding: 20px 29px;
   outline: none;
   display: block;
   margin: 35px auto;
   border-radius: 10px;
   font-size: 19px;
+  list-style: 1.7;
   /* background-color: #ffffffb3; */
   background-color: #fefcfc;
   border-bottom: 2px solid #ccc;
