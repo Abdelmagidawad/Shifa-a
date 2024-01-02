@@ -20,6 +20,10 @@ iconMenu.addEventListener("click", () => {
   overlayLinks.classList.toggle("overvisible");
 });
 
+overlayLinks.addEventListener("click", () => {
+  iconMenu.click();
+});
+
 let notificationIcon = document.querySelector(".note>i");
 let notifications = document.querySelector(".note .content-note");
 

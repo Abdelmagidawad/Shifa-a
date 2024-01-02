@@ -409,7 +409,7 @@ input[type="number"]::-webkit-inner-spin-button {
   padding: 25px;
   background-color: #fefefe;
   box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
-  transition: var(--main-transition);
+  transition: 0.3s;
 }
 
 @media (max-width: 767px) {

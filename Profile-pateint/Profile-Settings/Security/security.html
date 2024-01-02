@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shifa’a | Appointments | Patient</title>
+    <title>Shifa’a | Security | Patient</title>
     <link
       rel="shortcut icon"
       href="../../../images/favicon.png"
@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="../../../CSS/all.min.css" />
     <!-- Header-patient file css  -->
     <link rel="stylesheet" href="../../header.css" />
-    <!-- Upcoming File CSS  -->
-    <link rel="stylesheet" href="upcom.css" />
+    <!-- Security File CSS  -->
+    <link rel="stylesheet" href="security.css" />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -55,7 +55,11 @@
             <ul class="links">
               <li><a href="../../Home/home.html">Home</a></li>
               <li><a href="../../Reports/report.html">Reports</a></li>
-              <li><a href="#" style="color: #246bfd">Appointments</a></li>
+              <li>
+                <a href="../../Appointments/Upcomming/upcom.html"
+                  >Appointments</a
+                >
+              </li>
               <li><a href="../../Medicine/medicine.html">Medicine</a></li>
             </ul>
           </div>
@@ -80,8 +84,7 @@
                 </div>
                 <ul class="tol-links">
                   <li>
-                    <a
-                      href="../../Profile-Settings/EditProfile/editprofile.html"
+                    <a href="../EditProfile/editprofile.html"
                       ><i class="fa-regular fa-user"></i>Edit Profile</a
                     >
                   </li>
@@ -91,7 +94,7 @@
                     >
                   </li>
                   <li>
-                    <a href="../../Profile-Settings/Security/security.html"
+                    <a href="#" style="color: #a09a9a"
                       ><i class="far fa-check-circle fa-fw"></i>Security</a
                     >
                   </li>
@@ -118,7 +121,7 @@
       </div>
     </div>
     <!-- End Header  -->
-
+    <!-- ******************-->
     <!-- popuplogout -->
     <div class="popup" id="POP">
       <div class="overlay"></div>
@@ -133,105 +136,106 @@
     </div>
     <!-- end popuplogout -->
 
-    <!-- Start Upcoming of Doctor -->
-
-    <div class="list-upcoming">
+    <!-- start Change Password  -->
+    <div class="secur-profile">
       <div class="container">
-        <div class="links-appointments">
-          <div class="up-appoint">Upcoming Appointments</div>
-          <div class="com-appoint">Completed Appointments</div>
-          <div class="can-appoint">Canceled Appointments</div>
+        <div class="navbar">
+          <h2 class="main-head">My Profile</h2>
+
+          <ul class="settings">
+            <li>
+              <a href="../EditProfile/editprofile.html"
+                ><i class="fa-regular fa-user"></i>Edit Profile</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="fa-regular fa-bell"></i>Notification</a>
+            </li>
+            <li style="background-color: var(--main-color)">
+              <a href="#" style="color: #fefefe"
+                ><i class="far fa-check-circle fa-fw"></i>Security</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-circle-question"></i>Help Center</a
+              >
+            </li>
+          </ul>
         </div>
 
-        <div class="list-doctor-Up">
-          <h2 class="title">Appointments</h2>
-          <div class="list-doctor">
-            <div class="header-doc">
-              <h3>Doctor Name</h3>
-              <h3>Date</h3>
-              <h3>Time</h3>
-            </div>
-            <div class="box">
-              <div class="image">
-                <img src="upcom-imgs/doctor1.jpeg" alt="photo-doctor" />
-                Ahmed Ali
-              </div>
-              <p>21 Jan 2023</p>
-              <p>06:00AM</p>
-              <div class="button">
-                <a href="../../Home/search-doctor/book-appointment/book.html"
-                  >Reschedule</a
-                >
-                <button type="button" class="cancel a">Cancel</button>
-              </div>
-            </div>
-            <div class="box">
-              <div class="image">
-                <img src="upcom-imgs/doctor2.jpeg" alt="photo-doctor" />
-                Mahmoud Reda
-              </div>
-              <p>13 Jan 2023</p>
-              <p>12:00PM</p>
-              <div class="button">
-                <a href="../../Home/search-doctor/book-appointment/book.html"
-                  >Reschedule</a
-                >
-                <button type="button" class="cancel a">Cancel</button>
-              </div>
-            </div>
-            <div class="box">
-              <div class="image">
-                <img src="upcom-imgs/doc3.png" alt="photo-doctor" />
-                Rana Nader
-              </div>
-              <p>20 Feb 2023</p>
-              <p>5:00PM</p>
-              <div class="button">
-                <a href="../../Home/search-doctor/book-appointment/book.html"
-                  >Reschedule</a
-                >
-                <button type="button" class="cancel a">Cancel</button>
-              </div>
-            </div>
-            <div class="box">
-              <div class="image">
-                <img src="upcom-imgs/doc4.png" alt="photo-doctor" />
-                Amal Ibrahim
-              </div>
-              <p>29 Feb 2023</p>
-              <p>8:00PM</p>
-              <div class="button">
-                <a href="../../Home/search-doctor/book-appointment/book.html"
-                  >Reschedule</a
-                >
-                <button type="button" class="cancel a">Cancel</button>
-              </div>
-            </div>
-            <div class="box">
-              <div class="image">
-                <img src="upcom-imgs/doctor1.jpeg" alt="photo-doctor" />
-                Abdelmagid Awad
-              </div>
-              <p>2 March 2023</p>
-              <p>10:00AM</p>
-              <div class="button">
-                <a href="../../Home/search-doctor/book-appointment/book.html"
-                  >Reschedule</a
-                >
-                <button type="button" class="cancel a">Cancel</button>
-              </div>
-            </div>
+        <div class="cont-profile">
+          <h2 class="main-title">
+            <i class="fa-solid fa-unlock-keyhole"></i>
+            Change Password
+          </h2>
+          <div class="image">
+            <img src="changepassword2.png" alt="photo-password" />
           </div>
+
+          <form action="" method="get" class="Form">
+            <div class="Curr-pass">
+              <label for="">Current Password</label><br />
+              <input
+                type="password"
+                placeholder="Current Password"
+                name="current password"
+                required
+                minlength="8"
+                value="123456789"
+              />
+              <i class="fa-regular fa-eye-slash"></i>
+              <span class="error pass-error">
+                <i class="fa-regular fa-circle-exclamation"></i>
+                <p>Password must be between 8 and 16 characters</p>
+              </span>
+            </div>
+            <div class="pass">
+              <label for="">New Password</label><br />
+              <input
+                type="password"
+                placeholder="New Password"
+                name="new password"
+                required
+                minlength="8"
+              />
+              <i class="fa-regular fa-eye-slash"></i>
+              <span class="error pass-error">
+                <i class="fa-regular fa-circle-exclamation"></i>
+                <p>Password must be between 8 and 16 characters</p>
+              </span>
+            </div>
+            <div class="con-pass">
+              <label for="">Confirm Password</label><br />
+              <input
+                type="password"
+                placeholder="Confirm New Password"
+                name="confirm password"
+                required
+                minlength="8"
+              />
+              <i class="fa-regular fa-eye-slash"></i>
+              <span class="error pass-error">
+                <i class="fa-regular fa-circle-exclamation"></i>
+                <p>Confirm Password don't match</p>
+              </span>
+            </div>
+
+            <div class="buttons">
+              <button type="submit" class="save">Save changes</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
-    <!-- End Upcoming of Doctor -->
+
+    <!-- End start Change Password  -->
 
     <!-- Icon scroll to Top  -->
     <i class="fa-sharp fa-regular fa-arrow-up UP"></i>
 
     <!-- main file js  -->
-    <script type="module" src="upcom.js"></script>
+    <script type="module" src="security.js"></script>
     <!-- Cookies file js  -->
     <script type="module" src="../../../Local/localHelper.js"></script>
     <!-- network helper file js  -->
