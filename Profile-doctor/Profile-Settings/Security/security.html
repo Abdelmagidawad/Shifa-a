@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shifa’a | Past | Patient</title>
+    <title>Shifa’a | Security | Doctor</title>
     <link
       rel="shortcut icon"
       href="../../../images/favicon.png"
@@ -16,8 +16,11 @@
     <link rel="stylesheet" href="../../../CSS/all.min.css" />
     <!-- Header file css  -->
     <link rel="stylesheet" href="../../header.css" />
-    <!-- Past Patient File CSS  -->
-    <link rel="stylesheet" href="P-patient.css" />
+    <!-- Security File CSS  -->
+    <link
+      rel="stylesheet"
+      href="../../../Profile-pateint/Profile-Settings/Security/security.css"
+    />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -56,15 +59,15 @@
               <li><a href="../../Home/home.html">Home</a></li>
               <li><a href="../../Schedule/schedule.html">Schedule</a></li>
               <li>
-                <a href="#" style="color: #246bfd">Patients</a>
+                <a href="#">Patients</a>
                 <ul class="patient-links">
                   <li class="p-link">
-                    <a href="../new-patient/N-patient.html"
+                    <a href="../../Patients/new-patient/N-patient.html"
                       ><i class="fa-solid fa-user-group"></i>New Patients</a
                     >
                   </li>
                   <li class="p-link">
-                    <a href="#"
+                    <a href="../../Patients/past-patient/P-patient.html"
                       ><i class="fa-solid fa-user-group"></i>Past Patients</a
                     >
                   </li>
@@ -100,8 +103,7 @@
                 </div>
                 <ul class="tol-links">
                   <li>
-                    <a
-                      href="../../Profile-Settings/EditProfile/editprofile.html"
+                    <a href="../EditProfile/editprofile.html"
                       ><i class="fa-regular fa-user"></i>Edit Profile</a
                     >
                   </li>
@@ -111,7 +113,7 @@
                     >
                   </li>
                   <li>
-                    <a href="../../Profile-Settings/Security/security.html"
+                    <a href="#" style="color: #a09a9a"
                       ><i class="far fa-check-circle fa-fw"></i>Security</a
                     >
                   </li>
@@ -148,124 +150,108 @@
     </div>
     <!-- end popuplogout -->
 
-    <!-- Start Old Patient  -->
-    <div class="old-patient">
-      <div class="main-heading">
-        <h2>Past patients</h2>
-        <p><span>14</span> Old patients</p>
-      </div>
+    <!-- start Change Password  -->
+    <div class="secur-profile">
       <div class="container">
-        <div class="box">
-          <img src="../new-patient/new-img/patient1.png" alt="photo-patient" />
-          <div>
-            <h3>Mohamed Madge</h3>
-            <p>25 january 2022</p>
-          </div>
+        <div class="navbar">
+          <h2 class="main-head">My Profile</h2>
+
+          <ul class="settings">
+            <li>
+              <a href="../EditProfile/editprofile.html"
+                ><i class="fa-regular fa-user"></i>Edit Profile</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="fa-regular fa-bell"></i>Notification</a>
+            </li>
+            <li style="background-color: var(--main-color)">
+              <a href="#" style="color: #fefefe"
+                ><i class="far fa-check-circle fa-fw"></i>Security</a
+              >
+            </li>
+          </ul>
         </div>
-        <div class="box">
-          <img src="../new-patient/new-img/patient2.png" alt="photo-patient" />
-          <div>
-            <h3>Mohamed Ibrahim</h3>
-            <p>20 February 2022</p>
+
+        <div class="cont-profile">
+          <h2 class="main-title">
+            <i class="fa-solid fa-unlock-keyhole"></i>
+            Change Password
+          </h2>
+          <div class="image">
+            <img src="changepassword2.png" alt="photo-password" />
           </div>
-        </div>
-        <div class="box">
-          <img src="../new-patient/new-img/patient3.png" alt="photo-patient" />
-          <div>
-            <h3>Abdelmagid Awad</h3>
-            <p>25 january 2021</p>
-          </div>
-        </div>
-        <div class="box">
-          <img src="../new-patient/new-img/patient4.png" alt="photo-patient" />
-          <div>
-            <h3>Mohamed Hassan</h3>
-            <p>15 October 2022</p>
-          </div>
-        </div>
-        <div class="box">
-          <img src="../new-patient/new-img/patient5.png" alt="photo-patient" />
-          <div>
-            <h3>Omar Hamed</h3>
-            <p>25 March 2023</p>
-          </div>
-        </div>
-        <div class="box">
-          <img src="../new-patient/new-img/patient7.jpg" alt="photo-patient" />
-          <div>
-            <h3>Mai Samy</h3>
-            <p>25 january 2022</p>
-          </div>
-        </div>
-        <div class="box">
-          <img src="../new-patient/new-img/patient1.png" alt="photo-patient" />
-          <div>
-            <h3>Eslam Ahmed</h3>
-            <p>1 November 2021</p>
-          </div>
-        </div>
-        <div class="box">
-          <img src="../new-patient/new-img/patient2.png" alt="photo-patient" />
-          <div>
-            <h3>Ibrahim Ahmed</h3>
-            <p>5 january 2023</p>
-          </div>
-        </div>
-        <div class="box">
-          <img src="../new-patient/new-img/patient5.png" alt="photo-patient" />
-          <div>
-            <h3>Mahmoud Reda</h3>
-            <p>15 january 2023</p>
-          </div>
-        </div>
-        <div class="box">
-          <img src="../new-patient/new-img/patient4.png" alt="photo-patient" />
-          <div>
-            <h3>Yasso Mahmoud</h3>
-            <p>8 February 2023</p>
-          </div>
-        </div>
-        <div class="box">
-          <img src="../new-patient/new-img/patient6.png" alt="photo-patient" />
-          <div>
-            <h3>Mohab Hessian</h3>
-            <p>27 February 2023</p>
-          </div>
-        </div>
-        <div class="box">
-          <img src="../new-patient/new-img/patient4.png" alt="photo-patient" />
-          <div>
-            <h3>sayed Fared</h3>
-            <p>12 November 2022</p>
-          </div>
-        </div>
-        <div class="box">
-          <img src="../new-patient/new-img/patient2.png" alt="photo-patient" />
-          <div>
-            <h3>Mohamed Mostafa</h3>
-            <p>17 December 2022</p>
-          </div>
-        </div>
-        <div class="box">
-          <img src="../new-patient/new-img/patient7.jpg" alt="photo-patient" />
-          <div>
-            <h3>Merna Ahmed</h3>
-            <p>3 March 2022</p>
-          </div>
+
+          <form action="" method="get" class="Form">
+            <div class="Curr-pass">
+              <label for="">Current Password</label><br />
+              <input
+                type="password"
+                placeholder="Current Password"
+                name="current password"
+                required
+                minlength="8"
+                value="123456789"
+              />
+              <i class="fa-regular fa-eye-slash"></i>
+              <span class="error pass-error">
+                <i class="fa-regular fa-circle-exclamation"></i>
+                <p>Password must be between 8 and 16 characters</p>
+              </span>
+            </div>
+            <div class="pass">
+              <label for="">New Password</label><br />
+              <input
+                type="password"
+                placeholder="New Password"
+                name="new password"
+                required
+                minlength="8"
+              />
+              <i class="fa-regular fa-eye-slash"></i>
+              <span class="error pass-error">
+                <i class="fa-regular fa-circle-exclamation"></i>
+                <p>Password must be between 8 and 16 characters</p>
+              </span>
+            </div>
+            <div class="con-pass">
+              <label for="">Confirm Password</label><br />
+              <input
+                type="password"
+                placeholder="Confirm New Password"
+                name="confirm password"
+                required
+                minlength="8"
+              />
+              <i class="fa-regular fa-eye-slash"></i>
+              <span class="error pass-error">
+                <i class="fa-regular fa-circle-exclamation"></i>
+                <p>Confirm Password don't match</p>
+              </span>
+            </div>
+
+            <div class="buttons">
+              <button type="submit" class="save">Save changes</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
-    <!-- End Old Patient  -->
+
+    <!-- End start Change Password  -->
 
     <!-- Icon scroll to Top  -->
     <i class="fa-sharp fa-regular fa-arrow-up UP"></i>
 
-    <!-- main file js  -->
-    <script type="module" src="p-patient.js"></script>
+    <!-- Security file js  -->
+    <script
+      type="module"
+      src="../../../Profile-pateint/Profile-Settings/Security/security.js"
+    ></script>
     <!-- Cookies file js  -->
-    <script src="../../../Local/localHelper.js"></script>
+    <script type="module" src="../../../Local/localHelper.js"></script>
     <!-- network helper file js  -->
-    <script src="../../../Network/remoteHelper.js"></script>
+    <script type="module" src="../../../Network/remoteHelper.js"></script>
     <!-- header file js  -->
     <script src="../../header.js"></script>
     <!-- log out file js  -->

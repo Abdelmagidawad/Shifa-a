@@ -20,6 +20,10 @@ iconMenu.addEventListener("click", () => {
   overlayLinks.classList.toggle("overvisible");
 });
 
+overlayLinks.addEventListener("click", () => {
+  iconMenu.click();
+});
+
 // Scroll Top Code
 let iconScrollTop = document.querySelector(".UP");
 
