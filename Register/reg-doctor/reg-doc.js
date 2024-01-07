@@ -1,4 +1,5 @@
 import { NetworkHelper } from "../../Network/remoteHelper.js";
+import { Doctor } from "../../Models/doctor.js";
 
 let inputFName = document.querySelector("[name='first-name']");
 let inputLName = document.querySelector("[name='last-name']");

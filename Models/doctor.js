@@ -1,4 +1,4 @@
-class Doctor {
+export class Doctor {
   constructor(
     firstName,
     lastName,
