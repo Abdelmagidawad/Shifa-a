@@ -19,7 +19,7 @@ let inputFName = document.querySelector("[name='first-name']");
 let inputLName = document.querySelector("[name='last-name']");
 let inputAge = document.querySelector("[name='date-of-birth']");
 let inputPhone = document.querySelector("[name='phone']");
-let inputRating = document.querySelector("[name='rating']");
+let inputExperience = document.querySelector("[name='Years Experience']");
 let inputSpecialty = document.querySelector("[name='specialty']");
 //
 let secFName = document.querySelector(".Form .f-name");
@@ -28,8 +28,8 @@ let secLName = document.querySelector(".Form .l-name");
 let secLNameMassg = document.querySelector(".Form .l-name .error>p");
 let secPhone = document.querySelector(".Form .phone");
 let secPhoneMassg = document.querySelector(".Form .phone .error>p");
-let secRating = document.querySelector(".Form .rating");
-let secRatingMassg = document.querySelector(".Form .rating .error>p");
+let secExperience = document.querySelector(".Form .rating");
+let secExperienceMassg = document.querySelector(".Form .rating .error>p");
 let secSpecialty = document.querySelector(".Form .specialty");
 
 buttonSave.addEventListener("click", function (event) {
@@ -45,7 +45,7 @@ buttonSave.addEventListener("click", function (event) {
 // ***************
 const namePattern = /^[a-zA-Z\-]+$/;
 const phonePattern = /^01[0125][0-9]{8}$/;
-const ratingPattern = /^[1-5](\.\d{1,2})?$/;
+const experiencePattern = /^[1-9]\d$/;
 
 inputFName.addEventListener("keyup", () => {
   testVWKeyUp(
@@ -80,14 +80,14 @@ inputPhone.addEventListener("keyup", () => {
   );
 });
 
-inputRating.addEventListener("keyup", () => {
+inputExperience.addEventListener("keyup", () => {
   testVWKeyUp(
-    ratingPattern,
-    inputRating,
-    secRating,
-    secRatingMassg,
-    "Please enter a Valid Rating number",
-    "Rating number is required"
+    experiencePattern,
+    inputExperience,
+    secExperience,
+    secExperienceMassg,
+    "Please enter a Valid Experience number",
+    "Experience number is required"
   );
 });
 
@@ -131,7 +131,7 @@ function validateForm() {
     !Validation(namePattern, inputFName, secFName) ||
     !Validation(namePattern, inputLName, secLName) ||
     !Validation(phonePattern, inputPhone, secPhone) ||
-    !Validation(ratingPattern, inputRating, secRating) ||
+    !Validation(experiencePattern, inputExperience, secExperience) ||
     inputSpecialty.value === ""
   )
     return false;

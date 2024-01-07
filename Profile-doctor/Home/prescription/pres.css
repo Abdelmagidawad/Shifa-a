@@ -109,7 +109,7 @@ a {
   background-color: #fefcfc;
   border-radius: 12px;
   padding: 25px;
-  box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
+  box-shadow: 0 1px 5px 0px rgb(0 0 0 /10%);
 }
 .prescription .head .comment h3 {
   font-size: 21px;
@@ -128,7 +128,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
+  box-shadow: 0 1px 5px 0px rgb(0 0 0 /10%);
   border-radius: 12px;
   padding: 20px;
   background-color: var(--main-color);
@@ -203,7 +203,7 @@ a {
   justify-content: space-between;
   padding: 20px 30px;
   gap: 20px;
-  box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
+  box-shadow: 0 1px 5px 0px rgb(0 0 0 /10%);
   border-radius: 12px;
 }
 .prescription .write-pre .info-doc .text1 h3 {
@@ -236,7 +236,7 @@ a {
   background-color: #fffdfdcc;
   border-radius: 12px;
   padding: 20px 40px;
-  box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
+  box-shadow: 0 1px 5px 0px rgb(0 0 0 /10%);
 }
 
 @media (max-width: 767px) {
@@ -313,7 +313,7 @@ a {
   padding: 15px 20px;
   border-radius: 12px;
   background-color: #fefcfc;
-  box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
+  box-shadow: 0 1px 5px 0px rgb(0 0 0 /10%);
   flex-wrap: wrap;
 }
 
@@ -370,16 +370,16 @@ a {
   margin: 35px auto;
   border-radius: 10px;
   font-size: 19px;
-  list-style: 1.7;
+  line-height: 1.7;
   /* background-color: #ffffffb3; */
   background-color: #fefcfc;
   border-bottom: 2px solid #ccc;
-  box-shadow: 0 0 8px 0px rgb(0 0 0 /10%);
+  box-shadow: 0 1px 5px 0px rgb(0 0 0 /10%);
   caret-color: var(--main-color);
   transition: var(--main-transition);
 }
 .prescription .write-pre textarea:focus {
-  box-shadow: 0 0 5px 0 var(--main-color);
+  box-shadow: 0 0 6px 0 var(--main-color);
 }
 .prescription .write-pre textarea::placeholder {
   transition: opacity 0.5s;
