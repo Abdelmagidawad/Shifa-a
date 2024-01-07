@@ -45,7 +45,7 @@ buttonSave.addEventListener("click", function (event) {
 // ***************
 const namePattern = /^[a-zA-Z\-]+$/;
 const phonePattern = /^01[0125][0-9]{8}$/;
-const experiencePattern = /^[1-9]\d$/;
+const experiencePattern = /^[1-9]\d?$/;
 
 inputFName.addEventListener("keyup", () => {
   testVWKeyUp(
