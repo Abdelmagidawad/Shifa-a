@@ -10,7 +10,7 @@ let downloadLink = document.querySelector(
 btnGenerateQR.addEventListener("click", () => {
   //
   const filePath =
-    "https://abdelmagidawad.github.io/Shifaa-web-Application/Profile-pateint/Home/P-MedicalCard/QRCodePageMC/MedicalCard.html";
+    "https://abdelmagidawad.github.io/Shifa-a/Profile-pateint/Home/P-MedicalCard/QRCodePageMC/MedicalCard.html";
 
   // Use the qrious library to generate the QR code
   const qr = new QRious({
